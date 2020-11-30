@@ -1,0 +1,34 @@
+{
+  "name": "@vueblocks/vue-use-vuex",
+  "description": "Use Vuex With Composition API Easyily.",
+  "version": "0.1.0",
+  "main": "lib/index.cjs.js",
+  "types": "lib/index.d.ts",
+  "module": "lib/index.esm.js",
+  "unpkg": "lib/index.umd.min.js",
+  "jsdelivr": "lib/index.umd.min.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vueblocks/vue-use.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-use",
+    "vuex"
+  ],
+  "author": "xiaoluoboding<https://github.com/xiaoluoboding>",
+  "license": "MIT",
+  "peerDependencies": {
+    "vuex": "^3.6.0"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.0.0-beta.20",
+    "vue-demi": "^0.4.5"
+  },
+  "devDependencies": {
+    "vuex": "^3.6.0"
+  }
+}
