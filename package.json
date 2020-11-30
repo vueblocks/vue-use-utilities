@@ -1,5 +1,6 @@
 {
   "name": "@vueblocks/vue-use",
+  "version": "0.1.0",
   "description": "A collection of Vue composition-api utilities",
   "scripts": {
     "dev": "vuepress dev docs",
