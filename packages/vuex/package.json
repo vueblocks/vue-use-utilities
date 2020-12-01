@@ -1,6 +1,6 @@
 {
   "name": "@vueblocks/vue-use-vuex",
-  "description": "Use Vuex With Composition API Easyily.",
+  "description": "Use Vuex With Composition API Easily.",
   "version": "0.1.0",
   "main": "lib/index.cjs.js",
   "types": "lib/index.d.ts",

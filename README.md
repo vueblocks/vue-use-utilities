@@ -1,4 +1,4 @@
-# Vue Use
+# Vue Use Utilities
 
 Vue composition-api utilities build on top of `vue-demi` & `@vue/compostion-api`. It works both for Vue 2 & 3.
 

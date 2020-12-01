@@ -1,6 +1,6 @@
-import { customRef } from 'vue-demi'
+import { customRef, Ref } from 'vue-demi'
 
-const useDebouncedRef = (value: any, delay = 200) => {
+const useDebouncedRef = (value: any, delay = 200): Ref => {
   let timeout: any
   return customRef((track, trigger) => {
     return {

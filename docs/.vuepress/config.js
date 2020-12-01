@@ -7,7 +7,7 @@ module.exports = {
     sidebarDepth: 2,
     nav: [
       {
-        text: 'Document',
+        text: 'Guide',
         link: '/guide/'
       },
       {
@@ -41,6 +41,10 @@ module.exports = {
           sidebarDepth: 1,
           children: [
             '/guide/vuex/useVuex',
+            '/guide/vuex/useState',
+            '/guide/vuex/useGetters',
+            '/guide/vuex/useActions',
+            '/guide/vuex/useMutations'
           ]
         },
         {
@@ -53,5 +57,8 @@ module.exports = {
         }
       ]
     }
+  },
+  markdown: {
+    lineNumbers: true
   }
 }

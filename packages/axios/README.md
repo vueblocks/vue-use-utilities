@@ -1,6 +1,6 @@
 # @vueblocks/vue-use-axios
 
-> Use Axios With Composition API Easyily.
+> Use Axios With Composition API Easily.
 
 ## Install
 

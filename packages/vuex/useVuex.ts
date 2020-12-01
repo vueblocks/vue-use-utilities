@@ -1,5 +1,5 @@
-// import { Store } from 'vuex/types'
-import { computed, getCurrentInstance } from 'vue-demi'
+import { Store } from 'vuex/types'
+import { computed, getCurrentInstance, ComputedRef } from 'vue-demi'
 // import { isObject, isNull } from 'lodash'
 
 const isObject = (arg: any): boolean => Object.prototype.toString.call(arg) === '[object Object]'
@@ -27,7 +27,7 @@ const mapFormArray = (
   namespace: string | null,
   map: Array<string>,
   cb: Function
-) => {
+): [] => {
   // console.group('mapFromArray')
   // console.log(namespace)
   // console.log(map)
@@ -45,7 +45,7 @@ const mapFromObject = (
   namespace: string,
   map: any,
   cb: Function
-) => {
+): object => {
   // console.group('mapFromObject')
   // console.log(useType)
   // console.log(namespace)
@@ -67,7 +67,7 @@ const mapFromObject = (
   return result
 }
 
-const useVuexKeys = (store: any, namespace: string, type: string) => {
+const useVuexKeys = (store: any, namespace: string, type: string): string[] => {
   const { state, getters, _mutations, _actions } = store
 
   const keysMap: any = {
@@ -99,19 +99,19 @@ const useMapping = (
   }
 }
 
-const computedGetter = (store: any = null, namespace: string, prop: string) => {
+const computedGetter = (store: any = null, namespace: string, prop: string): ComputedRef => {
   if (!store) store = getStoreFromInstance()
 
   return computed(() => store.getters[prop])
 }
 
-const computedState = (store: any = null, namespace: string, prop: string) => {
+const computedState = (store: any = null, namespace: string, prop: string): ComputedRef => {
   if (!store) store = getStoreFromInstance()
 
   return computed(() => store.state[namespace][prop])
 }
 
-const computedMethods = (store: any = null, namespace: string, cb: Function) => {
+const computedMethods = (store: any = null, namespace: string, cb: Function): ComputedRef => {
   const { state, getters } = store
 
   return computed(() => cb(state[namespace], getters))

@@ -1,6 +1,6 @@
 # @vueblocks/vue-use-vuex
 
-> Use Vuex With Composition API Easyily.
+> Use Vuex With Composition API Easily.
 
 ## Install
 
