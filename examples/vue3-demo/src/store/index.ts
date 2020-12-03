@@ -1,4 +1,8 @@
-import { createStore } from 'vuex'
+import { createStore, ActionContext } from 'vuex'
+
+export interface State {
+  count: number;
+}
 
 // root state object.
 // each Vuex instance is just a single state tree.
@@ -6,7 +10,7 @@ const state = {
   count: 0
 }
 
-export type State = typeof state
+export type RootState = typeof state
 
 // mutations are operations that actually mutate the state.
 // each mutation handler gets the entire state tree as the
@@ -25,17 +29,18 @@ const mutations = {
 // actions are functions that cause side effects and can involve
 // asynchronous operations.
 const actions = {
-  increment: ({ commit }) => commit('increment'),
-  decrement: ({ commit }) => commit('decrement'),
-  incrementIfOdd ({ commit, state }) {
+  increment: (ctx: ActionContext<State, RootState>) => ctx.commit('increment'),
+  decrement: (ctx: ActionContext<State, RootState>) => ctx.commit('decrement'),
+  incrementIfOdd (ctx: ActionContext<State, RootState>) {
+    const { commit, state } = ctx
     if ((state.count + 1) % 2 === 0) {
       commit('increment')
     }
   },
-  incrementAsync ({ commit }) {
-    return new Promise((resolve, reject) => {
+  incrementAsync (ctx: ActionContext<State, RootState>) {
+    return new Promise((resolve) => {
       setTimeout(() => {
-        commit('increment')
+        ctx.commit('increment')
         resolve()
       }, 1000)
     })
@@ -49,7 +54,7 @@ const getters = {
 
 // A Vuex instance is created by combining the state, mutations, actions,
 // and getters.
-export default createStore({
+export default createStore<State>({
   state,
   getters,
   mutations,

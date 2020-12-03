@@ -14,7 +14,6 @@
 
 <script>
 import { useVuex } from '@vueblocks/vue-use-vuex'
-import { getCurrentInstance } from 'vue-demi'
 
 export default {
   setup () {

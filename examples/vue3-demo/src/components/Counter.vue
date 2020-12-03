@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Clicked: {{ $store.state.count }} times, count is {{ evenOrOdd }}.
+    Clicked: {{ count }} times, count is {{ evenOrOdd }}.
     <br>
     <button @click="increment">+</button>
     <br>
@@ -13,18 +13,21 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-import { useVuex } from '@vueblock/vue-use-vuex'
+import { computed, defineComponent } from 'vue'
+import { useStore } from 'vuex'
+import { useVuex } from '@vueblocks/vue-use-vuex'
 
 export default defineComponent({
   setup () {
-    const { useGetters, useActions } = useVuex
+    const store = useStore()
+    const { useGetters, useActions } = useVuex()
 
     return {
-      ...useGetters([
+      count: computed(() => store.state.count),
+      ...useGetters(null, [
         'evenOrOdd'
       ]),
-      ...useActions([
+      ...useActions(null, [
         'increment',
         'decrement',
         'incrementIfOdd',
