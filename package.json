@@ -6,6 +6,7 @@
     "dev": "vuepress dev docs",
     "build:docs": "vuepress build docs",
     "build:lib": "rollup -c rollup.config.js",
+    "release": "lerna publish",
     "test": "jest"
   },
   "devDependencies": {

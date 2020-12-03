@@ -40,8 +40,11 @@ for (const { name, display, external, globals } of activePackages) {
         plugins: [
           terser({
             format: {
-              comments: false,
+              comments: false
             },
+            compress: {
+              drop_console: true
+            }
           }),
         ],
       },

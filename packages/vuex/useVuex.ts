@@ -1,6 +1,4 @@
-import { Store } from 'vuex/types'
-import { computed, getCurrentInstance, ComputedRef } from 'vue-demi'
-// import { isObject, isNull } from 'lodash'
+import { computed, getCurrentInstance, ComputedRef, isVue3 } from 'vue-demi'
 
 const isObject = (arg: any): boolean => Object.prototype.toString.call(arg) === '[object Object]'
 
@@ -20,7 +18,25 @@ const getStoreFromInstance = () => {
   if (!vm) {
     console.error('You must use this function within the "setup()" method, or insert the store as first argument.')
   }
-  return vm.$store
+  return isVue3 ? vm.ctx.$store : vm.$store
+}
+
+const computedGetter = (store: any = null, namespace: string, prop: string): ComputedRef => {
+  if (!store) store = getStoreFromInstance()
+
+  return computed(() => store.getters[prop])
+}
+
+const computedState = (store: any = null, namespace: string, prop: string): ComputedRef => {
+  if (!store) store = getStoreFromInstance()
+
+  return computed(() => store.state[namespace][prop])
+}
+
+const computedMethods = (store: any = null, namespace: string, cb: Function): ComputedRef => {
+  const { state, getters } = store
+
+  return computed(() => cb(state[namespace], getters))
 }
 
 const mapFormArray = (
@@ -53,13 +69,13 @@ const mapFromObject = (
   // console.log(cb)
   // console.groupEnd()
 
-  let result: any = {}
-  for (let key in map) {
+  const result: any = {}
+  for (const key in map) {
     const prop = getProperty(map, key)
     if (typeof prop === 'function' && !isNull(namespace)) {
       result[key] = computedMethods(store, namespace, prop)
     }
-    
+
     if (props.includes(prop)) {
       result[key] = cb(null, namespace, prop)
     }
@@ -71,10 +87,10 @@ const useVuexKeys = (store: any, namespace: string, type: string): string[] => {
   const { state, getters, _mutations, _actions } = store
 
   const keysMap: any = {
-    'useState': state[namespace],
-    'useGetters': getters,
-    'useMutations': _mutations,
-    'useActions': _actions
+    useState: state[namespace],
+    useGetters: getters,
+    useMutations: _mutations,
+    useActions: _actions
   }
 
   return Object.keys(keysMap[type])
@@ -99,39 +115,19 @@ const useMapping = (
   }
 }
 
-const computedGetter = (store: any = null, namespace: string, prop: string): ComputedRef => {
-  if (!store) store = getStoreFromInstance()
-
-  return computed(() => store.getters[prop])
-}
-
-const computedState = (store: any = null, namespace: string, prop: string): ComputedRef => {
-  if (!store) store = getStoreFromInstance()
-
-  return computed(() => store.state[namespace][prop])
-}
-
-const computedMethods = (store: any = null, namespace: string, cb: Function): ComputedRef => {
-  const { state, getters } = store
-
-  return computed(() => cb(state[namespace], getters))
-}
-
 const getMutations = (store: any = null, namespace: string, type: string) => {
   if (!store) store = getStoreFromInstance()
 
-  return function mappedMutation () {
-    const args: IArguments = arguments
-    return store.commit.apply(store, [type, ...args])
+  return function mappedMutation (...args: string[]) {
+    return store.commit(type, ...args)
   }
 }
 
 const getActions = (store: any = null, namespace: string, action: string) => {
   if (!store) store = getStoreFromInstance()
 
-  return function mappedAction () {
-    const args: IArguments = arguments
-    return store.dispatch.apply(store, [action, ...args])
+  return function mappedAction (...args: string[]) {
+    return store.dispatch(action, args)
   }
 }
 
@@ -181,7 +177,7 @@ const createNamespacedHelpers = (namespace: string) => ({
 
 const useVuex = (store: any) => {
   if (!store) store = getStoreFromInstance()
-  console.log(store)
+  // console.log(store)
   return {
     useState: useState.bind(null, store),
     useGetters: useGetters.bind(null, store),
