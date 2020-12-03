@@ -1,15 +1,12 @@
 {
   "name": "@vueblocks/vue-use-utilities",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A collection of Vue composition-api utilities",
   "scripts": {
     "dev": "vuepress dev docs",
     "build:docs": "vuepress build docs",
     "build:lib": "rollup -c rollup.config.js",
     "test": "jest"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "devDependencies": {
     "@types/jest": "^26.0.15",
