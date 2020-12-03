@@ -1,7 +1,7 @@
 export const packages = [
   {
     name: 'core',
-    display: 'VueUse',
+    display: 'VueUseUtilities',
     description: 'Collection of essential Vue Composition API',
     external: [
       'lodash',

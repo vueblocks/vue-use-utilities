@@ -17,7 +17,9 @@
   "keywords": [
     "vue",
     "vue-use",
-    "axios"
+    "axios",
+    "composition-api",
+    "utilities"
   ],
   "author": "xiaoluoboding<https://github.com/xiaoluoboding>",
   "license": "MIT",
