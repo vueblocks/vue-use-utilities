@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-beta.20",
-    "@vueblocks/vue-use-vuex": "^0.1.5",
+    "@vueblocks/vue-use-vuex": "^0.1.6",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-demi": "^0.4.5",
