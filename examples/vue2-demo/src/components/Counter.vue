@@ -13,27 +13,18 @@
 </template>
 
 <script>
-// import { mapGetters, mapActions } from 'vuex
-import { useVuex } from '@vueblock/vue-use-vuex'
+import { useVuex } from '@vueblocks/vue-use-vuex'
+import { getCurrentInstance } from 'vue-demi'
 
 export default {
-  // computed: mapGetters([
-  //   'evenOrOdd'
-  // ]),
-  // methods: mapActions([
-  //   'increment',
-  //   'decrement',
-  //   'incrementIfOdd',
-  //   'incrementAsync'
-  // ]),
   setup () {
-    const { useGetters, useActions } = useVuex
+    const { useGetters, useActions } = useVuex()
 
     return {
-      ...useGetters([
+      ...useGetters(null, [
         'evenOrOdd'
       ]),
-      ...useActions([
+      ...useActions(null, [
         'increment',
         'decrement',
         'incrementIfOdd',

@@ -1380,6 +1380,14 @@
   resolved "https://registry.npm.taobao.org/@vue/web-component-wrapper/download/@vue/web-component-wrapper-1.2.0.tgz#bb0e46f1585a7e289b4ee6067dcc5a6ae62f1dd1"
   integrity sha1-uw5G8VhafiibTuYGfcxaauYvHdE=
 
+"@vueblocks/vue-use-vuex@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-vuex/-/vue-use-vuex-0.1.5.tgz#f8f6adf863c4a322dbf487debfd66cf5cfdd238d"
+  integrity sha512-4bTdDlY+eE+KXGvCsCfVxIQ0RlmyxFttwPBFkiCit0vir/JkWgGtSWOd/8NzSu8LV6nGbPRoZ9sxuj9HwDRRUg==
+  dependencies:
+    "@vue/composition-api" "^1.0.0-beta.20"
+    vue-demi "^0.4.5"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.npm.taobao.org/@webassemblyjs/ast/download/@webassemblyjs/ast-1.9.0.tgz?cache=0&sync_timestamp=1601756680107&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40webassemblyjs%2Fast%2Fdownload%2F%40webassemblyjs%2Fast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
