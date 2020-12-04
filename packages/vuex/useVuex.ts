@@ -1,166 +1,187 @@
-import { computed, getCurrentInstance, ComputedRef, isVue3 } from 'vue-demi'
+import { computed, getCurrentInstance, isVue3 } from 'vue-demi'
+import { Store } from 'vuex'
 
-const isObject = (arg: any): boolean => Object.prototype.toString.call(arg) === '[object Object]'
-
-const isNull = (val: any) => val === null
-
-const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => obj[key]
+const isObject = (obj: any) => obj === Object(obj)
+const partial = (fn: Function, ...partials: Array<any>) => (...args: Array<any>) => fn(...partials, ...args)
 
 /**
  * Validate whether given map is valid or not
  * @param {*} map
  * @return {Boolean}
  */
-const isValidMap = (map: Array<string> | object): boolean => Array.isArray(map) || isObject(map)
-
-const getStoreFromInstance = () => {
-  const vm: any = getCurrentInstance()
-  if (!vm) {
-    console.error('You must use this function within the "setup()" method, or insert the store as first argument.')
-  }
-  return isVue3 ? vm.ctx.$store : vm.$store
+function isValidMap (map: Array<string> | object) {
+  return Array.isArray(map) || isObject(map)
 }
 
-const computedGetter = (store: any = null, namespace: string, prop: string): ComputedRef => {
-  if (!store) store = getStoreFromInstance()
-
-  return computed(() => store.getters[prop])
-}
-
-const computedState = (store: any = null, namespace: string, prop: string): ComputedRef => {
-  if (!store) store = getStoreFromInstance()
-
-  return computed(() => store.state[namespace][prop])
-}
-
-const computedMethods = (store: any = null, namespace: string, cb: Function): ComputedRef => {
-  const { state, getters } = store
-
-  return computed(() => cb(state[namespace], getters))
-}
-
-const mapFormArray = (
-  namespace: string | null,
-  map: Array<string>,
-  cb: Function
-): [] => {
-  // console.group('mapFromArray')
-  // console.log(namespace)
-  // console.log(map)
-  // console.log(cb)
-  // console.groupEnd()
-  return map.reduce((result: any, prop) => {
-    result[prop] = cb(null, namespace, prop)
-    return result
-  }, {} as any)
-}
-
-const mapFromObject = (
-  props: Array<string>,
-  store: any,
-  namespace: string,
-  map: any,
-  cb: Function
-): object => {
-  // console.group('mapFromObject')
-  // console.log(useType)
-  // console.log(namespace)
-  // console.log(map)
-  // console.log(cb)
-  // console.groupEnd()
-
-  const result: any = {}
-  for (const key in map) {
-    const prop = getProperty(map, key)
-    if (typeof prop === 'function' && !isNull(namespace)) {
-      result[key] = computedMethods(store, namespace, prop)
-    }
-
-    if (props.includes(prop)) {
-      result[key] = cb(null, namespace, prop)
-    }
-  }
-  return result
-}
-
-const useVuexKeys = (store: any, namespace: string, type: string): string[] => {
-  const { state, getters, _mutations, _actions } = store
-
-  const keysMap: any = {
-    useState: state[namespace],
-    useGetters: getters,
-    useMutations: _mutations,
-    useActions: _actions
-  }
-
-  return Object.keys(keysMap[type])
-}
-
-const useMapping = (
-  type: string,
-  store: any,
-  namespace: string,
-  map: Array<string> | object,
-  cb: Function
-) => {
-  if (!map) return {}
-
-  if (Array.isArray(map)) {
-    return mapFormArray(namespace, map, cb)
-  }
-
-  if (isObject(map)) {
-    const vuexKeys = useVuexKeys(store, namespace, type)
-    return mapFromObject(vuexKeys, store, namespace, map, cb)
-  }
-}
-
-const getMutations = (store: any = null, namespace: string, type: string) => {
-  if (!store) store = getStoreFromInstance()
-
-  return function mappedMutation (...args: string[]) {
-    return store.commit(type, ...args)
-  }
-}
-
-const getActions = (store: any = null, namespace: string, action: string) => {
-  if (!store) store = getStoreFromInstance()
-
-  return function mappedAction (...args: string[]) {
-    return store.dispatch(action, args)
-  }
-}
-
-const useGetters = (store: any, namespace: string, map: Array<string> | object) => {
+/**
+ * Normalize the map
+ * normalizeMap([1, 2, 3]) => [ { key: 1, val: 1 }, { key: 2, val: 2 }, { key: 3, val: 3 } ]
+ * normalizeMap({a: 1, b: 2, c: 3}) => [ { key: 'a', val: 1 }, { key: 'b', val: 2 }, { key: 'c', val: 3 } ]
+ * @param {Array|Object} map
+ * @return {Object}
+ */
+function normalizeMap (map: any) {
   if (!isValidMap(map)) {
-    console.error('[vuex] useGetters: mapper parameter must be either an Array or an Object')
+    return []
   }
-
-  return useMapping.bind(null, useGetters.name)(store, namespace, map, computedGetter)
+  return Array.isArray(map)
+    ? map.map((key: string) => ({ key, val: key }))
+    : Object.keys(map).map(key => ({ key, val: map[key] }))
 }
 
-const useState = (store: any, namespace: string, map: Array<string> | object) => {
-  if (!isValidMap(map)) {
+/**
+ * Return a function expect two param contains namespace and map. it will normalize the namespace and then the param's function will handle the new namespace and the map.
+ * @param {Function} fn
+ * @return {Function}
+ */
+function normalizeNamespace (fn: Function) {
+  return (namespace: string, map: Array<string> | object) => {
+    if (typeof namespace !== 'string') {
+      map = namespace
+      namespace = ''
+    } else if (namespace.charAt(namespace.length - 1) !== '/') {
+      namespace += '/'
+    }
+    return fn(namespace, map)
+  }
+}
+
+/**
+ * Search a special module from store by namespace. if module not exist, print error message.
+ * @param {Object} store
+ * @param {String} helper
+ * @param {String} namespace
+ * @return {Object}
+ */
+function getModuleByNamespace (store: any, helper: string, namespace: string) {
+  const module = store._modulesNamespaceMap[namespace]
+  if (__DEV__ && !module) {
+    console.error(`[vuex] module namespace not found in ${helper}(): ${namespace}`)
+  }
+  return module
+}
+
+/**
+ * Reduce the code which written in Vue.js for getting the state.
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
+ * @param {Object}
+ */
+export const mapState = (store: any, namespace: string, states: Array<string> | object) => {
+  const res: any = {}
+  if (__DEV__ && !isValidMap(states)) {
     console.error('[vuex] useState: mapper parameter must be either an Array or an Object')
   }
-
-  return useMapping.bind(null, useState.name)(store, namespace, map, computedState)
+  normalizeMap(states).forEach(({ key, val }) => {
+    res[key] = computed(function mappedState () {
+      let state = store.state
+      let getters = store.getters
+      if (namespace) {
+        const module = getModuleByNamespace(store, 'mapState', namespace)
+        if (!module) {
+          return
+        }
+        state = module.context.state
+        getters = module.context.getters
+      }
+      return typeof val === 'function'
+        ? val(state, getters)
+        : state[val]
+    })
+    // mark vuex getter for devtools
+    // res[key].vuex = true
+  })
+  return res
 }
 
-const useMutations = (store: any, namespace: string, map: Array<string> | object) => {
-  if (!isValidMap(map)) {
-    console.error('[vuex] useMutations: mapper parameter must be either an Array or an Object')
+/**
+ * Reduce the code which written in Vue.js for committing the mutation
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept anthor params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+export const mapMutations = (store: any, namespace: string, mutations: Array<string> | object) => {
+  const res: any = {}
+  if (__DEV__ && !isValidMap(mutations)) {
+    console.error('[vuex] mapMutations: mapper parameter must be either an Array or an Object')
   }
-
-  return useMapping.bind(null, useMutations.name)(store, namespace, map, getMutations)
+  normalizeMap(mutations).forEach(({ key, val }) => {
+    res[key] = function mappedMutation (...args: Array<string>) {
+      // Get the commit method from store
+      let commit = store.commit
+      if (namespace) {
+        const module = getModuleByNamespace(store, 'mapMutations', namespace)
+        if (!module) {
+          return
+        }
+        commit = module.context.commit
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [commit].concat(args))
+        : commit.apply(store, [val].concat(args))
+    }
+  })
+  return res
 }
 
-const useActions = (store: any, namespace: string, map: Array<string> | object) => {
-  if (!isValidMap(map)) {
-    console.error('[vuex] useActions: mapper parameter must be either an Array or an Object')
+/**
+ * Reduce the code which written in Vue.js for getting the getters
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} getters
+ * @return {Object}
+ */
+export const mapGetters = (store: any, namespace: string, getters: Array<string> | object) => {
+  const res: any = {}
+  if (__DEV__ && !isValidMap(getters)) {
+    console.error('[vuex] mapGetters: mapper parameter must be either an Array or an Object')
   }
+  normalizeMap(getters).forEach(({ key, val }) => {
+    // The namespace has been mutated by normalizeNamespace
+    val = namespace + val
+    res[key] = computed(function mappedGetter () {
+      if (namespace && !getModuleByNamespace(store, 'mapGetters', namespace)) {
+        return
+      }
+      if (__DEV__ && !(val in store.getters)) {
+        console.error(`[vuex] unknown getter: ${val}`)
+        return
+      }
+      return store.getters[val]
+    })
+    // mark vuex getter for devtools
+    // res[key].vuex = true
+  })
+  return res
+}
 
-  return useMapping.bind(null, useActions.name)(store, namespace, map, getActions)
+/**
+ * Reduce the code which written in Vue.js for dispatch the action
+ * @param {String} [namespace] - Module's namespace
+ * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
+ * @return {Object}
+ */
+export const mapActions = (store: any, namespace: string, actions: Array<string> | object) => {
+  const res: any = {}
+  if (__DEV__ && !isValidMap(actions)) {
+    console.error('[vuex] mapActions: mapper parameter must be either an Array or an Object')
+  }
+  normalizeMap(actions).forEach(({ key, val }) => {
+    res[key] = function mappedAction (...args: Array<string>) {
+      // get dispatch function from store
+      let dispatch = store.dispatch
+      if (namespace) {
+        const module = getModuleByNamespace(store, 'mapActions', namespace)
+        if (!module) {
+          return
+        }
+        dispatch = module.context.dispatch
+      }
+      return typeof val === 'function'
+        ? val.apply(this, [dispatch].concat(args))
+        : dispatch.apply(store, [val].concat(args))
+    }
+  })
+  return res
 }
 
 /**
@@ -168,24 +189,47 @@ const useActions = (store: any, namespace: string, map: Array<string> | object) 
  * @param {String} namespace
  * @return {Object}
  */
-const createNamespacedHelpers = (namespace: string) => ({
-  mapState: useState.bind(null, namespace),
-  mapGetters: useGetters.bind(null, namespace),
-  mapMutations: useMutations.bind(null, namespace),
-  mapActions: useActions.bind(null, namespace)
-})
-
-const useVuex = (store: any) => {
-  if (!store) store = getStoreFromInstance()
-  // console.log(store)
+export const createNamespacedHelpers = (store: any, namespace: string) => {
+  // pre-specify initial arguments with store instance
   return {
-    useState: useState.bind(null, store),
-    useGetters: useGetters.bind(null, store),
-    useMutations: useMutations.bind(null, store),
-    useActions: useActions.bind(null, store),
-    getStoreFromInstance,
-    createNamespacedHelpers
+    useState: partial(normalizeNamespace(partial(mapState, store)), namespace),
+    useGetters: partial(normalizeNamespace(partial(mapGetters, store)), namespace),
+    useMutations: partial(normalizeNamespace(partial(mapMutations, store)), namespace),
+    useActions: partial(normalizeNamespace(partial(mapActions, store)), namespace)
   }
+}
+
+/**
+ * Get $store from current instance
+ * @return {Store} ### vm.$store
+ */
+const getStoreFromInstance = () => {
+  const vm: any = getCurrentInstance()
+  if (!vm) {
+    console.error('You must use this function within the "setup()" method')
+  }
+  return isVue3 ? vm.ctx.$store : vm.$store
+}
+
+/**
+ * Use Vuex with composition api easily. Both support Vue2.x / Vue3.x
+ * @param {String} namespace
+ * @param {Store} store ### vm.$store
+ */
+function useVuex (namespace?: string, store?: Store<any>) {
+  if (!store) store = getStoreFromInstance()
+  // pre-specify initial arguments with store instance
+  let helpers = {
+    useState: normalizeNamespace(partial(mapState, store)),
+    useGetters: normalizeNamespace(partial(mapGetters, store)),
+    useMutations: normalizeNamespace(partial(mapMutations, store)),
+    useActions: normalizeNamespace(partial(mapActions, store))
+  }
+
+  if (arguments.length === 1 && namespace) {
+    helpers = partial(createNamespacedHelpers, store)(namespace)
+  }
+  return helpers
 }
 
 export { useVuex }
