@@ -15,19 +15,20 @@
 <script>
 import { computed, defineComponent } from 'vue'
 import { useStore } from 'vuex'
-import { useVuex } from '@vueblocks/vue-use-vuex'
+// import { useVuex } from '@vueblocks/vue-use-vuex'
+import useVuex from '../utils/helper'
 
 export default defineComponent({
   setup () {
     const store = useStore()
-    const { useGetters, useActions } = useVuex()
+    const { useGetters, useActions } = useVuex('counter')
 
     return {
-      count: computed(() => store.state.count),
-      ...useGetters(null, [
+      count: computed(() => store.state.counter.count),
+      ...useGetters([
         'evenOrOdd'
       ]),
-      ...useActions(null, [
+      ...useActions([
         'increment',
         'decrement',
         'incrementIfOdd',
