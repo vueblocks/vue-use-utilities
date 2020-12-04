@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Clicked: {{ $store.state.count }} times, count is {{ evenOrOdd }}.
+    Clicked: {{ count }} times, count is {{ evenOrOdd }}.
     <br>
     <button @click="increment">+</button>
     <br>
@@ -13,17 +13,57 @@
 </template>
 
 <script>
-import { useVuex } from '@vueblocks/vue-use-vuex'
+// import { useVuex } from '@vueblocks/vue-use-vuex'
+// import useVuex from '@/utils/useVuex'
+import useVuex from '@/utils/helper'
 
 export default {
+  // mounted () {
+  //   console.group('--- mounted ---')
+  //   console.log(this.$store)
+  //   console.log(Object.keys(this.$store.state))
+  //   console.log(Object.keys(this.$store.getters))
+  //   console.log(Object.keys(this.$store._mutations))
+  //   console.log(Object.keys(this.$store._actions))
+  //   console.groupEnd()
+  // },
   setup () {
-    const { useGetters, useActions } = useVuex()
+    // const { useGetters, useActions } = useVuex()
+    const { useState, useGetters, useActions } = useVuex('counter')
 
     return {
-      ...useGetters(null, [
+      // ...useGetters([
+      //   'isDarkmode'
+      // ]),
+      // ...useGetters('counter', [
+      //   'evenOrOdd'
+      // ]),
+      // ...useGetters({
+      //   isDark: 'isDarkmode'
+      // }),
+      // ...useGetters('counter', {
+      //   evenOrOdd1: 'evenOrOdd'
+      // }),
+      // ...useActions('counter', [
+      //   'increment',
+      //   'decrement',
+      //   'incrementIfOdd',
+      //   'incrementAsync'
+      // ])
+      ...useState(['count']),
+      ...useGetters([
+        'isDarkmode'
+      ]),
+      ...useGetters([
         'evenOrOdd'
       ]),
-      ...useActions(null, [
+      ...useGetters({
+        isDark: 'isDarkmode'
+      }),
+      ...useGetters({
+        evenOrOdd1: 'evenOrOdd'
+      }),
+      ...useActions([
         'increment',
         'decrement',
         'incrementIfOdd',
