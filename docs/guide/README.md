@@ -9,7 +9,7 @@ Vue 2 / 3 Project. Build on top of [vue-demi](https://github.com/antfu/vue-demi)
 
 This libary is inspired by [@vueuse/core](https://github.com/antfu/vueuse) also other similar projects.
 
-## Why another wheel yet?
+## Why create another wheel yet
 
 I also have some idea，Maybe Usefull. 😄
 
