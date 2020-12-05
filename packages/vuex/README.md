@@ -5,59 +5,47 @@
 ## Install
 
 ```bash
-yarn add @vueblocks/vue-use-vuex
+# Vue 2 with @vue/composition-api
+yarn add @vue/composition-api @vueblocks/vue-use-vuex -S
+or
+npm i @vue/composition-api @vueblocks/vue-use-vuex -S
+
+# Vue 3
+yarn add @vueblocks/vue-use-vuex -S
+or
+npm i @vueblocks/vue-use-vuex -S
 ```
 
 ## Usage
 
 `useVuex` utilities just similar with [Vuex Component Binding Helpers](https://vuex.vuejs.org/api/#component-binding-helpers)
 
-It export these utilities:
+It export these composable helpers:
 
-* useState
-* useGetters
-* useMutations
-* useActions
+* [useState](./useState.md) - same as `mapState` helper in Vuex
+* [useGetters](./useGetters.md) - same as `mapGetters` helper in Vuex
+* [useMutations](./useMutations.md) - same as `mapMutations` helper in Vuex
+* [useActions](./useActions.md) - same as `mapActions` helper in Vuex
 
-### useState
+Differently, `useVuex` do not export `createNamespacedHelpers` function, Instead `useVuex` allow you provide
+the namespace as first argument, then return will be the namespaced component binding helpers.
 
-```js
-import { useVuex } from '@vueblocks/vue-use-vuex'
+Read more about namespacing [documention](./namespacing.md).
 
-export default {
-  ...
-  setup () {
-    const { useState } = useVuex()
+It seems familiar right?
 
-    // 写法1: 传字符串参数 'language' 等同于 `state => state.language`
-    const localState = useState('global', {
-      theme: 'theme',
-      lang: 'lang'
-    })
+## Typing
 
-    // 写法2: 箭头函数可使代码更简练
-    const localState = useState('global', {
-      theme: state => state.theme,
-      lang: state => state.lang
-    })
-
-    // 写法3: 常规函数用于计算，等同于箭头函数
-    const localState = useState('global', {
-      customTheme (state) {
-        return 'custom' + state.theme
-      }
-    })
-
-    // 写法4: 直接映射节点名称相同的计算属性
-    const localState = useState('global', [
-      'theme',
-      'lang'
-    ])
-  }
-  ...
-}
+```ts
+/**
+ * Use Vuex with composition api easily. Both support Vue2.x / Vue3.x
+ * @param {String} namespace
+ * @param {Store} store ### vm.$store
+ */
+declare function useVuex(namespace?: string, store?: Store<any>): {
+  useState: (namespace?: string, map: Array<string> | Object<string | function>) => Object<ComputedRef>
+  useGetters: (namespace?: string, map: Array<string> | Object<string>) => Object<ComputedRef>
+  useMutations: (namespace?: string, map: Array<string> | Object<string | function>) => Object
+  useActions: (namespace?: string, map: Array<string> | Object<string | function>) => Object
+};
 ```
-
-## License
-
-MIT [@xiaoluoboding](https://github.com/xiaoluoboding)
