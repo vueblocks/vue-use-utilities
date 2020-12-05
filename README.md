@@ -16,6 +16,10 @@ or
 npm i @vueblocks/vue-use-core -S
 ```
 
+## Demos
+
+Vue 2 Demo: [Vue CLI 2.x](./examples/vue2-demo/README.md)  |  Vue 3 Demo: [Vue CLI 3.x](./examples/vue3-demo/README.md)
+
 ## Usage
 
 ```html
@@ -43,6 +47,10 @@ export default {
   ...
 }
 ```
+
+## Documentation
+
+Check our [documentation](https://vue-use-utilities.vercel.app/)
 
 ## Integration
 

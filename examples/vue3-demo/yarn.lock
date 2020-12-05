@@ -1541,10 +1541,10 @@
   resolved "https://registry.npm.taobao.org/@vue/web-component-wrapper/download/@vue/web-component-wrapper-1.2.0.tgz#bb0e46f1585a7e289b4ee6067dcc5a6ae62f1dd1"
   integrity sha1-uw5G8VhafiibTuYGfcxaauYvHdE=
 
-"@vueblocks/vue-use-vuex@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-vuex/-/vue-use-vuex-0.1.6.tgz#02781cbd97e9600878b9f5f7af0111f5d0fc2d54"
-  integrity sha512-LZeDRkqr3XgylZh7JTY/TyGxmRxkdusLVABsPvA23zQkZPVb64+4oVUUnlna2AdPQCqfmj4vXizTOUUxu+E2Gg==
+"@vueblocks/vue-use-vuex@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-vuex/-/vue-use-vuex-0.1.7.tgz#5a576bc81b8ca0012d2d19e9c3dab790e1a51772"
+  integrity sha512-dkmku5EO5nbanEny8S27py7ozE7bK8bTTbcdb8i9Fg4QlTrRepWLe1NgJutT0vquU9pe0xipWqlW3OOCqO5Eew==
   dependencies:
     "@vue/composition-api" "^1.0.0-beta.20"
     vue-demi "^0.4.5"
