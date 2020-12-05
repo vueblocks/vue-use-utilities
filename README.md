@@ -2,9 +2,15 @@
 
 Vue composition-api utilities build on top of `vue-demi` & `@vue/compostion-api`. It works both for Vue 2 & 3.
 
-## Install
+## Installing
 
 ```bash
+# Vue 2 with @vue/composition-api
+yarn add @vue/composition-api @vueblocks/vue-use-core -S
+or
+npm i @vue/composition-api @vueblocks/vue-use-core -S
+
+# Vue 3
 yarn add @vueblocks/vue-use-core -S
 or
 npm i @vueblocks/vue-use-core -S
@@ -44,22 +50,22 @@ The Integration part provide utilities for commonly used libraries.
 
 ### Vuex
 
-`@vueblocks/vue-use-vuex` - Use Vuex With Composition API Easyily.
+`@vueblocks/vue-use-vuex` - Use Vuex With Composition API Easily.
 
 * `useState` - same as `mapState`
 * `useGetters` - same as `mapGetters`
 * `useMutations` - same as `mapMutations`
 * `useActions` - same as `mapActions`
 
-[Read Documents](./packages/vuex/README.md)
+[Read Docs](./packages/vuex/README.md)
 
 ### Axios
 
-`@vueblocks/vue-use-axios` - Use Axios with Compositon API Easyily.
+`@vueblocks/vue-use-axios` - Use Axios with Compositon API Easily.
 
 * useAxios
 
-[Read Documents](./packages/axios/README.md)
+[Read Docs](./packages/axios/README.md)
 
 ### Thanks
 

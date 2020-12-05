@@ -13,7 +13,7 @@ export interface PackageManifest {
 export const packages: PackageManifest[] = [
   {
     name: 'core',
-    display: 'VueUse',
+    display: 'VueUseUtilities',
     description: 'Collection of essential Vue Composition API',
     external: [
       'lodash',
@@ -27,7 +27,7 @@ export const packages: PackageManifest[] = [
   {
     name: 'vuex',
     display: 'Vuex',
-    description: 'Utilities for vuex',
+    description: 'Utilities for Vuex',
     addon: true,
     external: [
       'vuex'
@@ -39,7 +39,7 @@ export const packages: PackageManifest[] = [
   {
     name: 'axios',
     display: 'Axios',
-    description: 'Utilities for axios',
+    description: 'Utilities for Axios',
     addon: true,
     external: [
       'axios',
