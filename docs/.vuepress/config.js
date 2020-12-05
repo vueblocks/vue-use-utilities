@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Vue Use Utilities',
   description: 'A collection of Vue composition-api utilities',
-  base: '/vue-use-utilities/',
+  base: '/',
   port: 4848,
   themeConfig: {
     sidebarDepth: 2,
