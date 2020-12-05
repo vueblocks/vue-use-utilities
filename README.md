@@ -2,7 +2,7 @@
 
 Vue composition-api utilities build on top of `vue-demi` & `@vue/compostion-api`. It works both for Vue 2 & 3.
 
-## Installing
+## Installation
 
 ```bash
 # Vue 2 with @vue/composition-api

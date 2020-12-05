@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Vue Use Utilities',
   description: 'A collection of Vue composition-api utilities',
-  base: '/vue-use/',
+  base: '/vue-use-utilities/',
   port: 4848,
   themeConfig: {
     sidebarDepth: 2,
@@ -12,19 +12,16 @@ module.exports = {
       },
       {
         text: 'GitHub',
-        link: 'https://github.com/vueblocks/vue-use'
+        link: 'https://github.com/vueblocks/vue-use-utilities'
       },
     ],
     sidebar: {
       '/guide/': [
         {
-          title: 'Guide',
+          title: 'vue-use-utilities',
           collapsable: false,
           children: [
-            '',
-            'core',
-            'vuex',
-            'axios',
+            ''
           ]
         },
         {
@@ -44,7 +41,8 @@ module.exports = {
             '/guide/vuex/useState',
             '/guide/vuex/useGetters',
             '/guide/vuex/useActions',
-            '/guide/vuex/useMutations'
+            '/guide/vuex/useMutations',
+            '/guide/vuex/namespacing'
           ]
         },
         {
