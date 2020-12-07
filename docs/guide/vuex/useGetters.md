@@ -10,7 +10,7 @@ The first argument can optionally be a namespace string. [Details](./namespacing
 
 In order to access getters, you can simply use `useGetters` helper inside the setup hook. This is the equivalent of creating computed properties using the Option API.
 
-```js {4}
+```js {7}
 import { useVuex } from '@vueblocks/vue-use-vuex'
 
 export default {
