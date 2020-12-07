@@ -13,9 +13,7 @@
 </template>
 
 <script>
-// import { useVuex } from '@vueblocks/vue-use-vuex'
-// import useVuex from '@/utils/useVuex'
-import useVuex from '@/utils/helper'
+import { useVuex } from '@vueblocks/vue-use-vuex'
 
 export default {
   // mounted () {

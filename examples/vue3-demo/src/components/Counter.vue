@@ -16,7 +16,7 @@
 import { computed, defineComponent } from 'vue'
 import { useStore } from 'vuex'
 // import { useVuex } from '@vueblocks/vue-use-vuex'
-import useVuex from '../utils/helper'
+import useVuex from '../utils/useVuex'
 
 export default defineComponent({
   setup () {
