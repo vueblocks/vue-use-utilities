@@ -3,7 +3,14 @@ import typescript from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 import dts from 'rollup-plugin-dts'
 
+import pkg from '../package.json'
 import { activePackages } from './packages'
+
+const banner = `/*!
+ * @vueblocks/vue-use-vuex v${pkg.version}
+ * (c) ${new Date().getFullYear()} xiaoluoboding
+ * @license MIT
+ */`
 
 const configs = []
 interface IOutput {
@@ -40,6 +47,7 @@ const createOutputs = (arg: IOutput) => {
   let fileType = isMinify ? format + '.min' : format === 'es' ? 'esm' : format
   
   return {
+    banner,
     file: `packages/${name}/lib/index.${fileType}.js`,
     format,
     ...umdSettings,
