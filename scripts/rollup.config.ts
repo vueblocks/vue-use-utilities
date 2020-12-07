@@ -37,8 +37,10 @@ const createOutputs = (arg: IOutput) => {
     }
   }
 
+  let fileType = isMinify ? format + '.min' : format === 'es' ? 'esm' : format
+  
   return {
-    file: `packages/${name}/lib/index.${isMinify ? format + '.min' : format}.js`,
+    file: `packages/${name}/lib/index.${fileType}.js`,
     format,
     ...umdSettings,
     plugins
