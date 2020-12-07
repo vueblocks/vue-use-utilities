@@ -1,6 +1,21 @@
-# Vue Use Utilities
+<p align="center">
+    <!-- <a href="https://github.com/vueblocks/vue-use-utilities">
+        <img src="./docs/_media/icon.svg" width="152">
+    </a> -->
+    <h2 align="center">Vue Use Utilities</h2>
+    <br>
+    <p align="center">
+      <a href="https://www.npmjs.com/package/@vueblocks/vue-use-core"><img src="https://img.shields.io/npm/v/@vueblocks/vue-use-core.svg?maxAge=2592000"></a>
+      <a href="https://www.npmjs.com/package/@vueblocks/vue-use-core"><img src="https://img.shields.io/npm/dt/@vueblocks/vue-use-core.svg"></a>
+      <a href="https://github.com/vueblocks/vue-use-utilities/stargazers"><img src="https://img.shields.io/github/stars/vueblocks/vue-use-utilities.svg"></a>
+      <a href="https://raw.githubusercontent.com/vueblocks/vue-use-utilities/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+    </p>
+    <p align="center">
+       Vue Use Utilities build on top of `vue-demi` & `@vue/compostion-api`. It works both for Vue 2 & 3.
+    </p>
+    <br>
+</p>
 
-Vue composition-api utilities build on top of `vue-demi` & `@vue/compostion-api`. It works both for Vue 2 & 3.
 
 ## Installation
 
@@ -58,6 +73,9 @@ The Integration part provide utilities for commonly used libraries.
 
 ### Vuex
 
+<a href="https://www.npmjs.com/package/@vueblocks/vue-use-vuex"><img src="https://img.shields.io/npm/v/@vueblocks/vue-use-vuex.svg?maxAge=2592000"></a>
+<a href="https://www.npmjs.com/package/@vueblocks/vue-use-vuex"><img src="https://img.shields.io/npm/dt/@vueblocks/vue-use-vuex.svg"></a>
+
 `@vueblocks/vue-use-vuex` - Use Vuex With Composition API Easily.
 
 * `useState` - same as `mapState`
@@ -68,6 +86,9 @@ The Integration part provide utilities for commonly used libraries.
 [Read Docs](./packages/vuex/README.md)
 
 ### Axios
+
+<a href="https://www.npmjs.com/package/@vueblocks/vue-use-axios"><img src="https://img.shields.io/npm/v/@vueblocks/vue-use-axios.svg?maxAge=2592000"></a>
+<a href="https://www.npmjs.com/package/@vueblocks/vue-use-axios"><img src="https://img.shields.io/npm/dt/@vueblocks/vue-use-axios.svg"></a>
 
 `@vueblocks/vue-use-axios` - Use Axios with Compositon API Easily.
 
