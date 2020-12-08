@@ -1,7 +1,7 @@
 import { computed, getCurrentInstance, isVue3, ComputedRef } from 'vue-demi'
 import { Store } from 'vuex'
 
-import { isObject, partial } from './utils'
+import { isObject, isString, partial } from './utils'
 
 /**
  * Validate whether given map is valid or not
@@ -35,7 +35,7 @@ function normalizeMap (map: any) {
  */
 function normalizeNamespace<T> (fn: Function) {
   return (namespace?: any, map?: Array<string> | object): T => {
-    if (typeof namespace !== 'string') {
+    if (!isString(namespace)) {
       map = namespace
       namespace = ''
     } else if (namespace.charAt(namespace.length - 1) !== '/') {
@@ -225,7 +225,7 @@ function useVuex (namespace?: string, store?: Store<any>) {
     useActions: normalizeNamespace<object>(partial(useActions, store))
   }
 
-  if (arguments.length >= 1 && namespace) {
+  if (arguments.length >= 1 && isString(namespace)) {
     helpers = partial(createNamespacedHelpers, store)(namespace)
   }
   return helpers
