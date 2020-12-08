@@ -23,5 +23,5 @@ export default {
 ## Typing
 
 ```ts
-declare const useDebouncedRef: (value: any, delay?: number) => Ref
+declare const useDebouncedRef: (value: any, delay?: number) => Ref;
 ```

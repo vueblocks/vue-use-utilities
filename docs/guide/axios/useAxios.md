@@ -5,7 +5,15 @@
 ## Install
 
 ```bash
-yarn add @vueblocks/vue-use-axios
+# Vue 2 with @vue/composition-api
+yarn add @vue/composition-api @vueblocks/vue-use-axios -S
+or
+npm i @vue/composition-api @vueblocks/vue-use-axios -S
+
+# Vue 3
+yarn add @vueblocks/vue-use-axios -S
+or
+npm i @vueblocks/vue-use-axios -S
 ```
 
 ## Usage
@@ -37,6 +45,20 @@ export default {
 }
 ```
 
-## License
+## Typing
 
-MIT [@xiaoluoboding](https://github.com/xiaoluoboding)
+```ts
+interface IAxiosOptions {
+    debounce?: number;
+    throttle?: number;
+}
+declare const useAxios: (url: string, config?: AxiosRequestConfig | undefined, options?: IAxiosOptions | undefined) => {
+    refetch: () => void;
+    cancel: (message?: string | undefined) => void;
+    response: Ref<any>;
+    data: Ref<any>;
+    finished: Ref<boolean>;
+    canceled: Ref<boolean>;
+    error: Ref<any>;
+};
+```

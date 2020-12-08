@@ -1,7 +1,7 @@
 import { computed, getCurrentInstance, isVue3, ComputedRef } from 'vue-demi'
 import { Store } from 'vuex'
 
-import { isObject, partial } from './index'
+import { isObject, isString, partial } from './index'
 
 const __DEV__ = true
 
@@ -36,8 +36,8 @@ function normalizeMap (map: any) {
  * @return {Function}
  */
 function normalizeNamespace<T> (fn: Function) {
-  return (namespace?: string | Array<string> | object, map?: Array<string> | object): T => {
-    if (typeof namespace !== 'string') {
+  return (namespace?: any, map?: Array<string> | object): T => {
+    if (!isString(namespace)) {
       map = namespace
       namespace = ''
     } else if (namespace.charAt(namespace.length - 1) !== '/') {
@@ -68,7 +68,7 @@ function getModuleByNamespace (store: any, helper: string, namespace: string) {
  * @param {Object|Array} states # Object's item can be a function which accept state and getters for param, you can do something for state and getters in it.
  * @param {Object}
  */
-export const useState = (store: Store<any>, namespace: string, states: Array<string> | object): ComputedRef<any> => {
+export const useState = (store: Store<any>, namespace: string, states: Array<string> | object): object => {
   const res: any = {}
   if (__DEV__ && !isValidMap(states)) {
     console.error('[vuex] useState: mapper parameter must be either an Array or an Object')
@@ -101,7 +101,7 @@ export const useState = (store: Store<any>, namespace: string, states: Array<str
  * @param {Object|Array} mutations # Object's item can be a function which accept `commit` function as the first param, it can accept anthor params. You can commit mutation and do any other things in this function. specially, You need to pass anthor params from the mapped function.
  * @return {Object}
  */
-export const useMutations = (store: any, namespace: string, mutations: Array<string> | object) => {
+export const useMutations = (store: any, namespace: string, mutations: Array<string> | object): object => {
   const res: any = {}
   if (__DEV__ && !isValidMap(mutations)) {
     console.error('[vuex] useMutations: mapper parameter must be either an Array or an Object')
@@ -131,7 +131,7 @@ export const useMutations = (store: any, namespace: string, mutations: Array<str
  * @param {Object|Array} getters
  * @return {Object}
  */
-export const useGetters = (store: Store<any>, namespace: string, getters: Array<string> | object): ComputedRef<any> => {
+export const useGetters = (store: Store<any>, namespace: string, getters: Array<string> | object): object => {
   const res: any = {}
   if (__DEV__ && !isValidMap(getters)) {
     console.error('[vuex] useGetters: mapper parameter must be either an Array or an Object')
@@ -161,7 +161,7 @@ export const useGetters = (store: Store<any>, namespace: string, getters: Array<
  * @param {Object|Array} actions # Object's item can be a function which accept `dispatch` function as the first param, it can accept anthor params. You can dispatch action and do any other things in this function. specially, You need to pass anthor params from the mapped function.
  * @return {Object}
  */
-export const useActions = (store: any, namespace: string, actions: Array<string> | object) => {
+export const useActions = (store: any, namespace: string, actions: Array<string> | object): object => {
   const res: any = {}
   if (__DEV__ && !isValidMap(actions)) {
     console.error('[vuex] useActions: mapper parameter must be either an Array or an Object')
@@ -202,9 +202,9 @@ export const createNamespacedHelpers = (store: Store<any>, namespace: string) =>
 
 /**
  * Get $store from current instance
- * @return {Store} ### vm.$store
+ * @return {Store} vm.$store
  */
-const getStoreFromInstance = () => {
+export const useStore = (): Store<any> => {
   const vm: any = getCurrentInstance()
   if (!vm) {
     console.error('You must use this function within the "setup()" method')
@@ -215,10 +215,10 @@ const getStoreFromInstance = () => {
 /**
  * Use Vuex with composition api easily. Both support Vue2.x / Vue3.x
  * @param {String} namespace
- * @param {Store} store ### vm.$store
+ * @param {Store} store vm.$store
  */
 function useVuex (namespace?: string, store?: Store<any>) {
-  if (!store) store = getStoreFromInstance()
+  if (!store) store = useStore()
   // pre-specify initial arguments with store instance
   let helpers = {
     useState: normalizeNamespace<object>(partial(useState, store)),
@@ -227,7 +227,7 @@ function useVuex (namespace?: string, store?: Store<any>) {
     useActions: normalizeNamespace<object>(partial(useActions, store))
   }
 
-  if (arguments.length >= 1 && namespace) {
+  if (arguments.length >= 1 && isString(namespace)) {
     helpers = partial(createNamespacedHelpers, store)(namespace)
   }
   return helpers

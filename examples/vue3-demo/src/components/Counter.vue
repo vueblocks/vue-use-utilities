@@ -14,15 +14,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-// import { useStore } from 'vuex'
 // import { useVuex } from '@vueblocks/vue-use-vuex'
-import useVuex from '../utils/useVuex'
+import useVuex, { useStore } from '../utils/useVuex'
 
 export default defineComponent({
   setup () {
-    // const store = useStore()
+    const store = useStore()
     // const { useGetters } = useVuex()
     const { useGetters, useState, useActions } = useVuex('counter')
+    console.log(store)
 
     return {
       // count: computed(() => store.state.counter.count),

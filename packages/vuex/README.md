@@ -18,6 +18,8 @@ npm i @vueblocks/vue-use-vuex -S
 
 ## Usage
 
+### useVuex
+
 `useVuex` utilities just similar with [Vuex Component Binding Helpers](https://vuex.vuejs.org/api/#component-binding-helpers)
 
 It export these composable helpers:
@@ -32,11 +34,20 @@ the namespace as first argument, then return will be the namespaced component bi
 
 Read more about namespacing [documention](./namespacing.md).
 
+### useStore
+
+`useStore` utilities just do the same thing with Vuex 4.x composition api [useStore](https://next.vuex.vuejs.org/guide/composition-api.html)
+
 It seems familiar right?
 
 ## Typing
 
 ```ts
+/**
+ * Get $store from current instance
+ * @return {Store} vm.$store
+ */
+declare const useStore: () => Store<any>;
 /**
  * Use Vuex with composition api easily. Both support Vue2.x / Vue3.x
  * @param {String} namespace

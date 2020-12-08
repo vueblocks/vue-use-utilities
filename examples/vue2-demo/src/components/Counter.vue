@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { useVuex } from '@vueblocks/vue-use-vuex'
+import { useVuex, useStore } from '@vueblocks/vue-use-vuex'
 
 export default {
   // mounted () {
@@ -26,7 +26,8 @@ export default {
   //   console.groupEnd()
   // },
   setup () {
-    // const { useGetters, useActions } = useVuex()
+    const store = useStore()
+    console.log(store)
     const { useState, useGetters, useActions } = useVuex('counter')
 
     return {

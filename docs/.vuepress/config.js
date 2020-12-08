@@ -38,6 +38,7 @@ module.exports = {
           sidebarDepth: 1,
           children: [
             '/guide/vuex/useVuex',
+            '/guide/vuex/useStore',
             '/guide/vuex/useState',
             '/guide/vuex/useGetters',
             '/guide/vuex/useActions',

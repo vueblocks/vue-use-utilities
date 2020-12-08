@@ -43,9 +43,9 @@ It seems familiar right?
  * @param {Store} store ### vm.$store
  */
 declare function useVuex(namespace?: string, store?: Store<any>): {
-  useState: (namespace?: string, map: Array<string> | Object<string | function>) => Object<ComputedRef>
-  useGetters: (namespace?: string, map: Array<string> | Object<string>) => Object<ComputedRef>
-  useMutations: (namespace?: string, map: Array<string> | Object<string | function>) => Object
-  useActions: (namespace?: string, map: Array<string> | Object<string | function>) => Object
+  useState: (namespace?: string, map: Array<string> | Object<string | function>) => Object<ComputedRef>;
+  useGetters: (namespace?: string, map: Array<string> | Object<string>) => Object<ComputedRef>;
+  useMutations: (namespace?: string, map: Array<string> | Object<string | function>) => Object;
+  useActions: (namespace?: string, map: Array<string> | Object<string | function>) => Object;
 };
 ```

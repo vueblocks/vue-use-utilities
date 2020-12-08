@@ -78,10 +78,16 @@ The Integration part provide utilities for commonly used libraries.
 
 `@vueblocks/vue-use-vuex` - Use Vuex With Composition API Easily.
 
+#### useVuex
+
 * `useState` - same as `mapState`
 * `useGetters` - same as `mapGetters`
 * `useMutations` - same as `mapMutations`
 * `useActions` - same as `mapActions`
+
+#### useStore
+
+* `useStore` - same as Vuex 4.x composition api [useStore](https://next.vuex.vuejs.org/guide/composition-api.html)
 
 [Read Docs](./packages/vuex/README.md)
 
@@ -92,7 +98,7 @@ The Integration part provide utilities for commonly used libraries.
 
 `@vueblocks/vue-use-axios` - Use Axios with Compositon API Easily.
 
-* useAxios
+* `useAxios` - is a wrapper of axios
 
 [Read Docs](./packages/axios/README.md)
 
