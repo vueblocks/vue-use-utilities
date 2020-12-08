@@ -200,9 +200,9 @@ export const createNamespacedHelpers = (store: Store<any>, namespace: string) =>
 
 /**
  * Get $store from current instance
- * @return {Store} ### vm.$store
+ * @return {Store} vm.$store
  */
-const getStoreFromInstance = () => {
+export const useStore = (): Store<any> => {
   const vm: any = getCurrentInstance()
   if (!vm) {
     console.error('You must use this function within the "setup()" method')
@@ -213,10 +213,10 @@ const getStoreFromInstance = () => {
 /**
  * Use Vuex with composition api easily. Both support Vue2.x / Vue3.x
  * @param {String} namespace
- * @param {Store} store ### vm.$store
+ * @param {Store} store vm.$store
  */
 function useVuex (namespace?: string, store?: Store<any>) {
-  if (!store) store = getStoreFromInstance()
+  if (!store) store = useStore()
   // pre-specify initial arguments with store instance
   let helpers = {
     useState: normalizeNamespace<object>(partial(useState, store)),
