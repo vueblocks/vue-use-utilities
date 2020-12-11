@@ -9,6 +9,7 @@
       <a href="https://www.npmjs.com/package/@vueblocks/vue-use-core"><img src="https://img.shields.io/npm/dt/@vueblocks/vue-use-core.svg"></a>
       <a href="https://github.com/vueblocks/vue-use-utilities/stargazers"><img src="https://img.shields.io/github/stars/vueblocks/vue-use-utilities.svg"></a>
       <a href="https://raw.githubusercontent.com/vueblocks/vue-use-utilities/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+      <a href="https://openbase.io/js/@vueblocks/vue-use-vuex?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge"><img src="https://badges.openbase.io/js/rating/@vueblocks/vue-use-vuex.svg" alt="Rate on Openbase"></a>
     </p>
     <p align="center">
        Vue Use Utilities build on top of `vue-demi` & `@vue/compostion-api`. It works both for Vue 2 & 3.
@@ -42,7 +43,7 @@ Vue 2 Demo: [Vue CLI 2.x](./examples/vue2-demo/README.md)  |  Vue 3 Demo: [Vue C
 ```
 
 ```js
-import { useDebounceRef} from '@vueblocks/vue-use-core'
+import { useDebounceRef } from '@vueblocks/vue-use-core'
 
 export default {
   ...
