@@ -7,7 +7,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import { useDebouncedRef } from '../../../../packages/core/useDebounceRef'
+import { useDebouncedRef } from '@vueblocks/vue-use-core'
 
 export default defineComponent({
   name: 'HelloWorld',

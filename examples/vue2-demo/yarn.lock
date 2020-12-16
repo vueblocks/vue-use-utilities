@@ -1387,10 +1387,10 @@
   resolved "https://registry.npm.taobao.org/@vue/web-component-wrapper/download/@vue/web-component-wrapper-1.2.0.tgz#bb0e46f1585a7e289b4ee6067dcc5a6ae62f1dd1"
   integrity sha1-uw5G8VhafiibTuYGfcxaauYvHdE=
 
-"@vueblocks/vue-use-core@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-core/download/@vueblocks/vue-use-core-0.1.7.tgz#89af479b74f9477450a8b8cde9c4943418e9aae0"
-  integrity sha1-ia9Hm3T5R3RQqLjN6cSUNBjpquA=
+"@vueblocks/vue-use-core@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-core/download/@vueblocks/vue-use-core-0.1.9.tgz?cache=0&sync_timestamp=1608095289647&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vueblocks%2Fvue-use-core%2Fdownload%2F%40vueblocks%2Fvue-use-core-0.1.9.tgz#56d49a03bf3e0eeeb8dbc3284b16fcd08ea83e00"
+  integrity sha1-VtSaA78+Du6428MoSxb80I6oPgA=
   dependencies:
     "@vue/composition-api" "^1.0.0-beta.20"
     vue-demi "^0.4.5"
