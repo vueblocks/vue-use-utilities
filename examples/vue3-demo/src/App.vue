@@ -1,15 +1,18 @@
 <template>
+  <hello-world />
   <Counter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Counter from './components/Counter.vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    Counter
+    Counter,
+    HelloWorld
   }
 })
 </script>

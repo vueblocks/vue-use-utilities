@@ -9,7 +9,7 @@ import { tryOnMounted } from './useLifecycle'
  * @return {function} toggle
  */
 const useFullscreen = (target: HTMLElement) => {
-  const targetRef = ref(target || document?.querySelector('html'))
+  const targetRef = ref(target || document.querySelector('html'))
   const isFullscreen = ref(false)
 
   const toggleFullscreen = () => {
