@@ -207,7 +207,7 @@ export const useStore = (): Store<any> => {
   if (!vm) {
     console.error('You must use this function within the "setup()" method')
   }
-  return isVue3 ? vm.ctx.$store : vm.$store
+  return isVue3 ? vm.ctx.$store : vm.proxy.$store
 }
 
 /**
