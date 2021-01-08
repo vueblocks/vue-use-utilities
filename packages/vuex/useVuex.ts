@@ -1,4 +1,4 @@
-import { computed, getCurrentInstance, isVue3, ComputedRef } from 'vue-demi'
+import { computed, getCurrentInstance, isVue3 } from 'vue-demi'
 import { Store } from 'vuex'
 
 import { isObject, isString, partial } from './utils'
