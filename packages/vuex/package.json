@@ -30,8 +30,8 @@
     "vuex": "^3.6.0"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.0.0-beta.20",
-    "vue-demi": "^0.4.5"
+    "@vue/composition-api": "^1.0.0-beta.24",
+    "vue-demi": "^0.5.4"
   },
   "devDependencies": {
     "vuex": "^3.6.0"

@@ -26,13 +26,13 @@
   "author": "xiaoluoboding<https://github.com/xiaoluoboding>",
   "license": "MIT",
   "optionalDependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "lodash": "^4.17.20",
-    "screenfull": "^5.0.2"
+    "screenfull": "^5.1.0"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.0.0-beta.20",
-    "vue-demi": "^0.4.5"
+    "@vue/composition-api": "^1.0.0-beta.24",
+    "vue-demi": "^0.5.4"
   },
   "gitHead": "19fec27b41f71b70a73f0afd37180c39bb362827"
 }

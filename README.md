@@ -1,20 +1,40 @@
+<!-- <a href="https://github.com/vueblocks/vue-use-utilities">
+    <img src="./docs/_media/icon.svg" width="152">
+</a> -->
+<h2 align="center">Vue Use Utilities</h2>
+<br>
+<div align="center">
+    
+[![NPM][npmBadge]][npmUrl]
+[![NPM Download][npmDtBadge]][npmDtUrl]
+[![License][licenseBadge]][licenseUrl]
+[![lerna][lernaBadge]][lernaUrl]
+[![OpenBase][openbaseBadge]][openbaseUrl]
+![support][supportBadge]
+
+</div>
+
 <p align="center">
-    <!-- <a href="https://github.com/vueblocks/vue-use-utilities">
-        <img src="./docs/_media/icon.svg" width="152">
-    </a> -->
-    <h2 align="center">Vue Use Utilities</h2>
-    <br>
-    <p align="center">
-      <a href="https://www.npmjs.com/package/@vueblocks/vue-use-core"><img src="https://img.shields.io/npm/v/@vueblocks/vue-use-core.svg?maxAge=2592000"></a>
-      <a href="https://www.npmjs.com/package/@vueblocks/vue-use-core"><img src="https://img.shields.io/npm/dt/@vueblocks/vue-use-core.svg"></a>
-      <a href="https://github.com/vueblocks/vue-use-utilities/stargazers"><img src="https://img.shields.io/github/stars/vueblocks/vue-use-utilities.svg"></a>
-      <a href="https://raw.githubusercontent.com/vueblocks/vue-use-utilities/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-      <a href="https://openbase.io/js/@vueblocks/vue-use-vuex?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge"><img src="https://badges.openbase.io/js/rating/@vueblocks/vue-use-vuex.svg" alt="Rate on Openbase"></a>
-    </p>
-    <p align="center">
-       Vue Use Utilities build on top of `vue-demi` & `@vue/compostion-api`. It works both for Vue 2 & 3.
-    </p>
-    <br>
+  Vue Use Utilities build on top of <strong>vue-demi</strong> & <strong>@vue/compostion-api</strong>. It works both for Vue 2 & 3.
+</p>
+<br>
+
+[npmBadge]:https://img.shields.io/npm/v/@vueblocks/vue-use-core.svg?maxAge=2592000
+[npmUrl]:https://www.npmjs.com/package/@vueblocks/vue-use-core
+
+[npmDtBadge]:https://img.shields.io/npm/dt/@vueblocks/vue-use-core.svg
+[npmDtUrl]:https://www.npmjs.com/package/@vueblocks/vue-use-core
+
+[licenseBadge]:https://img.shields.io/badge/license-MIT-blue.svg
+[licenseUrl]:https://raw.githubusercontent.com/vueblocks/vue-use-utilities/master/LICENSE
+
+[openbaseBadge]:https://badges.openbase.io/js/rating/@vueblocks/vue-use-vuex.svg
+[openbaseUrl]:https://openbase.io/js/@vueblocks/vue-use-vuex?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge
+
+[supportBadge]:https://img.shields.io/badge/support-2%263-%234FC08D?style=flat&logo=Vue.js
+
+[lernaBadge]:https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg
+[lernaUrl]:https://lerna.js.org/
 </p>
 
 
