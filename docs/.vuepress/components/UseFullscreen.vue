@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from '@vue/composition-api'
+import { ref, onMounted } from 'vue-demi'
 // import { useFullscreen } from '@vueblocks/vue-use-core'
 // Test local bundle
 import { useFullscreen } from '../../../packages/core/lib/index.cjs'

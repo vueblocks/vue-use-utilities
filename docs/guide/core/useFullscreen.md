@@ -52,10 +52,10 @@ export default {
  * Reactive Fullscreen API build on top of screenfull.js
  * @param {HTMLElement} target
  * @return {boolean} isFullscreen
- * @return {function} toggle
+ * @return {function} toggleFullscreen
  */
 declare const useFullscreen: (target: HTMLElement) => {
-    isFullscreen: Ref$1<boolean>;
+    isFullscreen: Ref<boolean>;
     toggleFullscreen: () => void;
 };
 ```
