@@ -33,6 +33,7 @@ module.exports = {
           sidebarDepth: 1,
           children: [
             '/guide/core/useDebounceRef',
+            '/guide/core/useFullscreen',
           ]
         },
         {
