@@ -20,6 +20,10 @@ export default {
 }
 ```
 
+## Example
+
+<UseDeounceRef />
+
 ## Typing
 
 ```ts

@@ -1,3 +1,6 @@
+const { path } = require('@vuepress/shared-utils')
+require('@vuepress/theme-default')
+
 module.exports = {
   title: 'Vue Use Utilities',
   description: 'A collection of Vue composition-api utilities',
@@ -59,5 +62,14 @@ module.exports = {
   },
   markdown: {
     lineNumbers: true
+  },
+  alias: {
+    '@': path.resolve(__dirname, '../.vuepress')
+  },
+  postcss: {
+    plugins: [
+      require('tailwindcss'),
+      require('autoprefixer')
+    ]
   }
 }
