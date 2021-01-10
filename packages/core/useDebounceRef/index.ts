@@ -1,20 +1,17 @@
 import { customRef, Ref } from 'vue-demi'
+import debounce from 'lodash.debounce'
 
 const useDebouncedRef = (value: any, delay = 200): Ref => {
-  let timeout: any
   return customRef((track, trigger) => {
     return {
       get() {
         track()
         return value
       },
-      set(newValue) {
-        clearTimeout(timeout)
-        timeout = setTimeout(() => {
-          value = newValue
-          trigger()
-        }, delay)
-      }
+      set: debounce((newValue) => {
+        value = newValue
+        trigger()
+      }, delay)
     }
   })
 }
