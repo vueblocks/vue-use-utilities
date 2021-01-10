@@ -26,6 +26,7 @@
   ],
   "author": "xiaoluoboding<https://github.com/xiaoluoboding>",
   "license": "MIT",
+  "sideEffects": false,
   "peerDependencies": {
     "axios": "^0.21.0"
   },
