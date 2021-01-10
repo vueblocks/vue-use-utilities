@@ -1,6 +1,7 @@
-import { debounce, throttle } from 'lodash'
-import { tryOnMounted, tryOnUnmounted } from './useLifecycle'
-import { Fn } from './utils'
+import debounce from 'lodash.debounce'
+import throttle from 'lodash.throttle'
+import { tryOnMounted, tryOnUnmounted } from '../useLifecycle'
+import { Fn } from '../utils'
 
 /**
  * Reactive Resize API, When window resize, do someting.
@@ -9,7 +10,7 @@ import { Fn } from './utils'
  * @param {boolean} isThrottle: true: throttle | false: debounce
  * @return {function} dispatchResize
  */
-const useResize = (fn: Fn, useCapture = false, isThrottle = false) => {
+const useResizeEvent = (fn: Fn, useCapture = false, isThrottle = false) => {
   const dispatchResize = () => {
     const e = document.createEvent('Event')
     e.initEvent('resize', true, true)
@@ -30,4 +31,4 @@ const useResize = (fn: Fn, useCapture = false, isThrottle = false) => {
   }
 }
 
-export { useResize }
+export { useResizeEvent }
