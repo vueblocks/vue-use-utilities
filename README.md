@@ -37,6 +37,12 @@
 [lernaUrl]:https://lerna.js.org/
 </p>
 
+## Features
+
+* 🌳 TreeShakable & None SideEffects, Check out [Bundle Phobia](https://bundlephobia.com/result?p=@vueblocks/vue-use-core)
+* 💪 Fully TypeScript
+* 🤟 Vue 2 and 3 Support
+* 🧩 Advanced Integration
 
 ## Installation
 
