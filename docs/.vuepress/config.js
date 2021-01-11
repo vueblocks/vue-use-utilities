@@ -32,7 +32,7 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 1,
           children: [
-            '/guide/core/useDebounceRef',
+            '/guide/core/useDebouncedRef',
             '/guide/core/useFullscreen',
             '/guide/core/useResizeEvent',
             '/guide/core/useResizeObserver',
