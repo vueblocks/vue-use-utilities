@@ -92,7 +92,7 @@ export default {
 
 ## 📖 Documentation
 
-Check our [documentation](https://vue-use-utilities.vercel.app/)
+Check our [documentation](https://vueblocks.github.io/vue-use-utilities/)
 
 ## 🧩 Integration
 
