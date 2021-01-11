@@ -3,7 +3,7 @@
 ::: tip useShortcut
 Bind Keyboard Shortcuts API build on top of [keymaster](https://github.com/madrobby/keymaster).
 
-♻️ Bind shortcuts on mounted, and unbind shortcust automatically on unmounted.
+♻️ Bind shortcuts on mounted, and unbind shortcuts automatically on unmounted.
 :::
 
 ## Usage
