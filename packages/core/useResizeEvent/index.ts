@@ -1,7 +1,7 @@
 import debounce from 'lodash.debounce'
 import throttle from 'lodash.throttle'
 import { tryOnMounted, tryOnUnmounted } from '../useLifecycle'
-import { Fn } from '../utils'
+import { Fn } from '../types'
 
 /**
  * Reactive Resize API, When window resize, do someting.

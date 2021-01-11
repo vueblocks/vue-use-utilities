@@ -1,7 +1,7 @@
 import { ref, Ref } from 'vue-demi'
 import screenfull, { Screenfull } from 'screenfull'
 import { tryOnMounted } from '../useLifecycle'
-import { Fn } from '../utils'
+import { Fn } from '../types'
 
 export interface IFullScreen {
   isFullscreen: Ref<boolean>;

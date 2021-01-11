@@ -1,3 +1,4 @@
-export type Fn = () => void
-
-export const isArray = Array.isArray
+export {
+  isArray,
+  isClient
+} from './is'
