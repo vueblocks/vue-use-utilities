@@ -4,7 +4,7 @@ require('@vuepress/theme-default')
 module.exports = {
   title: 'Vue Use Utilities',
   description: 'A collection of Vue composition-api utilities',
-  base: '/',
+  base: '/vue-use-utilities/',
   port: 4848,
   themeConfig: {
     sidebarDepth: 2,
