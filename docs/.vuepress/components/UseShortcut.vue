@@ -14,9 +14,9 @@
 
 <script>
 import { onUnmounted, ref } from 'vue-demi'
-// import { useShortcut } from '@vueblocks/vue-use-core'
+import { useShortcut } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useShortcut } from '../../../packages/core/lib/index.cjs'
+// import { useShortcut } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {

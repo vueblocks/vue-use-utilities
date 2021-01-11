@@ -20,9 +20,9 @@
 
 <script>
 import { ref, onMounted } from 'vue-demi'
-// import { useFullscreen } from '@vueblocks/vue-use-core'
+import { useFullscreen } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useFullscreen } from '../../../packages/core/lib/index.cjs'
+// import { useFullscreen } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {
