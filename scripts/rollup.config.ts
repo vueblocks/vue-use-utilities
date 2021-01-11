@@ -6,12 +6,6 @@ import dts from 'rollup-plugin-dts'
 import pkg from '../package.json'
 import { activePackages } from './packages'
 
-const banner = `/*!
- * @vueblocks/vue-use-vuex v${pkg.version}
- * (c) ${new Date().getFullYear()} xiaoluoboding
- * @license MIT
- */`
-
 const configs = []
 interface IOutput {
   format: string;
@@ -45,9 +39,17 @@ const createOutputs = (arg: IOutput) => {
   }
 
   let fileType = isMinify ? format + '.min' : format === 'es' ? 'esm' : format
+
+  const makeBanner = name => {
+    return `/*!
+ * @vueblocks/vue-use-${name} v${pkg.version}
+ * (c) ${new Date().getFullYear()} xiaoluoboding
+ * @license MIT
+ */`
+  }
   
   return {
-    banner,
+    banner: makeBanner(name),
     file: `packages/${name}/lib/index.${fileType}.js`,
     format,
     ...umdSettings,
