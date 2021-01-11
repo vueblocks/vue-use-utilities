@@ -37,8 +37,14 @@
 [lernaUrl]:https://lerna.js.org/
 </p>
 
+## ✨ Features
 
-## Installation
+* 🌳 TreeShakable & None SideEffects, Check out [Bundle Phobia](https://bundlephobia.com/result?p=@vueblocks/vue-use-core)
+* 💪 Fully TypeScript
+* 🤟 Vue 2 and 3 Support
+* 🧩 Advanced Integration
+
+## 📦 Installation
 
 ```bash
 # Vue 2 with @vue/composition-api
@@ -52,11 +58,11 @@ or
 npm i @vueblocks/vue-use-core -S
 ```
 
-## Demos
+## 🦄️ Demos
 
 Vue 2 Demo: [Vue CLI 2.x](./examples/vue2-demo/README.md)  |  Vue 3 Demo: [Vue CLI 3.x](./examples/vue3-demo/README.md)
 
-## Usage
+## 💡 Usage
 
 ```html
 <input v-model="searchVal" />
@@ -84,11 +90,11 @@ export default {
 }
 ```
 
-## Documentation
+## 📖 Documentation
 
 Check our [documentation](https://vue-use-utilities.vercel.app/)
 
-## Integration
+## 🧩 Integration
 
 The Integration part provide utilities for commonly used libraries.
 
@@ -128,6 +134,6 @@ The Integration part provide utilities for commonly used libraries.
 * [vue-composition-toolkit](https://github.com/HcySunYang/vue-composition-toolkit)
 * [vueuse](https://github.com/antfu/vueuse)
 
-## License
+## 📄 License
 
 MIT [@xiaoluoboding](https://github.com/xiaoluoboding)

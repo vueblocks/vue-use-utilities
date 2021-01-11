@@ -34,6 +34,9 @@ module.exports = {
           children: [
             '/guide/core/useDebounceRef',
             '/guide/core/useFullscreen',
+            '/guide/core/useResizeEvent',
+            '/guide/core/useResizeObserver',
+            '/guide/core/useShortcut',
           ]
         },
         {

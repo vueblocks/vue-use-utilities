@@ -1,6 +1,6 @@
 import { getCurrentInstance, onMounted, onUnmounted, nextTick } from 'vue-demi'
 
-import { Fn } from './utils'
+import { Fn } from '../utils'
 
 /**
  * Call onMounted() if it's inside a component lifecycle, if not, run just call the function

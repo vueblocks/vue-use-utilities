@@ -24,7 +24,7 @@ export default {
   components: { ExampleBlock },
   setup() {
     return {
-      text: useDebouncedRef("hello")
+      text: useDebouncedRef('hello')
     }
   }
 }
