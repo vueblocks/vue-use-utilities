@@ -2416,13 +2416,6 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@^1.0.0-beta.20":
-  version "1.0.0-beta.24"
-  resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-beta.24.tgz#0dbd7a0995c107103c80e307defe66c494f4a2f4"
-  integrity sha512-TqFjl2DOjde+EOEJEgiJHmEaS4rDB69CntzDAU/mUuPjHefHvRX389qQJVCFj9hzYOIFyIvdjr7ojSsLTOS5KA==
-  dependencies:
-    tslib "^2.0.3"
-
 "@vue/composition-api@^1.0.0-beta.25":
   version "1.0.0-beta.25"
   resolved "https://registry.npm.taobao.org/@vue/composition-api/download/@vue/composition-api-1.0.0-beta.25.tgz#fb8fcce4df9ee6c617320d4e49bf6f802a2aa8fa"
@@ -2439,17 +2432,19 @@
     lodash "^4.17.15"
     pretty "^2.0.0"
 
-"@vueblocks/vue-use-core@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-core/-/vue-use-core-0.1.9.tgz#56d49a03bf3e0eeeb8dbc3284b16fcd08ea83e00"
-  integrity sha512-Di2UQ7J722gGR7DDpfihDmDAc1MuoeVnwvEx34g2atzO5Wg2Z+Pw44FCfI86Y5by5YN2i+2p7GnariEDLQW1Zg==
+"@vueblocks/vue-use-core@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-core/download/@vueblocks/vue-use-core-0.2.1.tgz#0a6018e7503ba754a8a3b7de2ed030a4d1f32d5f"
+  integrity sha1-CmAY51A7p1Soo7feLtAwpNHzLV8=
   dependencies:
-    "@vue/composition-api" "^1.0.0-beta.20"
-    vue-demi "^0.4.5"
-  optionalDependencies:
-    axios "^0.21.0"
-    lodash "^4.17.20"
-    screenfull "^5.0.2"
+    "@juggle/resize-observer" "^3.2.0"
+    "@vue/composition-api" "^1.0.0-beta.25"
+    dayjs "^1.10.2"
+    keymaster "^1.6.2"
+    lodash.debounce "^4.0.8"
+    lodash.throttle "^4.1.1"
+    screenfull "^5.1.0"
+    vue-demi "^0.5.4"
 
 "@vuepress/core@1.8.0":
   version "1.8.0"
@@ -3202,7 +3197,7 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-axios@^0.21.0, axios@^0.21.1:
+axios@^0.21.1:
   version "0.21.1"
   resolved "https://registry.npm.taobao.org/axios/download/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
   integrity sha1-IlY0gZYvTWvemnbVFu8OXTwJsrg=
@@ -4717,7 +4712,7 @@ dateformat@^3.0.0:
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
-dayjs@^1.10.3:
+dayjs@^1.10.2, dayjs@^1.10.3:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.3.tgz#cf3357c8e7f508432826371672ebf376cb7d619b"
   integrity sha512-/2fdLN987N8Ki7Id8BUN2nhuiRyxTLumQnSQf9CNncFCyqFsSKb9TNhzRYcC8K8eJSJOKvbvkImo/MKKhNi4iw==
@@ -11025,7 +11020,7 @@ schema-utils@^2.6.5:
     ajv "^6.12.4"
     ajv-keywords "^3.5.2"
 
-screenfull@^5.0.2, screenfull@^5.1.0:
+screenfull@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npm.taobao.org/screenfull/download/screenfull-5.1.0.tgz?cache=0&sync_timestamp=1608796640338&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fscreenfull%2Fdownload%2Fscreenfull-5.1.0.tgz#85c13c70f4ead4c1b8a935c70010dfdcd2c0e5c8"
   integrity sha1-hcE8cPTq1MG4qTXHABDf3NLA5cg=
@@ -12611,10 +12606,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-demi@^0.4.5:
-  version "0.4.5"
-  resolved "https://registry.npm.taobao.org/vue-demi/download/vue-demi-0.4.5.tgz#ea422a4468cb6321a746826a368a770607f87791"
-  integrity sha1-6kIqRGjLYyGnRoJqNop3Bgf4d5E=
+vue-demi@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.npm.taobao.org/vue-demi/download/vue-demi-0.5.4.tgz?cache=0&sync_timestamp=1610130541145&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-demi%2Fdownload%2Fvue-demi-0.5.4.tgz#cedb887af819ff0126c545a5540170d8895b816d"
+  integrity sha1-ztuIevgZ/wEmxUWlVAFw2IlbgW0=
 
 vue-demi@^0.6.0:
   version "0.6.0"
