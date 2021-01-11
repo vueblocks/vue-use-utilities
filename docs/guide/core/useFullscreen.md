@@ -43,7 +43,10 @@ export default {
 
 > Click the image to make it fullscreen
 
-<UseFullscreen />
+<ClientOnly>
+  <UseFullscreen />
+</ClientOnly>
+
 
 ## Typing
 

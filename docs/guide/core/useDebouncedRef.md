@@ -24,7 +24,9 @@ export default {
 
 ## Example
 
-<UseDebouncedRef />
+<ClientOnly>
+  <UseDebouncedRef />
+</ClientOnly>
 
 ## Typing
 

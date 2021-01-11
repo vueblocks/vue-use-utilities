@@ -49,7 +49,9 @@ export default {
 
 > 💡 resize the textarea, and watch the contentRect changed.
 
-<UseResizeObserver />
+<ClientOnly>
+  <UseResizeObserver />
+</ClientOnly>
 
 ## Typing
 

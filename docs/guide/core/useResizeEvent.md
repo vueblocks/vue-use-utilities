@@ -42,7 +42,9 @@ export default {
 
 > 💡 resize the browser and watch document size changed.
 
-<UseResizeEvent />
+<ClientOnly>
+  <UseResizeEvent />
+</ClientOnly>
 
 ## Typing
 

@@ -48,7 +48,9 @@ setup () {
 
 > Type one of the following Keys👇:
 
-<UseShortcut />
+<ClientOnly>
+  <UseShortcut />
+</ClientOnly>
 
 ## Typing
 
