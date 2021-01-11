@@ -2416,10 +2416,17 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@^1.0.0-beta.20", "@vue/composition-api@^1.0.0-beta.24":
+"@vue/composition-api@^1.0.0-beta.20":
   version "1.0.0-beta.24"
   resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-beta.24.tgz#0dbd7a0995c107103c80e307defe66c494f4a2f4"
   integrity sha512-TqFjl2DOjde+EOEJEgiJHmEaS4rDB69CntzDAU/mUuPjHefHvRX389qQJVCFj9hzYOIFyIvdjr7ojSsLTOS5KA==
+  dependencies:
+    tslib "^2.0.3"
+
+"@vue/composition-api@^1.0.0-beta.25":
+  version "1.0.0-beta.25"
+  resolved "https://registry.npm.taobao.org/@vue/composition-api/download/@vue/composition-api-1.0.0-beta.25.tgz#fb8fcce4df9ee6c617320d4e49bf6f802a2aa8fa"
+  integrity sha1-+4/M5N+e5sYXMg1OSb9vgCoqqPo=
   dependencies:
     tslib "^2.0.3"
 
@@ -12609,10 +12616,10 @@ vue-demi@^0.4.5:
   resolved "https://registry.npm.taobao.org/vue-demi/download/vue-demi-0.4.5.tgz#ea422a4468cb6321a746826a368a770607f87791"
   integrity sha1-6kIqRGjLYyGnRoJqNop3Bgf4d5E=
 
-vue-demi@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.5.4.tgz#cedb887af819ff0126c545a5540170d8895b816d"
-  integrity sha512-m/cm/Jo+USFx4JNGvhXVuAAbeB+Dejc0O8hzarph9MMuxxcMEDxf+0UBzg79g15YwYGIToX957XvzG0xSufG9A==
+vue-demi@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.6.0.tgz#e314282f704cb449119b9fd002cbbc0e39f591fe"
+  integrity sha512-8GEJa0mHJpYJeGeq5fD1pJct2kfdl30PHfmL1NaJ97mgKPyKojlIRt/3inGBK4Y0ylCI6T5vOo3chwpqDOq/Hw==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
