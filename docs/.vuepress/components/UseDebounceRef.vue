@@ -14,9 +14,9 @@
 </template>
 
 <script>
-// import { useDebouncedRef } from '@vueblocks/vue-use-core'
+import { useDebouncedRef } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useDebouncedRef } from '../../../packages/core/lib/index.cjs'
+// import { useDebouncedRef } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {

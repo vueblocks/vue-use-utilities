@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.0...v0.2.1) (2021-01-11)
+
+
+### Bug Fixes
+
+* typo error ([fc68c9d](https://github.com/xiaoluoboding/vue-use-utilities/commit/fc68c9df3196a1c55bd1013e6ba10c074d169a9c))
+
+
+
 # [0.2.0](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.1.9...v0.2.0) (2021-01-11)
 
 

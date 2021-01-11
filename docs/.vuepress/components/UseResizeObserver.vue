@@ -19,9 +19,9 @@
 
 <script>
 import { ref } from 'vue-demi'
-// import { UseResizeObserver } from '@vueblocks/vue-use-core'
+import { UseResizeObserver } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useResizeObserver } from '../../../packages/core/lib/index.cjs'
+// import { useResizeObserver } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {
