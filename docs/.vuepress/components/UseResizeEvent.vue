@@ -1,20 +1,22 @@
 <template>
-  <example-block>
-    <div slot="component">
-      <div class="w-full text-center mt-4">
-        <button class="px-3 py-2" @click="debounceResize">Debounce Resize Event</button>
-        <button class="px-3 py-2" @click="throttleResize">Throttle Resize Event</button>
+  <section>
+    <example-block>
+      <div slot="component" class="w-full text-center">
+        <h3 class="px-3 py-2" >Throttle Resize Event</h3>
       </div>
-      <div class="w-full text-center mt-4">
-        isThrottle: {{ isThrottle }}
+      <span slot="code">document size: {{ throttleSize }}</span>
+    </example-block>
+    <example-block>
+      <div slot="component" class="w-full text-center">
+        <h3 class="px-3 py-2" >Debounce Resize Event</h3>
       </div>
-    </div>
-    <span slot="code">document size: {{ domSize }}</span>
-  </example-block>
+      <span slot="code">document size: {{ debounceSize }}</span>
+    </example-block>
+  </section>
 </template>
 
 <script>
-import { onMounted, reactive, toRefs, ref } from 'vue-demi'
+import { onMounted, reactive } from 'vue-demi'
 // import { useResizeEvent } from '@vueblocks/vue-use-core'
 // Test local bundle
 import { useResizeEvent } from '../../../packages/core/lib/index.cjs'
@@ -24,30 +26,34 @@ export default {
   name: 'useResizeEvent',
   components: { ExampleBlock },
   setup () {
-    const domSize = reactive({
+    const throttleSize = reactive({
       width: 0,
       height: 0
     })
 
-    const isThrottle = ref(true)
+    const debounceSize = reactive({
+      width: 0,
+      height: 0
+    })
 
-    const onResize = () => {
-      domSize.width = document.body.clientWidth
-      domSize.height = document.body.clientHeight
+    const onThrottleResize = () => {
+      throttleSize.width = document.body.clientWidth
+      throttleSize.height = document.body.clientHeight
     }
 
-    const debounceResize = () => isThrottle.value = false
-    const throttleResize = () => isThrottle.value = true
+    const onDebounceResize = () => {
+      debounceSize.width = document.body.clientWidth
+      debounceSize.height = document.body.clientHeight
+    }
 
-    const { dispatchResize } = useResizeEvent(onResize, true, isThrottle.value)
+    const { dispatchResize } = useResizeEvent(onThrottleResize, true, true)
+    useResizeEvent(onDebounceResize, true, false)
 
     onMounted(dispatchResize)
 
     return {
-      domSize,
-      isThrottle,
-      debounceResize,
-      throttleResize
+      throttleSize,
+      debounceSize
     }
   }
 }

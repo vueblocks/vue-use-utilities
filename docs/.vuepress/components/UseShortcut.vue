@@ -1,11 +1,11 @@
 <template>
   <example-block>
     <div slot="component">
-      <div class="my-4">
+      <div>
         <kbd>Shift</kbd> + <kbd>D</kbd>
       </div>
-      <div>
-        <kbd>Command</kbd> + <kbd>D</kbd>
+      <div class="mt-4">
+        <kbd>⌘</kbd> + <kbd>D</kbd> or <kbd>Ctrl</kbd> + <kbd>D</kbd>
       </div>
     </div>
     <span slot="code">Pressed KeyCodes: {{ pressedKeyCodes }}</span>

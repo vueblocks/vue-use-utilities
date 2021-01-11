@@ -1,7 +1,9 @@
 # useShortcut
 
 ::: tip useShortcut
-Bind Keyboard Shortcuts API build on top of [keymaster](https://github.com/madrobby/keymaster)
+Bind Keyboard Shortcuts API build on top of [keymaster](https://github.com/madrobby/keymaster).
+
+♻️ Bind shortcuts on mounted, and unbind shortcust automatically on unmounted.
 :::
 
 ## Usage
@@ -9,13 +11,10 @@ Bind Keyboard Shortcuts API build on top of [keymaster](https://github.com/madro
 ```html
 <div class="wrapper">
   <div>
-    Type one of the following Keys 👇:
-  </div>
-  <div class="my-4">
     <kbd>Shift</kbd> + <kbd>D</kbd>
   </div>
   <div>
-    <kbd>Command</kbd> + <kbd>D</kbd>
+    <kbd>Command</kbd> + <kbd>D</kbd> or <kbd>Ctrl</kbd> + <kbd>D</kbd>
   </div>
 </div>
 ```
@@ -60,13 +59,40 @@ setup () {
 interface KeyBindingMap {
     [keybinding: string]: (event: KeyboardEvent) => void;
 }
+interface KeymasterEvent {
+    key: string;
+    method: KeyHandler;
+    mods: number[];
+    scope: string;
+    shortcut: string;
+}
+interface KeyHandler {
+    (keyboardEvent: KeyboardEvent, keymasterEvent: KeymasterEvent): void;
+}
 /**
- * Bind shortcut onMounted & unbind shortcut onUnmounted in setup hooks
+ * Bind shortcut onMounted & unbind shortcut automatically onUnmounted in setup hooks
  * or
  * Unbind shortcut before bind shortcut without setup hooks
  * @param {Object} keymap
  * @param {Object} vm
  * @return {function} toggle
  */
-declare const useShortcut: (keymap: KeyBindingMap, vm: any) => void;
+declare const useShortcut: (keymap: KeyBindingMap, vm: any) => {
+    shift: boolean;
+    alt: boolean;
+    option: boolean;
+    ctrl: boolean;
+    control: boolean;
+    command: boolean;
+    setScope(scopeName: string): void;
+    getScope(): string;
+    deleteScope(scopeName: string): void;
+    noConflict(): void;
+    unbind(key: string): void;
+    unbind(key: string, scopeName: string): void;
+    isPressed(keyCode: number): boolean;
+    getPressedKeyCodes(): number[];
+    filter(event: FilterEvent): void;
+    bind: (seed: string, func: Function) => void;
+};
 ```

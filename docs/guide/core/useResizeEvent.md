@@ -1,24 +1,14 @@
 # useResizeEvent
 
 ::: tip useResizeEvent
-Register [resize](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event) event on mounted, and removeEventListener automatically on unmounted.
+♻️  Register [resize](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event) event on mounted, and remove event automatically on unmounted.
 :::
 
 ## Usage
 
 ```html
 <div class="wrapper">
-  <label for="story">Tell us your story:</label>
-
-  <textarea
-    id="story"
-    name="story"
-    rows="5"
-    cols="33"
-    ref="textareaRef"
-  >
-    It was a dark and stormy night...
-  </textarea>
+  document size: {{ domSize }}
 </div>
 ```
 
@@ -39,6 +29,7 @@ export default {
 
     const { dispatchResize } = useResizeEvent(onResize, true, false)
 
+    // dispatch resize event once
     onMounted(dispatchResize)
 
     return {
@@ -49,12 +40,21 @@ export default {
 
 ## Example
 
-> 💡 resize the browser
+> 💡 resize the browser and watch document size changed.
 
 <UseResizeEvent />
 
 ## Typing
 
 ```ts
-
+/**
+ * Reactive Resize API, When window resize, do someting.
+ * @param {function} fn
+ * @param {boolean} useCapture
+ * @param {boolean} isThrottle: true: throttle | false: debounce
+ * @return {function} dispatchResize
+ */
+declare const useResizeEvent: (fn: Fn, useCapture?: boolean, isThrottle?: boolean) => {
+  dispatchResize: () => void;
+};
 ```
