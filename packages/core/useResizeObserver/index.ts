@@ -26,7 +26,8 @@ const useResizeObserver = (
   }, { immediate: true })
 
   const stop = () => {
-    ro?.disconnect()
+    ro && ro.disconnect()
+    ro = undefined
     stopWatch()
   }
 
