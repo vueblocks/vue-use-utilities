@@ -5,6 +5,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "docs:deploy": "sh deploy.sh",
     "build": "rollup -c rollup.config.js",
     "release": "lerna publish",
     "test": "jest --coverage",
