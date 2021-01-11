@@ -1,6 +1,6 @@
-# useDebounceRef
+# useDebouncedRef
 
-::: tip useDebounceRef
+::: tip useDebouncedRef
 Inspired by Vue3 Offical Document [customRef](https://v3.cn.vuejs.org/api/refs-api.html#customref) demo.
 :::
 
@@ -24,7 +24,9 @@ export default {
 
 ## Example
 
-<useDebounceRef />
+<ClientOnly>
+  <UseDebouncedRef />
+</ClientOnly>
 
 ## Typing
 

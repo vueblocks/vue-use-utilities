@@ -20,7 +20,7 @@ import { useDebouncedRef } from '@vueblocks/vue-use-core'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {
-  name: 'UseDebounceRef',
+  name: 'UseDebouncedRef',
   components: { ExampleBlock },
   setup() {
     return {

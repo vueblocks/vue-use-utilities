@@ -1,7 +1,7 @@
 import { renderHook } from '../../../__tests__/setupTest'
-import { useDebouncedRef } from '../useDebounceRef'
+import { useDebouncedRef } from '../useDebouncedRef'
 
-test('useDeounceRef', () => {
+test('useDebouncedRef', () => {
   renderHook(() => {})
   const debouncedValue = useDebouncedRef('before', 1000)
   expect(debouncedValue.value).toEqual('before')

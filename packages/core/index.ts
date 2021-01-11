@@ -1,4 +1,4 @@
-export * from './useDebounceRef'
+export * from './useDebouncedRef'
 export * from './useFullscreen'
 export * from './useLifecycle'
 export * from './useReactiveState'

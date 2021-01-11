@@ -69,7 +69,7 @@ Vue 2 Demo: [Vue CLI 2.x](./examples/vue2-demo/README.md)  |  Vue 3 Demo: [Vue C
 ```
 
 ```js
-import { useDebounceRef } from '@vueblocks/vue-use-core'
+import { useDebouncedRef } from '@vueblocks/vue-use-core'
 
 export default {
   ...

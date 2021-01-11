@@ -14,8 +14,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-// import { useVuex } from '@vueblocks/vue-use-vuex'
-import useVuex, { useStore } from '../utils/useVuex'
+import { useVuex, useStore } from '@vueblocks/vue-use-vuex'
 
 export default defineComponent({
   setup () {
