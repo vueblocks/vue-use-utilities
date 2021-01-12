@@ -1,4 +1,5 @@
 export * from './useDebouncedRef'
+export * from './useElementSize'
 export * from './useFullscreen'
 export * from './useLifecycle'
 export * from './useReactiveState'
