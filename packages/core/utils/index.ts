@@ -1,4 +1,10 @@
 export {
   isArray,
-  isClient
+  isClient,
+  isElement,
+  isBoolean
 } from './is'
+
+export {
+  noop
+} from './common'

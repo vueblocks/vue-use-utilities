@@ -13,7 +13,7 @@ Reactive window size
 ```
 
 ```js
-import { useResizeEvent } from '@vueblocks/vue-use-core'
+import { useWindowSize } from '@vueblocks/vue-use-core'
 
 export default {
   setup () {
@@ -23,6 +23,7 @@ export default {
       width,
       height
     }
+  }
 }
 ```
 

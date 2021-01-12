@@ -16,5 +16,7 @@ export type {
 } from './resize-observer'
 
 export type {
-  WindowSize
+  WindowSize,
+  ElementSize,
+  EventOptions
 } from './dom'

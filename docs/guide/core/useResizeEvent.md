@@ -27,7 +27,7 @@ export default {
       domSize.height = document.body.clientHeight
     }
 
-    const { dispatchResize } = useResizeEvent(onResize, true, false)
+    const { dispatchResize } = useResizeEvent(onResize)
 
     // dispatch resize event once
     onMounted(dispatchResize)
@@ -35,6 +35,7 @@ export default {
     return {
       domSize
     }
+  }
 }
 ```
 
@@ -49,14 +50,19 @@ export default {
 ## Typing
 
 ```ts
+interface EventOptions {
+  useCapture?: boolean;
+  useThrottle?: boolean | null;
+  delay?: number;
+}
+
 /**
  * Reactive Resize API, When window resize, do someting.
  * @param {function} fn
- * @param {boolean} useCapture
- * @param {boolean} isThrottle: true: throttle | false: debounce
+ * @param {object} options
  * @return {function} dispatchResize
  */
-declare const useResizeEvent: (fn: Fn, useCapture?: boolean, isThrottle?: boolean) => {
+declare const useResizeEvent: (fn: Fn, options?: EventOptions) => {
   dispatchResize: () => void;
 };
 ```
