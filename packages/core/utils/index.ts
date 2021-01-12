@@ -1,3 +1,10 @@
-export type Fn = () => void
+export {
+  isArray,
+  isClient,
+  isElement,
+  isBoolean
+} from './is'
 
-export const isArray = Array.isArray
+export {
+  noop
+} from './common'

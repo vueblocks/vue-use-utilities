@@ -1,4 +1,8 @@
 export type {
+  Fn
+} from './common'
+
+export type {
   RefTyped,
   RefElement,
   ToRefs
@@ -11,3 +15,8 @@ export type {
   ResizeObserverCallback
 } from './resize-observer'
 
+export type {
+  WindowSize,
+  ElementSize,
+  EventOptions
+} from './dom'

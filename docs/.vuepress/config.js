@@ -37,6 +37,7 @@ module.exports = {
             '/guide/core/useResizeEvent',
             '/guide/core/useResizeObserver',
             '/guide/core/useShortcut',
+            '/guide/core/useWindowSize',
           ]
         },
         {
