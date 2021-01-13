@@ -1,23 +1,32 @@
 import debounce from 'lodash.debounce'
 import throttle from 'lodash.throttle'
 import { tryOnMounted, tryOnUnmounted } from '../useLifecycle'
-import { Fn } from '../utils'
+import { Fn, EventOptions } from '../types'
+import { isBoolean } from '../utils'
 
 /**
  * Reactive Resize API, When window resize, do someting.
  * @param {function} fn
- * @param {boolean} useCapture
- * @param {boolean} isThrottle: true: throttle | false: debounce
+ * @param {object} options
  * @return {function} dispatchResize
  */
-const useResizeEvent = (fn: Fn, useCapture = false, isThrottle = false) => {
+const useResizeEvent = (
+  fn: Fn,
+  options: EventOptions = { useCapture: false, useThrottle: null, delay: 500 }
+) => {
+  const { useCapture = false, useThrottle = null, delay = 500 } = options
+
   const dispatchResize = () => {
     const e = document.createEvent('Event')
     e.initEvent('resize', true, true)
     window.dispatchEvent(e)
   }
 
-  const waitFn = isThrottle ? throttle(fn, 500) : debounce(fn, 500)
+  const waitFn = isBoolean(useThrottle)
+    ? useThrottle
+      ? throttle(fn, delay)
+      : debounce(fn, delay)
+    : fn
 
   tryOnMounted(() => {
     window.addEventListener('resize', waitFn, useCapture)

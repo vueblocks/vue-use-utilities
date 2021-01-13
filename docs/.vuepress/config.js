@@ -33,10 +33,12 @@ module.exports = {
           sidebarDepth: 1,
           children: [
             '/guide/core/useDebouncedRef',
+            '/guide/core/useElementSize',
             '/guide/core/useFullscreen',
             '/guide/core/useResizeEvent',
             '/guide/core/useResizeObserver',
             '/guide/core/useShortcut',
+            '/guide/core/useWindowSize',
           ]
         },
         {

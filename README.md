@@ -7,10 +7,11 @@
     
 [![NPM][npmBadge]][npmUrl]
 [![NPM Download][npmDtBadge]][npmDtUrl]
-[![License][licenseBadge]][licenseUrl]
+![support][supportBadge]
+[![Minzipped Size][bundlePhobiaBadge]][bundlePhobiaUrl]
 [![lerna][lernaBadge]][lernaUrl]
 [![OpenBase][openbaseBadge]][openbaseUrl]
-![support][supportBadge]
+[![License][licenseBadge]][licenseUrl]
 
 </div>
 
@@ -35,12 +36,16 @@
 
 [lernaBadge]:https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg
 [lernaUrl]:https://lerna.js.org/
+
+[bundlePhobiaBadge]:https://badgen.net/bundlephobia/minzip/@vueblocks/vue-use-core
+[bundlePhobiaUrl]:https://bundlephobia.com/result?p=@vueblocks/vue-use-core
 </p>
 
 ## ✨ Features
 
-* 🌳 TreeShakable & None SideEffects, Check out [Bundle Phobia](https://bundlephobia.com/result?p=@vueblocks/vue-use-core)
-* 💪 Fully TypeScript
+* 🛠 Composable Utilities
+* 🌳 TreeShakable & SideEffects Free, Check out [Bundle Phobia](https://bundlephobia.com/result?p=@vueblocks/vue-use-core)
+* 💪 Fully Typed APIs
 * 🤟 Vue 2 and 3 Support
 * 🧩 Advanced Integration
 
@@ -102,6 +107,8 @@ The Integration part provide utilities for commonly used libraries.
 
 <a href="https://www.npmjs.com/package/@vueblocks/vue-use-vuex"><img src="https://img.shields.io/npm/v/@vueblocks/vue-use-vuex.svg?maxAge=2592000"></a>
 <a href="https://www.npmjs.com/package/@vueblocks/vue-use-vuex"><img src="https://img.shields.io/npm/dt/@vueblocks/vue-use-vuex.svg"></a>
+<a href="https://bundlephobia.com/result?p=@vueblocks/vue-use-vuex"><img src="https://badgen.net/bundlephobia/minzip/@vueblocks/vue-use-vuex"></a>
+
 
 `@vueblocks/vue-use-vuex` - Use Vuex With Composition API Easily.
 
@@ -122,6 +129,7 @@ The Integration part provide utilities for commonly used libraries.
 
 <a href="https://www.npmjs.com/package/@vueblocks/vue-use-axios"><img src="https://img.shields.io/npm/v/@vueblocks/vue-use-axios.svg?maxAge=2592000"></a>
 <a href="https://www.npmjs.com/package/@vueblocks/vue-use-axios"><img src="https://img.shields.io/npm/dt/@vueblocks/vue-use-axios.svg"></a>
+<a href="https://bundlephobia.com/result?p=@vueblocks/vue-use-axios"><img src="https://badgen.net/bundlephobia/minzip/@vueblocks/vue-use-axios"></a>
 
 `@vueblocks/vue-use-axios` - Use Axios with Compositon API Easily.
 

@@ -3,7 +3,7 @@
 ::: tip useShortcut
 Bind Keyboard Shortcuts API build on top of [keymaster](https://github.com/madrobby/keymaster).
 
-♻️ Bind shortcuts on mounted, and unbind shortcust automatically on unmounted.
+♻️ Bind shortcuts on mounted, and unbind shortcuts automatically on unmounted.
 :::
 
 ## Usage
@@ -22,24 +22,26 @@ Bind Keyboard Shortcuts API build on top of [keymaster](https://github.com/madro
 ```js
 import { useShortcut } from '@vueblocks/vue-use-core'
 
-setup () {
-  const pressedKeyCodes = ref([])
+export default {
+  setup () {
+    const pressedKeyCodes = ref([])
 
-  useShortcut({
-    'shift+d': (event, handler) => {
-      pressedKeyCodes.value.push(handler.shortcut)
-      alert("The 'Shift' and 'd' keys were pressed at the same time")
-    },
-    '⌘+d, ctrl+d': (event, handler) => {
-      pressedKeyCodes.value.push(handler.shortcut)
-      alert("Either 'Control+d' or 'Meta+d' were pressed")
+    useShortcut({
+      'shift+d': (event, handler) => {
+        pressedKeyCodes.value.push(handler.shortcut)
+        alert("The 'Shift' and 'd' keys were pressed at the same time")
+      },
+      '⌘+d, ctrl+d': (event, handler) => {
+        pressedKeyCodes.value.push(handler.shortcut)
+        alert("Either 'Control+d' or 'Meta+d' were pressed")
+      }
+    })
+
+    onUnmounted(() => pressedKeyCodes.value = [])
+
+    return {
+      pressedKeyCodes
     }
-  })
-
-  onUnmounted(() => pressedKeyCodes.value = [])
-
-  return {
-    pressedKeyCodes
   }
 }
 ```
