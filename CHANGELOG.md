@@ -1,3 +1,19 @@
+## [0.2.2](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.1...v0.2.2) (2021-01-13)
+
+
+### Bug Fixes
+
+* typo error ([230e6e6](https://github.com/xiaoluoboding/vue-use-utilities/commit/230e6e66610cd8ebd2efd33b5b9f12cb995630f9))
+
+
+### Features
+
+* add useElementSize utilities ([1ce439e](https://github.com/xiaoluoboding/vue-use-utilities/commit/1ce439e1c5a152fee24a0b23d0df42f106d0443c))
+* add useWindowSize utilities ([a7cbc18](https://github.com/xiaoluoboding/vue-use-utilities/commit/a7cbc18ff7fea54467ac4f3ccb33ce899379243d))
+* update useWindowSize & useResizeEvent utilities ([ea49c5f](https://github.com/xiaoluoboding/vue-use-utilities/commit/ea49c5fe26f3d9693669550af60061c3ced4c733))
+
+
+
 ## [0.2.1](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.0...v0.2.1) (2021-01-11)
 
 
