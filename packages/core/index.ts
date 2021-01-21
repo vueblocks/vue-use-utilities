@@ -1,3 +1,4 @@
+export * from './useColor'
 export * from './useDebouncedRef'
 export * from './useElementSize'
 export * from './useFullscreen'

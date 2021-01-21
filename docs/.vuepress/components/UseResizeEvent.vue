@@ -23,13 +23,13 @@
 
 <script>
 import { onMounted, reactive } from 'vue-demi'
-// import { useResizeEvent } from '@vueblocks/vue-use-core'
+import { useResizeEvent } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useResizeEvent } from '../../../packages/core/lib/index.cjs'
+// import { useResizeEvent } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {
-  name: 'useResizeEvent',
+  name: 'UseResizeEvent',
   components: { ExampleBlock },
   setup () {
     const domSize = reactive({

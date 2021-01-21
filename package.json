@@ -25,6 +25,7 @@
     "@vueblocks/vue-use-core": "^0.2.1",
     "autoprefixer": "^9",
     "axios": "^0.21.1",
+    "color2k": "^1.1.1",
     "dayjs": "^1.10.3",
     "esbuild": "^0.8.29",
     "esbuild-register": "^1.2.1",
@@ -51,7 +52,7 @@
     "vuex": "^3.6.0"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.0.0-beta.25",
+    "@vue/composition-api": "^1.0.0-rc.1",
     "vue-demi": "^0.6.0"
   }
 }

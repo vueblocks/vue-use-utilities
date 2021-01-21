@@ -32,6 +32,7 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 1,
           children: [
+            '/guide/core/useColor',
             '/guide/core/useDebouncedRef',
             '/guide/core/useElementSize',
             '/guide/core/useFullscreen',
