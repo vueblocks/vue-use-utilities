@@ -1,21 +1,8 @@
-import color2k, {
-  mix,
-  toHex,
-  toHsla,
-  toRgba,
-  darken,
-  lighten
-} from 'color2k'
-import { Ref, computed, ComputedRef } from 'vue-demi'
+import color2k from 'color2k'
+import { Ref, computed } from 'vue-demi'
 
+import { ReactiveColor } from '../types'
 import { isUndefined } from '../utils'
-
-export interface ColorWithAmount {
-  lightenColor: ComputedRef<string>;
-  darkenColor: ComputedRef<string>;
-  tintColor: ComputedRef<string>;
-  shadeColor: ComputedRef<string>;
-}
 
 const usePalette = {
   /**
@@ -23,13 +10,22 @@ const usePalette = {
    * @param color
    * @param amount given as a decimal between 0 and 1
    */
-  tint: (color: string, amount: number) => mix('#FFF', color, amount),
+  tint: (color: string, amount: number) => color2k.mix('#FFF', color, amount),
   /**
    * Shades a color by mixing it with black.
    * @param color 
    * @param amount given as a decimal between 0 and 1
    */
-  shade: (color: string, amount: number) => mix('#000', color, amount),
+  shade: (color: string, amount: number) => color2k.mix('#000', color, amount),
+  /**
+   * Inverts the red, green and blue values of a color.
+   * @param color 
+   */
+  invert: (color: string) => {
+    if (color === 'transparent') return color
+    const [r, g, b, a] = color2k.parseToRgba(color)
+    return color2k.rgba(255 - r, 255 - g, 255 - b, a)
+  },
   ...color2k
 }
 
@@ -39,35 +35,41 @@ const usePalette = {
  * @param amount 
  */
 const useColor = (color: Ref<string>, amount?: Ref<number> | undefined) => {
-  const { tint, shade } = usePalette
+  const { tint, shade, invert } = usePalette
+  console.log(usePalette)
   // accpet color argument
-  const hexColor = computed(() => toHex(color.value))
-  const hslaColor = computed(() => toHsla(color.value))
-  const rgbaColor = computed(() => toRgba(color.value))
-  const readableColor = computed(() => color2k.readableColor(color.value))
-
-  // accept amount argument
-  let colorWithAmount: ColorWithAmount = {
+  const colorState: ReactiveColor = {
+    hexColor: computed(() => color2k.toHex(color.value)),
+    hslaColor: computed(() => color2k.toHsla(color.value)),
+    rgbaColor: computed(() => color2k.toRgba(color.value)),
+    readableColor: computed(() => color2k.readableColor(color.value)),
+    invertColor: computed(() => invert(color.value)),
+    luminance: computed(() => color2k.getLuminance(color.value)),
     lightenColor: computed(() => ''),
     darkenColor: computed(() => ''),
     tintColor: computed(() => ''),
-    shadeColor: computed(() => '')
+    shadeColor: computed(() => ''),
+    desaturateColor: computed(() => ''),
+    saturateColor: computed(() => ''),
+    opacifyColor: computed(() => ''),
+    transparentizeColor: computed(() => '')
   }
 
+  // accept amount argument
   if (amount && !isUndefined(amount)) {
-    colorWithAmount.lightenColor = computed(() => lighten(color.value, amount.value))
-    colorWithAmount.darkenColor = computed(() => darken(color.value, amount.value))
-    colorWithAmount.tintColor = computed(() => tint(color.value, amount.value))
-    colorWithAmount.shadeColor = computed(() => shade(color.value, amount.value))
+    colorState.lightenColor = computed(() => color2k.lighten(color.value, amount.value))
+    colorState.darkenColor = computed(() => color2k.darken(color.value, amount.value))
+    colorState.tintColor = computed(() => tint(color.value, amount.value))
+    colorState.shadeColor = computed(() => shade(color.value, amount.value))
+    colorState.desaturateColor = computed(() => color2k.desaturate(color.value, amount.value))
+    colorState.saturateColor = computed(() => color2k.saturate(color.value, amount.value))
+    colorState.opacifyColor = computed(() => color2k.opacify(color.value, amount.value))
+    colorState.transparentizeColor = computed(() => color2k.transparentize(color.value, amount.value))
   }
 
   return {
     usePalette,
-    hexColor,
-    hslaColor,
-    rgbaColor,
-    readableColor,
-    ...colorWithAmount
+    ...colorState,
   }
 }
 

@@ -20,3 +20,11 @@ export type {
   ElementSize,
   EventOptions
 } from './dom'
+
+export type {
+  ReactiveColor,
+  HslColor,
+  HslaColor,
+  RgbColor,
+  RgbaColor
+} from './color'
