@@ -123,7 +123,7 @@
 import { computed, onMounted, ref } from 'vue-demi'
 // import { useColor } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useColor } from '../../../packages/core/lib/index.cjs'
+import { useColor, usePalette } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 const range = (end, start = 0, step = 1) =>
@@ -140,7 +140,6 @@ export default {
     const onInputAmount = e => amountColor.value = e.target.value
 
     const tinyColor = useColor(mainColor, mainAmount)
-    const { usePalette } = tinyColor
 
     const colorStyle = color => {
       return {
@@ -172,10 +171,11 @@ export default {
       onInput,
       onInputAmount,
       colorStyle,
-      ...tinyColor,
       transparentColors,
       tintColors,
-      shadeColors
+      shadeColors,
+      usePalette,
+      ...tinyColor
     }
   }
 }

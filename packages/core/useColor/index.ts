@@ -4,6 +4,9 @@ import { Ref, computed } from 'vue-demi'
 import { ReactiveColor } from '../types'
 import { isUndefined } from '../utils'
 
+/**
+ * enhanced `color2k` with new utilities like `tint` 、 `shade` 、 `invert`.
+ */
 const usePalette = {
   /**
    * Tints a color by mixing it with white.
@@ -34,11 +37,11 @@ const usePalette = {
  * @param color 
  * @param amount 
  */
-const useColor = (color: Ref<string>, amount?: Ref<number> | undefined) => {
+const useColor = (color: Ref<string>, amount?: Ref<number> | undefined): ReactiveColor => {
   const { tint, shade, invert } = usePalette
-  console.log(usePalette)
+
   // accpet color argument
-  const colorState: ReactiveColor = {
+  const colorState = {
     hexColor: computed(() => color2k.toHex(color.value)),
     hslaColor: computed(() => color2k.toHsla(color.value)),
     rgbaColor: computed(() => color2k.toRgba(color.value)),
@@ -67,10 +70,7 @@ const useColor = (color: Ref<string>, amount?: Ref<number> | undefined) => {
     colorState.transparentizeColor = computed(() => color2k.transparentize(color.value, amount.value))
   }
 
-  return {
-    usePalette,
-    ...colorState,
-  }
+  return colorState
 }
 
-export { useColor }
+export { usePalette, useColor }
