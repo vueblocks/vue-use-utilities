@@ -34,8 +34,11 @@ module.exports = {
           children: [
             '/guide/core/useColor',
             '/guide/core/useDebouncedRef',
+            '/guide/core/useEmitter',
+            '/guide/core/useEventListener',
             '/guide/core/useElementSize',
             '/guide/core/useFullscreen',
+            '/guide/core/useMouse',
             '/guide/core/useResizeEvent',
             '/guide/core/useResizeObserver',
             '/guide/core/useShortcut',
