@@ -22,7 +22,7 @@
     "@types/lodash.throttle": "^4.1.6",
     "@types/node": "^14.14.20",
     "@vue/test-utils": "^1.1.2",
-    "@vueblocks/vue-use-core": "^0.2.1",
+    "@vueblocks/vue-use-core": "^0.2.2",
     "autoprefixer": "^9",
     "axios": "^0.21.1",
     "color2k": "^1.1.1",
