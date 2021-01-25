@@ -4,6 +4,14 @@
 
 :::
 
+## Example
+
+> 💡 Emit a custom event
+
+<ClientOnly>
+  <UseEmitter />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -25,14 +33,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-> 💡 Move your mouse
-
-<ClientOnly>
-  <UseEmitter />
-</ClientOnly>
 
 ## Typing
 

@@ -4,6 +4,14 @@
 ♻️  Register [resize](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event) event on mounted, and remove event automatically on unmounted.
 :::
 
+## Example
+
+> 💡 resize the browser and watch document size changed.
+
+<ClientOnly>
+  <UseResizeEvent />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -38,14 +46,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-> 💡 resize the browser and watch document size changed.
-
-<ClientOnly>
-  <UseResizeEvent />
-</ClientOnly>
 
 ## Typing
 

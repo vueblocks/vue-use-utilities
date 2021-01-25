@@ -4,6 +4,14 @@
 ♻️  Register [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) on mounted, and [removeEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener) automatically on unmounted.
 :::
 
+## Example
+
+> 💡 Example of [MouseMove](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event) event. The following example uses the `mousedown`, `mousemove`, and `mouseup` events to allow the user to draw on an HTML5 canvas.
+
+<ClientOnly>
+  <UseEventListener />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -66,14 +74,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-> 💡 Example of [MouseMove](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event) event. The following example uses the `mousedown`, `mousemove`, and `mouseup` events to allow the user to draw on an HTML5 canvas.
-
-<ClientOnly>
-  <UseEventListener />
-</ClientOnly>
 
 ## Typing
 

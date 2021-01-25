@@ -1,5 +1,5 @@
 import color2k from 'color2k'
-import { Ref, computed } from 'vue-demi'
+import { Ref, computed, unref, isRef } from 'vue-demi'
 
 import { ReactiveColor } from '../types'
 import { isUndefined } from '../utils'
@@ -40,14 +40,13 @@ const usePalette = {
 const useColor = (color: Ref<string>, amount?: Ref<number> | undefined): ReactiveColor => {
   const { tint, shade, invert } = usePalette
 
-  // accpet color argument
-  const colorState = {
-    hexColor: computed(() => color2k.toHex(color.value)),
-    hslaColor: computed(() => color2k.toHsla(color.value)),
-    rgbaColor: computed(() => color2k.toRgba(color.value)),
-    readableColor: computed(() => color2k.readableColor(color.value)),
-    invertColor: computed(() => invert(color.value)),
-    luminance: computed(() => color2k.getLuminance(color.value)),
+  const colorState: ReactiveColor = {
+    hexColor: computed(() => ''),
+    hslaColor: computed(() => ''),
+    rgbaColor: computed(() => ''),
+    readableColor: computed(() => ''),
+    invertColor: computed(() => ''),
+    luminance: computed(() => 0),
     lightenColor: computed(() => ''),
     darkenColor: computed(() => ''),
     tintColor: computed(() => ''),
@@ -58,16 +57,26 @@ const useColor = (color: Ref<string>, amount?: Ref<number> | undefined): Reactiv
     transparentizeColor: computed(() => '')
   }
 
+  // accpet color argument
+  if (isRef(color) && unref(color)) {
+    colorState.hexColor = computed(() => color2k.toHex(unref(color)))
+    colorState.hslaColor = computed(() => color2k.toHsla(unref(color)))
+    colorState.rgbaColor = computed(() => color2k.toRgba(unref(color)))
+    colorState.readableColor = computed(() => color2k.readableColor(unref(color)))
+    colorState.invertColor = computed(() => invert(unref(color)))
+    colorState.luminance = computed(() => color2k.getLuminance(unref(color)))
+  }
+
   // accept amount argument
-  if (amount && !isUndefined(amount)) {
-    colorState.lightenColor = computed(() => color2k.lighten(color.value, amount.value))
-    colorState.darkenColor = computed(() => color2k.darken(color.value, amount.value))
-    colorState.tintColor = computed(() => tint(color.value, amount.value))
-    colorState.shadeColor = computed(() => shade(color.value, amount.value))
-    colorState.desaturateColor = computed(() => color2k.desaturate(color.value, amount.value))
-    colorState.saturateColor = computed(() => color2k.saturate(color.value, amount.value))
-    colorState.opacifyColor = computed(() => color2k.opacify(color.value, amount.value))
-    colorState.transparentizeColor = computed(() => color2k.transparentize(color.value, amount.value))
+  if (isRef(amount) && !isUndefined(unref(amount))) {
+    colorState.lightenColor = computed(() => color2k.lighten(unref(color), unref(amount)))
+    colorState.darkenColor = computed(() => color2k.darken(unref(color), unref(amount)))
+    colorState.tintColor = computed(() => tint(unref(color), unref(amount)))
+    colorState.shadeColor = computed(() => shade(unref(color), unref(amount)))
+    colorState.desaturateColor = computed(() => color2k.desaturate(unref(color), unref(amount)))
+    colorState.saturateColor = computed(() => color2k.saturate(unref(color), unref(amount)))
+    colorState.opacifyColor = computed(() => color2k.opacify(unref(color), unref(amount)))
+    colorState.transparentizeColor = computed(() => color2k.transparentize(unref(color), unref(amount)))
   }
 
   return colorState

@@ -49,8 +49,8 @@ export function useEventListener (
       element,
       (n, _, cleanUp) => {
         if (n) {
-          addEventListener(n);
-          cleanUp(() => removeEventListener(n));
+          addEventListener(n)
+          cleanUp(() => removeEventListener(n))
         }
       },
       { immediate: true }

@@ -2,8 +2,8 @@
   <section>
     <example-block>
       <div slot="component" class="w-full text-center">
-        <h1>Drawing with mouse events</h1>
-        <canvas id="myPics" ref="refPics" width="560" height="360" class="border"></canvas>
+        <h3>Drawing with mouse events</h3>
+        <canvas id="myPics" ref="refPics" width="560" height="240" class="border"></canvas>
       </div>
     </example-block>
   </section>

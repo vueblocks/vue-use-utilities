@@ -2506,10 +2506,10 @@
     lodash "^4.17.15"
     pretty "^2.0.0"
 
-"@vueblocks/vue-use-core@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-core/download/@vueblocks/vue-use-core-0.2.1.tgz#0a6018e7503ba754a8a3b7de2ed030a4d1f32d5f"
-  integrity sha1-CmAY51A7p1Soo7feLtAwpNHzLV8=
+"@vueblocks/vue-use-core@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-core/download/@vueblocks/vue-use-core-0.2.2.tgz#72cb8511c3ecdec9aecc2025a19e44f6b1aa32b4"
+  integrity sha1-csuFEcPs3smuzCAloZ5E9rGqMrQ=
   dependencies:
     "@juggle/resize-observer" "^3.2.0"
     "@vue/composition-api" "^1.0.0-beta.25"

@@ -139,7 +139,7 @@ export default {
     const onInput = e => mainColor.value = e.target.value
     const onInputAmount = e => amountColor.value = e.target.value
 
-    const tinyColor = useColor(mainColor, mainAmount)
+    const reactiveColors = useColor(mainColor, mainAmount)
 
     const colorStyle = color => {
       return {
@@ -175,7 +175,7 @@ export default {
       tintColors,
       shadeColors,
       usePalette,
-      ...tinyColor
+      ...reactiveColors
     }
   }
 }

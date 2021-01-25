@@ -4,6 +4,14 @@
 [ResizeObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/ResizeObserver) lets you know when an element's size changes.
 :::
 
+## Example
+
+> 💡 resize the textarea, and watch the contentRect changed.
+
+<ClientOnly>
+  <UseResizeObserver />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -44,14 +52,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-> 💡 resize the textarea, and watch the contentRect changed.
-
-<ClientOnly>
-  <UseResizeObserver />
-</ClientOnly>
 
 ## Typing
 

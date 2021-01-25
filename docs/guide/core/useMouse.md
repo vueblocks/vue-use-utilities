@@ -4,6 +4,14 @@
 ♻️  Register [MouseMove](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event) event on mounted, and remove event automatically on unmounted.
 :::
 
+## Example
+
+> 💡 Move your mouse
+
+<ClientOnly>
+  <UseMouse />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -26,14 +34,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-> 💡 Move your mouse
-
-<ClientOnly>
-  <UseMouse />
-</ClientOnly>
 
 ## Typing
 
