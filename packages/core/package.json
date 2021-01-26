@@ -1,7 +1,7 @@
 {
   "name": "@vueblocks/vue-use-core",
   "description": "A Collection of Vue Compositon API Utilities",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "lib/index.cjs.js",
   "types": "lib/index.d.ts",
   "module": "lib/index.esm.js",
