@@ -17,6 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/vueblocks/vue-use-utilities.git"
   },
+  "homepage": "https://github.com/vueblocks/vue-use-utilities",
   "keywords": [
     "vue",
     "vue-use",

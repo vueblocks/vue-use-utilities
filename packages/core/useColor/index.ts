@@ -1,4 +1,4 @@
-import color2k from 'color2k'
+import * as color2k from 'color2k'
 import { Ref, computed, unref, isRef } from 'vue-demi'
 
 import { ReactiveColor } from '../types'

@@ -39,29 +39,29 @@ export default {
  * enhanced `color2k` with new utilities like `tint` 、 `shade` 、 `invert`.
  */
 declare const usePalette: {
-    adjustHue: typeof color2k.adjustHue;
-    darken: typeof color2k.darken;
-    desaturate: typeof color2k.desaturate;
-    getContrast: typeof color2k.getContrast;
-    getLuminance: typeof color2k.getLuminance;
-    getScale: typeof color2k.getScale;
-    guard: typeof color2k.guard;
-    hasBadContrast: typeof color2k.hasBadContrast;
-    hsla: typeof color2k.hsla;
-    lighten: typeof color2k.lighten;
-    mix: typeof color2k.mix;
-    opacify: typeof color2k.opacify;
-    parseToHsla: typeof color2k.parseToHsla;
-    readableColor: typeof color2k.readableColor;
-    readableColorIsBlack: typeof color2k.readableColorIsBlack;
-    rgba: typeof color2k.rgba;
-    saturate: typeof color2k.saturate;
-    transparentize: typeof color2k.transparentize;
-    parseToRgba: typeof color2k.parseToRgba;
-    ColorError: typeof color2k.ColorError;
-    toHex: typeof color2k.toHex;
-    toRgba: typeof color2k.toRgba;
-    toHsla: typeof color2k.toHsla;
+    adjustHue: typeof adjustHue;
+    darken: typeof darken;
+    desaturate: typeof desaturate;
+    getContrast: typeof getContrast;
+    getLuminance: typeof getLuminance;
+    getScale: typeof getScale;
+    guard: typeof guard;
+    hasBadContrast: typeof hasBadContrast;
+    hsla: typeof hsla;
+    lighten: typeof lighten;
+    mix: typeof mix;
+    opacify: typeof opacify;
+    parseToHsla: typeof parseToHsla;
+    readableColor: typeof readableColor;
+    readableColorIsBlack: typeof readableColorIsBlack;
+    rgba: typeof rgba;
+    saturate: typeof saturate;
+    transparentize: typeof transparentize;
+    parseToRgba: typeof parseToRgba;
+    ColorError: typeof ColorError;
+    toHex: typeof toHex;
+    toRgba: typeof toRgba;
+    toHsla: typeof toHsla;
     /**
      * Tints a color by mixing it with white.
      * @param color
