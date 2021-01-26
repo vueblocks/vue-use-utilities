@@ -7,5 +7,5 @@ export {
 } from './is'
 
 export {
-  noop
+  NOOP
 } from './common'

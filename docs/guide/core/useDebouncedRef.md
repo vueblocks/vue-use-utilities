@@ -4,6 +4,12 @@
 Inspired by Vue3 Offical Document [customRef](https://v3.cn.vuejs.org/api/refs-api.html#customref) demo.
 :::
 
+## Example
+
+<ClientOnly>
+  <UseDebouncedRef />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -21,12 +27,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-<ClientOnly>
-  <UseDebouncedRef />
-</ClientOnly>
 
 ## Typing
 

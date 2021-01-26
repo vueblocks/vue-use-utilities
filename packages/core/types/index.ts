@@ -5,7 +5,8 @@ export type {
 export type {
   RefTyped,
   RefElement,
-  ToRefs
+  ToRefs,
+  MaybeRef
 } from './ref'
 
 export type {

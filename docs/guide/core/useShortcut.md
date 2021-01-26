@@ -6,6 +6,14 @@ Bind Keyboard Shortcuts API build on top of [keymaster](https://github.com/madro
 ♻️ Bind shortcuts on mounted, and unbind shortcuts automatically on unmounted.
 :::
 
+## Example
+
+> Type one of the following Keys👇:
+
+<ClientOnly>
+  <UseShortcut />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -45,14 +53,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-> Type one of the following Keys👇:
-
-<ClientOnly>
-  <UseShortcut />
-</ClientOnly>
 
 ## Typing
 

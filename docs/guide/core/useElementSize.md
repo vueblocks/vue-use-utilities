@@ -4,6 +4,14 @@
 Reactive [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) size.
 :::
 
+## Example
+
+> 💡 resize the textarea, and watch the element size changed.
+
+<ClientOnly>
+  <UseElementSize />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -39,14 +47,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-> 💡 resize the textarea, and watch the element size changed.
-
-<ClientOnly>
-  <UseElementSize />
-</ClientOnly>
 
 ## Typing
 

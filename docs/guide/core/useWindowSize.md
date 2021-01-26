@@ -4,6 +4,14 @@
 Reactive window size
 :::
 
+## Example
+
+> 💡 resize the browser and watch window size changed.
+
+<ClientOnly>
+  <UseWindowSize />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -26,14 +34,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-> 💡 resize the browser and watch window size changed.
-
-<ClientOnly>
-  <UseWindowSize />
-</ClientOnly>
 
 ## Typing
 
