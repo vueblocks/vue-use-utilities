@@ -23,9 +23,9 @@
 
 <script>
 import { onMounted, reactive, watchEffect } from 'vue-demi'
-// import { useWindowSize } from '@vueblocks/vue-use-core'
+import { useWindowSize } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useWindowSize } from '../../../packages/core/lib/index.cjs'
+// import { useWindowSize } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {

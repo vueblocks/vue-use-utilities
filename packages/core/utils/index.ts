@@ -2,7 +2,8 @@ export {
   isArray,
   isClient,
   isElement,
-  isBoolean
+  isBoolean,
+  isUndefined
 } from './is'
 
 export {

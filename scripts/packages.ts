@@ -20,14 +20,16 @@ export const packages: PackageManifest[] = [
       'lodash.throttle',
       'screenfull',
       'keymaster',
-      '@juggle/resize-observer'
+      '@juggle/resize-observer',
+      'color2k'
     ],
     globals: {
       'lodash.debounce': 'lodash.debounce',
       'lodash.throttle': 'lodash.throttle',
       'screenfull': 'screenfull',
       '@juggle/resize-observer': 'ResizeObserver',
-      'keymaster': 'keymaster'
+      'keymaster': 'keymaster',
+      'color2k': 'color2k'
     }
   },
   {
