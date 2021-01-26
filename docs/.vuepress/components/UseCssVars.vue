@@ -36,9 +36,9 @@
 
 <script>
 import { ref } from 'vue-demi'
-// import { useCssVars } from '@vueblocks/vue-use-core'
+import { useCssVars } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useCssVars } from '../../../packages/core/lib/index.cjs'
+// import { useCssVars } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {

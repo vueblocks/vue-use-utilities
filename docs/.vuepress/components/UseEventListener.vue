@@ -11,9 +11,9 @@
 
 <script>
 import { onMounted, ref } from 'vue-demi'
-// import { useEventListener } from '@vueblocks/vue-use-core'
+import { useEventListener } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useEventListener } from '../../../packages/core/lib/index.cjs'
+// import { useEventListener } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {

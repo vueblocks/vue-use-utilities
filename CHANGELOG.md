@@ -1,3 +1,12 @@
+## [0.2.4](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.3...v0.2.4) (2021-01-26)
+
+
+### Features
+
+* add useInstance utilitiy ([ad2b508](https://github.com/xiaoluoboding/vue-use-utilities/commit/ad2b508bd08c3149a03b835a131e75105d8d173c))
+
+
+
 ## [0.2.3](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.2...v0.2.3) (2021-01-26)
 
 

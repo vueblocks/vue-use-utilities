@@ -38,6 +38,7 @@ module.exports = {
             '/guide/core/useElementSize',
             '/guide/core/useEventListener',
             '/guide/core/useFullscreen',
+            '/guide/core/useInstance',
             '/guide/core/useMouse',
             '/guide/core/usePalette',
             '/guide/core/useResizeEvent',
