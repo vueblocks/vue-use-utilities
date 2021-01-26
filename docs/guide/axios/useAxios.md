@@ -16,6 +16,14 @@ or
 npm i @vueblocks/vue-use-axios -S
 ```
 
+## Example
+
+> Fetch Bitcoin Price every 20 seconds
+
+<ClientOnly>
+  <UseAxios />
+</ClientOnly>
+
 ## Usage
 
 `useAxios` is a wrapper of Axios
@@ -29,16 +37,21 @@ export default {
     const url = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 
     const { refetch, data } = useAxios(url)
+    
+    const bitcoin = ref(data)
 
-    const fetchBitcoinPrice = () => {
+    const fetchBitcoinRate = () => {
       setInterval(() => {
         refetch()
       }, 20000)
     }
 
+    onMounted(() => {
+      fetchBitcoinRate()
+    })
+
     return {
-      data,
-      fetchBitcoinPrice
+      bitcoin
     }
   }
   ...

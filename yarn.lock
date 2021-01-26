@@ -2483,14 +2483,7 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@^1.0.0-beta.25":
-  version "1.0.0-beta.25"
-  resolved "https://registry.npm.taobao.org/@vue/composition-api/download/@vue/composition-api-1.0.0-beta.25.tgz#fb8fcce4df9ee6c617320d4e49bf6f802a2aa8fa"
-  integrity sha1-+4/M5N+e5sYXMg1OSb9vgCoqqPo=
-  dependencies:
-    tslib "^2.0.3"
-
-"@vue/composition-api@^1.0.0-rc.1":
+"@vue/composition-api@^1.0.0-beta.24", "@vue/composition-api@^1.0.0-beta.25", "@vue/composition-api@^1.0.0-rc.1":
   version "1.0.0-rc.1"
   resolved "https://registry.npm.taobao.org/@vue/composition-api/download/@vue/composition-api-1.0.0-rc.1.tgz#d5286bbaffcd1987e56d5e3a9f26bfb6023e7c41"
   integrity sha1-1Shruv/NGYflbV46nya/tgI+fEE=
@@ -2506,13 +2499,22 @@
     lodash "^4.17.15"
     pretty "^2.0.0"
 
-"@vueblocks/vue-use-core@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-core/download/@vueblocks/vue-use-core-0.2.2.tgz#72cb8511c3ecdec9aecc2025a19e44f6b1aa32b4"
-  integrity sha1-csuFEcPs3smuzCAloZ5E9rGqMrQ=
+"@vueblocks/vue-use-axios@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-axios/download/@vueblocks/vue-use-axios-0.2.0.tgz#7db27fbcc02c86b1c89386b0943595533958e1f1"
+  integrity sha1-fbJ/vMAshrHIk4awlDWVUzlY4fE=
+  dependencies:
+    "@vue/composition-api" "^1.0.0-beta.24"
+    vue-demi "^0.5.4"
+
+"@vueblocks/vue-use-core@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-core/-/vue-use-core-0.2.4.tgz#6e3287903d7fb33390f3b8152793790c78b16c39"
+  integrity sha512-ycRKW5IOVc3xysWPnkg5x9baPOG89lompRLYZb3owP9I/pwdz01+n8wwT20JhdmDaG0cdWCF9/S+u/pIHCPiKQ==
   dependencies:
     "@juggle/resize-observer" "^3.2.0"
     "@vue/composition-api" "^1.0.0-beta.25"
+    color2k "^1.1.1"
     dayjs "^1.10.2"
     keymaster "^1.6.2"
     lodash.debounce "^4.0.8"
@@ -4860,7 +4862,12 @@ dateformat@^3.0.0:
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
 
-dayjs@^1.10.2, dayjs@^1.10.3:
+dayjs@^1.10.2:
+  version "1.10.4"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"
+  integrity sha512-RI/Hh4kqRc1UKLOAf/T5zdMMX5DQIlDxwUe3wSyMMnEbGunnpENCdbUgM+dW7kXidZqCttBrmw7BhN4TMddkCw==
+
+dayjs@^1.10.3:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.3.tgz#cf3357c8e7f508432826371672ebf376cb7d619b"
   integrity sha512-/2fdLN987N8Ki7Id8BUN2nhuiRyxTLumQnSQf9CNncFCyqFsSKb9TNhzRYcC8K8eJSJOKvbvkImo/MKKhNi4iw==
@@ -13058,8 +13065,8 @@ vm-browserify@^1.0.1:
 
 vue-demi@^0.5.4:
   version "0.5.4"
-  resolved "https://registry.npm.taobao.org/vue-demi/download/vue-demi-0.5.4.tgz?cache=0&sync_timestamp=1610130541145&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-demi%2Fdownload%2Fvue-demi-0.5.4.tgz#cedb887af819ff0126c545a5540170d8895b816d"
-  integrity sha1-ztuIevgZ/wEmxUWlVAFw2IlbgW0=
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.5.4.tgz#cedb887af819ff0126c545a5540170d8895b816d"
+  integrity sha512-m/cm/Jo+USFx4JNGvhXVuAAbeB+Dejc0O8hzarph9MMuxxcMEDxf+0UBzg79g15YwYGIToX957XvzG0xSufG9A==
 
 vue-demi@^0.6.0:
   version "0.6.0"
