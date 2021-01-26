@@ -121,9 +121,9 @@
 
 <script>
 import { computed, onMounted, ref } from 'vue-demi'
-// import { useColor } from '@vueblocks/vue-use-core'
+import { useColor, usePalette } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useColor, usePalette } from '../../../packages/core/lib/index.cjs'
+// import { useColor, usePalette } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 const range = (end, start = 0, step = 1) =>

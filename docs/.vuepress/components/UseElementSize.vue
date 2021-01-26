@@ -19,9 +19,9 @@
 
 <script>
 import { onMounted, ref } from 'vue-demi'
-// import { useElementSize } from '@vueblocks/vue-use-core'
+import { useElementSize } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useElementSize } from '../../../packages/core/lib/index.cjs'
+// import { useElementSize } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {
