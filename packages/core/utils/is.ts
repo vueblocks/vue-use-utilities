@@ -10,3 +10,4 @@ export const isBoolean = (val: any): val is boolean => typeof val === 'boolean'
 export const isClient = ![typeof window, typeof document].includes('undefined')
 export const isElement = (val: any): val is Element =>
   typeof val === 'object' && !!val.tagName
+export const isUndefined = (val: any) => val === undefined

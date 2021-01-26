@@ -2,6 +2,7 @@ import replace from '@rollup/plugin-replace'
 import typescript from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 import dts from 'rollup-plugin-dts'
+import filesize from 'rollup-plugin-filesize'
 
 import pkg from '../package.json'
 import { activePackages } from './packages'
@@ -95,7 +96,8 @@ for (const { name, display, external = [], globals = {} } of activePackages) {
           __DEV__: config.format !== 'umd'
             ? `(process.env.NODE_ENV !== 'production')`
             : config.isMinify ? 'false' : 'true'
-        })
+        }),
+        filesize()
       ],
       external: [
         'vue-demi',

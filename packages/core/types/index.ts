@@ -5,7 +5,8 @@ export type {
 export type {
   RefTyped,
   RefElement,
-  ToRefs
+  ToRefs,
+  MaybeRef
 } from './ref'
 
 export type {
@@ -20,3 +21,11 @@ export type {
   ElementSize,
   EventOptions
 } from './dom'
+
+export type {
+  ReactiveColor,
+  HslColor,
+  HslaColor,
+  RgbColor,
+  RgbaColor
+} from './color'

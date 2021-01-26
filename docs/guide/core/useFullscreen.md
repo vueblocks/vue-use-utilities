@@ -4,6 +4,14 @@
 Reactive Fullscreen API build on top of [screenfull.js](https://github.com/sindresorhus/screenfull.js/)
 :::
 
+## Example
+
+> Click the image to make it fullscreen
+
+<ClientOnly>
+  <UseFullscreen />
+</ClientOnly>
+
 ## Usage
 
 ```html
@@ -38,15 +46,6 @@ export default {
   }
 }
 ```
-
-## Example
-
-> Click the image to make it fullscreen
-
-<ClientOnly>
-  <UseFullscreen />
-</ClientOnly>
-
 
 ## Typing
 
