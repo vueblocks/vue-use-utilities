@@ -36,7 +36,6 @@ module.exports = {
             '/guide/core/useColor',
             '/guide/core/useDebouncedRef',
             '/guide/core/useElementSize',
-            '/guide/core/useEmitter',
             '/guide/core/useEventListener',
             '/guide/core/useFullscreen',
             '/guide/core/useMouse',
