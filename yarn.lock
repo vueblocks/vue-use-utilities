@@ -2499,18 +2499,18 @@
     lodash "^4.17.15"
     pretty "^2.0.0"
 
-"@vueblocks/vue-use-axios@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-axios/download/@vueblocks/vue-use-axios-0.2.0.tgz#7db27fbcc02c86b1c89386b0943595533958e1f1"
-  integrity sha1-fbJ/vMAshrHIk4awlDWVUzlY4fE=
+"@vueblocks/vue-use-axios@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-axios/download/@vueblocks/vue-use-axios-0.2.5.tgz#ae1ffd3402e83ce43798cd331eb5867b0986e0e1"
+  integrity sha1-rh/9NALoPOQ3mM0zHrWGewmG4OE=
   dependencies:
     "@vue/composition-api" "^1.0.0-beta.24"
     vue-demi "^0.5.4"
 
-"@vueblocks/vue-use-core@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-core/-/vue-use-core-0.2.4.tgz#6e3287903d7fb33390f3b8152793790c78b16c39"
-  integrity sha512-ycRKW5IOVc3xysWPnkg5x9baPOG89lompRLYZb3owP9I/pwdz01+n8wwT20JhdmDaG0cdWCF9/S+u/pIHCPiKQ==
+"@vueblocks/vue-use-core@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-core/-/vue-use-core-0.2.5.tgz#4af0bf35f2ae750b2e3a4c456bb36c5708b9b151"
+  integrity sha512-HEgVpEVW6PRizQZq/BWC5mWEyzh5M253kbTTWy5HwURUnPHSscNDUad+pjmbNCako08G97FVe0DdSzh2wTGlBg==
   dependencies:
     "@juggle/resize-observer" "^3.2.0"
     "@vue/composition-api" "^1.0.0-beta.25"
