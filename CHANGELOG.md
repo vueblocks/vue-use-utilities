@@ -1,3 +1,12 @@
+## [0.2.5](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.4...v0.2.5) (2021-01-26)
+
+
+### Bug Fixes
+
+* import colo2k as es6 module ([b17dbf8](https://github.com/xiaoluoboding/vue-use-utilities/commit/b17dbf8cf409cc2701026e1a424d0bcf4a318910))
+
+
+
 ## [0.2.4](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.3...v0.2.4) (2021-01-26)
 
 

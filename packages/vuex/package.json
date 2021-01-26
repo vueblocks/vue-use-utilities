@@ -1,7 +1,7 @@
 {
   "name": "@vueblocks/vue-use-vuex",
   "description": "Use Vuex With Composition API Easily.",
-  "version": "0.2.0",
+  "version": "0.2.5",
   "main": "lib/index.cjs.js",
   "types": "lib/index.d.ts",
   "module": "lib/index.esm.js",
@@ -17,6 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/vueblocks/vue-use-utilities.git"
   },
+  "homepage": "https://github.com/vueblocks/vue-use-utilities",
   "keywords": [
     "vue",
     "vue-use",

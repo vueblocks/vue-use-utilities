@@ -1,7 +1,7 @@
 {
   "name": "@vueblocks/vue-use-core",
-  "description": "A Collection of Vue Compositon API Utilities",
-  "version": "0.2.4",
+  "description": "A Collection of Vue Compositon API Utilities.",
+  "version": "0.2.5",
   "main": "lib/index.cjs.js",
   "types": "lib/index.d.ts",
   "module": "lib/index.esm.js",
@@ -17,6 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/vueblocks/vue-use-utilities.git"
   },
+  "homepage": "https://github.com/vueblocks/vue-use-utilities",
   "keywords": [
     "vue",
     "vue-use",

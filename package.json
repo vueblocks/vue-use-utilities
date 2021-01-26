@@ -1,6 +1,6 @@
 {
   "name": "@vueblocks/vue-use-utilities",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A collection of Vue composition-api utilities",
   "scripts": {
     "docs:dev": "vuepress dev docs",
@@ -22,7 +22,8 @@
     "@types/lodash.throttle": "^4.1.6",
     "@types/node": "^14.14.20",
     "@vue/test-utils": "^1.1.2",
-    "@vueblocks/vue-use-core": "^0.2.2",
+    "@vueblocks/vue-use-axios": "^0.2.0",
+    "@vueblocks/vue-use-core": "^0.2.4",
     "autoprefixer": "^9",
     "axios": "^0.21.1",
     "color2k": "^1.1.1",
