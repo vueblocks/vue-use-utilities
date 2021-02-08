@@ -22,7 +22,8 @@ export const packages: PackageManifest[] = [
       'keymaster',
       '@juggle/resize-observer',
       'color2k',
-      'mitt'
+      'mitt',
+      'stateshot'
     ],
     globals: {
       'lodash.debounce': 'lodash.debounce',
@@ -31,7 +32,8 @@ export const packages: PackageManifest[] = [
       '@juggle/resize-observer': 'ResizeObserver',
       'keymaster': 'keymaster',
       'color2k': 'color2k',
-      'mitt': 'mitt'
+      'mitt': 'mitt',
+      'stateshot': 'stateshot'
     }
   },
   {
@@ -53,11 +55,13 @@ export const packages: PackageManifest[] = [
     addon: true,
     external: [
       'axios',
-      'lodash'
+      'lodash.debounce',
+      'lodash.throttle'
     ],
     globals: {
       'axios': 'Axios',
-      'lodash': 'lodash'
+      'lodash.debounce': 'lodash.debounce',
+      'lodash.throttle': 'lodash.throttle'
     }
   }
 ]
