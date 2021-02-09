@@ -5,7 +5,8 @@ import axios, {
   AxiosResponse,
   CancelTokenSource
 } from 'axios'
-import { debounce, throttle } from 'lodash'
+import debounce from 'lodash.debounce'
+import throttle from 'lodash.throttle'
 
 interface IAxiosState {
   response: any

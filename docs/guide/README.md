@@ -3,7 +3,7 @@
 ## What is vue-use-utilities
 
 `@vueblocks/vue-use-utilities` is a out of box generic `composition-api` utilities. It's both Support
-Vue 2 / 3 Project. Build on top of [vue-demi](https://github.com/antfu/vue-demi) & [@vue/composition-api](https://github.com/vuejs/composition-api)
+Vue 2 / 3 Project. Built on top of [vue-demi](https://github.com/antfu/vue-demi) & [@vue/composition-api](https://github.com/vuejs/composition-api)
 
 ## Inspiration
 
