@@ -18,6 +18,7 @@ export const packages: PackageManifest[] = [
     external: [
       'lodash.debounce',
       'lodash.throttle',
+      'lodash.clonedeep',
       'screenfull',
       'keymaster',
       '@juggle/resize-observer',
@@ -28,6 +29,7 @@ export const packages: PackageManifest[] = [
     globals: {
       'lodash.debounce': 'lodash.debounce',
       'lodash.throttle': 'lodash.throttle',
+      'lodash.clonedeep': 'lodash.clonedeep',
       'screenfull': 'screenfull',
       '@juggle/resize-observer': 'ResizeObserver',
       'keymaster': 'keymaster',

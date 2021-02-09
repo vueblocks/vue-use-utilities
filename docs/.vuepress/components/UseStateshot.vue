@@ -8,7 +8,7 @@
         placeholder="E.g. Feed the cat"
         v-model="newTodoText"
       />
-      <button class="px-4 py-2 border rounded-md" @click="addTodo">Add</button>
+      <button class="cursor-pointer px-4 py-2 border rounded-md" @click="addTodo">Add</button>
 
       <ul v-for="(item, index) in historyState.todoList">
         <li :key="item.id">
@@ -18,10 +18,10 @@
       </ul>
 
       <div class="w-full text-center mt-4">
-        <button class="px-3 py-2" @click="undo">Undo</button>
-        <button class="px-3 py-2" @click="redo">Redo</button>
-        <button class="px-3 py-2" @click="reset">Reset</button>
-        </div>
+        <button class="cursor-pointer px-3 py-2" @click="undo" :disabled="!hasUndo">Undo {{ undoCount }}</button>
+        <button class="cursor-pointer px-3 py-2" @click="redo" :disabled="!hasRedo">Redo {{ redoCount }}</button>
+        <button class="cursor-pointer px-3 py-2" @click="reset" :disabled="historyLength === 0">Reset</button>
+      </div>
     </div>
     <span slot="code">{{ historyState.todoList }}</span>
   </example-block>
@@ -47,23 +47,27 @@ export default {
       ]
     })
 
-    const todoListLength = computed(() => state.todoList.length)
+    const { historyState, ...funcs } = useStateshot(state)
+
+    const todoListLength = computed(() => historyState.value.todoList.length)
 
     const addTodo = () => {
-      state.todoList.push({
+      if (newTodoText.value === '') return
+      historyState.value.todoList.push({
         id: todoListLength.value + 1,
         title: newTodoText.value
       })
       newTodoText.value = ''
     }
-    const removeTodo = index => state.todoList.splice(index, 1)
+    const removeTodo = index => historyState.value.todoList.splice(index, 1)
 
     return {
       ...state,
       newTodoText,
       addTodo,
       removeTodo,
-      ...useStateshot(state)
+      historyState,
+      ...funcs
     }
   }
 }
