@@ -1,3 +1,13 @@
+## [0.2.6](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.5...v0.2.6) (2021-02-09)
+
+
+### Features
+
+* add useStateshot utilities ([e2cf92b](https://github.com/xiaoluoboding/vue-use-utilities/commit/e2cf92b4fd47702c865f665131f39defde17e0f4))
+* finish useStateshot utilities ([c8b3869](https://github.com/xiaoluoboding/vue-use-utilities/commit/c8b386930b0773201b0dd01ae69834f67aa97871))
+
+
+
 ## [0.2.5](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.4...v0.2.5) (2021-01-26)
 
 

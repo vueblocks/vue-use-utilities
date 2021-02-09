@@ -1,6 +1,6 @@
 import { watch, Ref, ref } from 'vue-demi'
 
-import { RefElement, MaybeRef, Fn } from '../types'
+import { RefElement, RefTyped, Fn } from '../types'
 import { NOOP } from '../utils'
 
 export function useEventListener<E extends keyof WindowEventMap>(
@@ -25,7 +25,7 @@ export function useEventListener<E extends keyof DocumentEventMap>(
 ): Fn
 
 export function useEventListener(
-  target: MaybeRef<EventTarget>,
+  target: RefTyped<EventTarget>,
   event: string,
   listener: EventListener,
   options?: boolean | AddEventListenerOptions

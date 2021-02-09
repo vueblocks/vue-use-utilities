@@ -1,10 +1,10 @@
 import { Ref, ref, watch } from 'vue-demi'
-import { MaybeRef } from '../types'
+import { RefTyped } from '../types'
 
 const cssVariableRegex = /--[\S]*/g
 
 const useCssVars = (
-  el: MaybeRef<HTMLElement | null>,
+  el: RefTyped<HTMLElement | null>,
   variable: string,
   defaultValue: string
 ): Ref<string> => {

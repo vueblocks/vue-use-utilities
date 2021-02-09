@@ -5,8 +5,7 @@ export type {
 export type {
   RefTyped,
   RefElement,
-  ToRefs,
-  MaybeRef
+  ToRefs
 } from './ref'
 
 export type {
@@ -29,3 +28,5 @@ export type {
   RgbColor,
   RgbaColor
 } from './color'
+
+export * from './stateshot'

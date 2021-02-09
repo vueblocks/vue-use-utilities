@@ -1,7 +1,7 @@
 {
   "name": "@vueblocks/vue-use-axios",
   "description": "Use Axios With Composition API Easily.",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "main": "lib/index.cjs.js",
   "types": "lib/index.d.ts",
   "module": "lib/index.esm.js",
@@ -33,6 +33,8 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-beta.24",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
     "vue-demi": "^0.5.4"
   },
   "devDependencies": {

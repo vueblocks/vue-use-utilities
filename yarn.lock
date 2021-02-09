@@ -2228,6 +2228,13 @@
   resolved "https://registry.npm.taobao.org/@types/keymaster/download/@types/keymaster-1.6.28.tgz#093fc6fe49deff4ee17d36935a49230edb1c935f"
   integrity sha1-CT/G/kne/07hfTaTWkkjDtsck18=
 
+"@types/lodash.clonedeep@^4.5.6":
+  version "4.5.6"
+  resolved "https://registry.npm.taobao.org/@types/lodash.clonedeep/download/@types/lodash.clonedeep-4.5.6.tgz#3b6c40a0affe0799a2ce823b440a6cf33571d32b"
+  integrity sha1-O2xAoK/+B5mizoI7RAps8zVx0ys=
+  dependencies:
+    "@types/lodash" "*"
+
 "@types/lodash.debounce@^4.0.6":
   version "4.0.6"
   resolved "https://registry.npm.taobao.org/@types/lodash.debounce/download/@types/lodash.debounce-4.0.6.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Flodash.debounce%2Fdownload%2F%40types%2Flodash.debounce-4.0.6.tgz#c5a2326cd3efc46566c47e4c0aa248dc0ee57d60"
@@ -2499,18 +2506,18 @@
     lodash "^4.17.15"
     pretty "^2.0.0"
 
-"@vueblocks/vue-use-axios@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-axios/download/@vueblocks/vue-use-axios-0.2.0.tgz#7db27fbcc02c86b1c89386b0943595533958e1f1"
-  integrity sha1-fbJ/vMAshrHIk4awlDWVUzlY4fE=
+"@vueblocks/vue-use-axios@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-axios/download/@vueblocks/vue-use-axios-0.2.5.tgz#ae1ffd3402e83ce43798cd331eb5867b0986e0e1"
+  integrity sha1-rh/9NALoPOQ3mM0zHrWGewmG4OE=
   dependencies:
     "@vue/composition-api" "^1.0.0-beta.24"
     vue-demi "^0.5.4"
 
-"@vueblocks/vue-use-core@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-core/-/vue-use-core-0.2.4.tgz#6e3287903d7fb33390f3b8152793790c78b16c39"
-  integrity sha512-ycRKW5IOVc3xysWPnkg5x9baPOG89lompRLYZb3owP9I/pwdz01+n8wwT20JhdmDaG0cdWCF9/S+u/pIHCPiKQ==
+"@vueblocks/vue-use-core@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-core/-/vue-use-core-0.2.5.tgz#4af0bf35f2ae750b2e3a4c456bb36c5708b9b151"
+  integrity sha512-HEgVpEVW6PRizQZq/BWC5mWEyzh5M253kbTTWy5HwURUnPHSscNDUad+pjmbNCako08G97FVe0DdSzh2wTGlBg==
   dependencies:
     "@juggle/resize-observer" "^3.2.0"
     "@vue/composition-api" "^1.0.0-beta.25"
@@ -4196,6 +4203,11 @@ color2k@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/color2k/download/color2k-1.1.1.tgz#f9703fab6693e2a407962211f1ab7e8e0602d5d7"
   integrity sha1-+XA/q2aT4qQHliIR8at+jgYC1dc=
+
+color2k@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npm.taobao.org/color2k/download/color2k-1.2.2.tgz#468b98ae35141c802dcfa1fb594d396baaa052d3"
+  integrity sha1-RouYrjUUHIAtz6H7WU05a6qgUtM=
 
 color@^3.0.0, color@^3.1.3:
   version "3.1.3"
@@ -8348,7 +8360,7 @@ lodash._reinterpolate@^3.0.0:
 
 lodash.clonedeep@^4.5.0:
   version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  resolved "https://registry.npm.taobao.org/lodash.clonedeep/download/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
   integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
 
 lodash.debounce@^4.0.8:
@@ -11956,6 +11968,11 @@ stack-utils@^2.0.2:
   integrity sha512-gL//fkxfWUsIlFL2Tl42Cl6+HFALEaB1FU76I/Fy+oZjRreP7OPMXFlGbxM7NQsI0ZpUfw76sHnv0WNYuTb7Iw==
   dependencies:
     escape-string-regexp "^2.0.0"
+
+stateshot@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.npm.taobao.org/stateshot/download/stateshot-1.3.3.tgz#d7cc0c69c50c24e7c20382ed22b1d3ec5bd6c717"
+  integrity sha1-18wMacUMJOfCA4LtIrHT7FvWxxc=
 
 static-extend@^0.1.1:
   version "0.1.2"
