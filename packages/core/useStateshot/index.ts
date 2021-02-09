@@ -7,8 +7,8 @@ import { unwrap } from '../utils'
 
 /**
  * 💾 A state snapshot composable utilities built on top of stateshot.js.
- * @param defaultValue 
- * @param options 
+ * @param defaultValue
+ * @param options checkout stateshot [options](https://github.com/gaoding-inc/stateshot#history)
  */
 const useStateshot = (
   defaultValue: RefTyped<any>,

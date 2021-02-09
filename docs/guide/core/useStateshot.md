@@ -17,11 +17,10 @@
   <label for="text">Add a todo: </label>
   <input
     type="text"
-    class="px-3 py-2 leading-5 border rounded-md ml-2"
     placeholder="E.g. Feed the cat"
     v-model="newTodoText"
   />
-  <button class="cursor-pointer px-4 py-2 border rounded-md" @click="addTodo">Add</button>
+  <button @click="addTodo">Add</button>
 
   <ul v-for="(item, index) in historyState.todoList">
     <li :key="item.id">
@@ -31,9 +30,9 @@
   </ul>
 
   <div class="w-full text-center mt-4">
-    <button class="cursor-pointer px-3 py-2" @click="undo" :disabled="!hasUndo">Undo {{ undoCount }}</button>
-    <button class="cursor-pointer px-3 py-2" @click="redo" :disabled="!hasRedo">Redo {{ redoCount }}</button>
-    <button class="cursor-pointer px-3 py-2" @click="reset" :disabled="historyLength === 0">Reset</button>
+    <button @click="undo" :disabled="!hasUndo">Undo {{ undoCount }}</button>
+    <button @click="redo" :disabled="!hasRedo">Redo {{ redoCount }}</button>
+    <button @click="reset" :disabled="historyLength === 0">Reset</button>
   </div>
 </div>
 ```
@@ -85,7 +84,10 @@ export default {
  * @param defaultValue
  * @param options
  */
-declare const useStateshot: (defaultValue: RefTyped<any>, options?: IHistoryOptions) => {
+declare const useStateshot: (
+  defaultValue: RefTyped<any>,
+  options?: IHistoryOptions
+) => {
     undo: () => void;
     redo: () => void;
     reset: () => void;
@@ -99,3 +101,8 @@ declare const useStateshot: (defaultValue: RefTyped<any>, options?: IHistoryOpti
     redoCount: Ref<number>;
 };
 ```
+
+## Related works
+
+* [vuex-stateshot](https://github.com/xiaoluoboding/vuex-stateshot) - 💾 A State Snapshot plugin on Actions/Mutations for Vuex3.1+.
+

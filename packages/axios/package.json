@@ -33,6 +33,8 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-beta.24",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
     "vue-demi": "^0.5.4"
   },
   "devDependencies": {
