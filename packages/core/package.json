@@ -29,11 +29,11 @@
   "sideEffects": false,
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
-    "@types/lodash.clonedeep": "^4.5.6",
     "@vue/composition-api": "^1.0.0-rc.1",
     "color2k": "^1.1.1",
     "dayjs": "^1.10.2",
     "keymaster": "^1.6.2",
+    "lodash.clonedeep": "^4.5.6",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "screenfull": "^5.1.0",
