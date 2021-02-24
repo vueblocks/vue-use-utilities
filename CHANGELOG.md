@@ -1,3 +1,12 @@
+## [0.2.9](https://github.com/vueblocks/vue-use-utilities/compare/v0.2.8...v0.2.9) (2021-02-24)
+
+
+### Bug Fixes
+
+* fixed dependencies package version typo ([89214d1](https://github.com/vueblocks/vue-use-utilities/commit/89214d186af14f10fdae4aaa1fd86e969906ea6f))
+
+
+
 ## [0.2.7](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.6...v0.2.7) (2021-02-24)
 
 
