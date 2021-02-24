@@ -4215,10 +4215,10 @@ color2k@^1.1.1:
   resolved "https://registry.npm.taobao.org/color2k/download/color2k-1.1.1.tgz#f9703fab6693e2a407962211f1ab7e8e0602d5d7"
   integrity sha1-+XA/q2aT4qQHliIR8at+jgYC1dc=
 
-color2k@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.npm.taobao.org/color2k/download/color2k-1.2.3.tgz#fc36ab4428a01aa1e06a5f3cbb46b8fc1a438a31"
-  integrity sha1-/DarRCigGqHgal88u0a4/BpDijE=
+color2k@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.npm.taobao.org/color2k/download/color2k-1.2.4.tgz#af34950ac58e23cf224a01cb8dd0c9911a79605e"
+  integrity sha1-rzSVCsWOI88iSgHLjdDJkRp5YF4=
 
 color@^3.0.0, color@^3.1.3:
   version "3.1.3"
