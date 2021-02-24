@@ -29,9 +29,9 @@
 
 <script>
 import { computed, reactive, ref } from 'vue-demi'
-// import { useStateshot } from '@vueblocks/vue-use-core'
+import { useStateshot } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useStateshot } from '../../../packages/core/lib/index.cjs'
+// import { useStateshot } from '../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {

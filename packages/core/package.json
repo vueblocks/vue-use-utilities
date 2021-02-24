@@ -30,7 +30,7 @@
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
     "@vue/composition-api": "^1.0.0-rc.1",
-    "color2k": "^1.1.1",
+    "color2k": "^1.2.3",
     "dayjs": "^1.10.2",
     "keymaster": "^1.6.2",
     "lodash.clonedeep": "^4.5.6",

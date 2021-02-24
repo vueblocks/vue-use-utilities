@@ -6,8 +6,5 @@ export {
   isUndefined
 } from './is'
 
-export {
-  NOOP
-} from './common'
-
+export * from './common'
 export * from './ref'
