@@ -40,6 +40,7 @@ module.exports = {
             '/guide/core/useFullscreen',
             '/guide/core/useInstance',
             '/guide/core/useMouse',
+            '/guide/core/usePrecision',
             '/guide/core/usePalette',
             '/guide/core/useResizeEvent',
             '/guide/core/useResizeObserver',

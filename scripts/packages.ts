@@ -24,7 +24,8 @@ export const packages: PackageManifest[] = [
       '@juggle/resize-observer',
       'color2k',
       'mitt',
-      'stateshot'
+      'stateshot',
+      'number-precision'
     ],
     globals: {
       'lodash.debounce': 'lodash.debounce',
@@ -35,7 +36,8 @@ export const packages: PackageManifest[] = [
       'keymaster': 'keymaster',
       'color2k': 'color2k',
       'mitt': 'mitt',
-      'stateshot': 'stateshot'
+      'stateshot': 'stateshot',
+      'number-precision': 'number-precision'
     }
   },
   {
