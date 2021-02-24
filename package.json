@@ -1,6 +1,6 @@
 {
   "name": "@vueblocks/vue-use-utilities",
-  "version": "0.2.7",
+  "version": "0.2.9",
   "description": "A collection of Vue composition-api utilities",
   "scripts": {
     "docs:dev": "vuepress dev docs",
@@ -27,7 +27,7 @@
     "@vueblocks/vue-use-core": "^0.2.6",
     "autoprefixer": "^9",
     "axios": "^0.21.1",
-    "color2k": "^1.2.3",
+    "color2k": "^1.2.4",
     "dayjs": "^1.10.3",
     "esbuild": "^0.8.29",
     "esbuild-register": "^1.2.1",
