@@ -1,3 +1,13 @@
+## [0.2.7](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.6...v0.2.7) (2021-02-24)
+
+
+### Features
+
+* add dependencies for usePrecision ([316ac99](https://github.com/xiaoluoboding/vue-use-utilities/commit/316ac99398b252e310133adac6ff91ef912d8dbb))
+* add usePrecision utilities ([8d11fd4](https://github.com/xiaoluoboding/vue-use-utilities/commit/8d11fd4bc3583552cafd5549b0ace6ece5dac3e6))
+
+
+
 ## [0.2.6](https://github.com/xiaoluoboding/vue-use-utilities/compare/v0.2.5...v0.2.6) (2021-02-09)
 
 
