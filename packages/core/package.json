@@ -29,13 +29,14 @@
   "sideEffects": false,
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
-    "@vue/composition-api": "^1.0.0-rc.1",
+    "@vue/composition-api": "^1.0.0-rc.2",
     "color2k": "^1.2.3",
     "dayjs": "^1.10.2",
     "keymaster": "^1.6.2",
     "lodash.clonedeep": "^4.5.6",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
+    "number-precision": "^1.5.0",
     "screenfull": "^5.1.0",
     "stateshot": "^1.3.3",
     "vue-demi": "^0.6.0"
