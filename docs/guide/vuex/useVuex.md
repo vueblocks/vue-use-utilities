@@ -34,6 +34,45 @@ Read more about namespacing [documention](./namespacing.md).
 
 It seems familiar right?
 
+## Example
+
+::: tip 💡 Tips
+`useVuex` also allow you provide the `namespace` as first argument, then return will be the namespaced component binding helpers.
+:::
+
+<ClientOnly>
+  <UseVuex />
+</ClientOnly>
+
+> Open dev-tools you will find `store` printing.
+
+```js
+import { useVuex, useStore } from '@vueblocks/vue-use-vuex'
+
+export default {
+  setup () {
+    const store = useStore()
+    console.log(store)
+    const { useState, useGetters, useActions } = useVuex('counter')
+
+    return {
+      ...useState(['count']),
+
+      ...useGetters([
+        'evenOrOdd'
+      ]),
+      
+      ...useActions([
+        'increment',
+        'decrement',
+        'incrementIfOdd',
+        'incrementAsync'
+      ])
+    }
+  }
+}
+```
+
 ## Typing
 
 ```ts

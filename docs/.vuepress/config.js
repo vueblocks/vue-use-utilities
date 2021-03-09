@@ -14,6 +14,18 @@ module.exports = {
         link: '/guide/'
       },
       {
+        text: 'Core',
+        link: '/guide/core/useCssVars/'
+      },
+      {
+        text: 'Vuex',
+        link: '/guide/vuex/useVuex/'
+      },
+      {
+        text: 'Axios',
+        link: '/guide/axios/useAxios/'
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/vueblocks/vue-use-utilities'
       },
@@ -21,15 +33,13 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
-          title: 'vue-use-utilities',
+          title: 'Introduction',
           collapsable: false,
-          children: [
-            ''
-          ]
+          children: ['']
         },
         {
           title: 'Core',
-          collapsable: false,
+          collapsable: true,
           sidebarDepth: 1,
           children: [
             '/guide/core/useCssVars',
