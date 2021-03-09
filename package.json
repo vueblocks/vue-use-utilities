@@ -61,5 +61,11 @@
   "dependencies": {
     "@vue/composition-api": "^1.0.0-rc.3",
     "vue-demi": "^0.7.1"
-  }
+  },
+	"postcss": {
+		"plugins": {
+			"tailwindcss": {},
+			"autoprefixer": {}
+		}
+	}
 }
