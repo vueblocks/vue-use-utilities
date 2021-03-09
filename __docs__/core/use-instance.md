@@ -8,9 +8,9 @@ Get `vm` from `getCurrentInstance` API, Same as [getCurrentInstance.proxy](https
 
 > 💡 Open DevTools, Instance Info already Print out.
 
-<!-- <ClientOnly>
-  <UseInstance />
-</ClientOnly> -->
+<ClientOnly>
+  <UseInstanceDemo />
+</ClientOnly>
 
 ## Usage
 

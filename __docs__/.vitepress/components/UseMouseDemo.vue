@@ -1,31 +1,31 @@
 <template>
   <section>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <strong class="px-3 py-2" >Reactive Mouse Event</strong>
-      </div>
-      <span slot="code">Mouse Position: [X: {{ x }}, Y: {{ y }}]</span>
+      </template>
+      <template v-slot:code>
+        <span>Mouse Position: [X: {{ x }}, Y: {{ y }}]</span>
+      </template>
     </example-block>
   </section>
 </template>
 
-<script>
-import { onMounted, reactive } from 'vue-demi'
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { useMouse } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useMouse } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseMouse',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseMouseDemo',
   setup () {
-    const { x, y, remove } = useMouse()
+    const { x, y } = useMouse()
 
     return {
       x,
       y
     }
   }
-}
+})
 </script>

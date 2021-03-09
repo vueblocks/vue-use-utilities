@@ -8,9 +8,9 @@ Reactive [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) siz
 
 > 💡 resize the textarea, and watch the element size changed.
 
-<!-- <ClientOnly>
-  <UseElementSize />
-</ClientOnly> -->
+<ClientOnly>
+  <UseElementSizeDemo />
+</ClientOnly>
 
 ## Usage
 

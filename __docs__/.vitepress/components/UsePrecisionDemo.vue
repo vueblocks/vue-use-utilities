@@ -1,7 +1,7 @@
 <template>
   <section>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <table>
           <thead>
             <tr>
@@ -50,21 +50,19 @@
         <div>
           <button class="cursor-pointer px-3 py-2" @click="randomNumbers">Random</button>
         </div>
-      </div>
+      </template>
     </example-block>
   </section>
 </template>
 
-<script>
-import { ref, reactive, toRefs, computed, isRef } from 'vue-demi'
-// import { usePrecision } from '@vueblocks/vue-use-core'
+<script lang="ts">
+import { defineComponent, reactive, toRefs, computed } from 'vue'
+import { usePrecision } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { usePrecision } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
+// import { usePrecision } from '../../../packages/core/lib/index.cjs'
 
-export default {
-  name: 'UsePrecision',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UsePrecisionDemo',
   setup () {
     const { strip, times, plus, minus, divide, round } = usePrecision()
 
@@ -106,5 +104,5 @@ export default {
       randomNumbers
     }
   }
-}
+})
 </script>

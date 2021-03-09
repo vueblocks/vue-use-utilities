@@ -6,9 +6,9 @@ Inspired by Vue3 Offical Document [customRef](https://v3.cn.vuejs.org/api/refs-a
 
 ## Example
 
-<!-- <ClientOnly>
-  <UseDebouncedRef />
-</ClientOnly> -->
+<ClientOnly>
+  <UseDebouncedRefDemo />
+</ClientOnly>
 
 ## Usage
 

@@ -1,24 +1,22 @@
 <template>
   <section>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <h3>Drawing with mouse events</h3>
         <canvas id="myPics" ref="refPics" width="560" height="240" class="border"></canvas>
-      </div>
+      </template>
     </example-block>
   </section>
 </template>
 
-<script>
-import { onMounted, ref } from 'vue-demi'
+<script lang="ts">
+import { defineComponent, onMounted, ref } from 'vue'
 import { useEventListener } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useEventListener } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseEventListener',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseEventListenerDemo',
   setup () {
     const x = ref(0)
     const y = ref(0)
@@ -66,5 +64,5 @@ export default {
       useEventListener(window, 'mouseup', onMouseUp)
     })
   }
-}
+})
 </script>

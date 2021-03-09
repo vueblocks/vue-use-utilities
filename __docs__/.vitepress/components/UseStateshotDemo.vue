@@ -1,6 +1,6 @@
 <template>
   <example-block>
-    <div slot="component">
+    <template v-slot:component>
       <label for="text">Add a todo: </label>
       <input
         type="text"
@@ -10,7 +10,7 @@
       />
       <button class="cursor-pointer px-4 py-2 border rounded-md" @click="addTodo">Add</button>
 
-      <ul v-for="(item, index) in historyState.todoList">
+      <ul v-for="(item, index) in historyState.todoList" :key="index">
         <li :key="item.id">
           {{ item.title }}
           <button @click="removeTodo(index)">Remove</button>
@@ -22,21 +22,21 @@
         <button class="cursor-pointer px-3 py-2" @click="redo" :disabled="!hasRedo">Redo {{ redoCount }}</button>
         <button class="cursor-pointer px-3 py-2" @click="reset" :disabled="historyLength === 0">Reset</button>
       </div>
-    </div>
-    <span slot="code">{{ historyState.todoList }}</span>
+    </template>
+    <template v-slot:code>
+      <span>{{ historyState.todoList }}</span>
+    </template>
   </example-block>
 </template>
 
-<script>
-import { computed, reactive, ref } from 'vue-demi'
+<script lang="ts">
+import { defineComponent, computed, reactive, ref } from 'vue'
 import { useStateshot } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useStateshot } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseStateshot',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseStateshotDemo',
   setup() {
     const newTodoText = ref('')
     const state = reactive({
@@ -59,7 +59,7 @@ export default {
       })
       newTodoText.value = ''
     }
-    const removeTodo = index => historyState.value.todoList.splice(index, 1)
+    const removeTodo = (index: any) => historyState.value.todoList.splice(index, 1)
 
     return {
       ...state,
@@ -70,5 +70,5 @@ export default {
       ...funcs
     }
   }
-}
+})
 </script>

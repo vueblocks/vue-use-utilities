@@ -8,9 +8,9 @@
 
 > 💡 resize the browser and watch document size changed.
 
-<!-- <ClientOnly>
-  <UseResizeEvent />
-</ClientOnly> -->
+<ClientOnly>
+  <UseResizeEventDemo />
+</ClientOnly>
 
 ## Usage
 

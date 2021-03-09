@@ -8,9 +8,9 @@
 
 > 💡 resize the textarea, and watch the contentRect changed.
 
-<!-- <ClientOnly>
-  <UseResizeObserver />
-</ClientOnly> -->
+<ClientOnly>
+  <UseResizeObserverDemo />
+</ClientOnly>
 
 ## Usage
 

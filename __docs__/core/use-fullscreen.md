@@ -8,9 +8,9 @@ Reactive Fullscreen API build on top of [screenfull.js](https://github.com/sindr
 
 > Click the image to make it fullscreen
 
-<!-- <ClientOnly>
-  <UseFullscreen />
-</ClientOnly> -->
+<ClientOnly>
+  <UseFullscreenDemo />
+</ClientOnly>
 
 ## Usage
 

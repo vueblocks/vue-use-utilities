@@ -1,7 +1,7 @@
 <template>
   <section>
     <example-block>
-      <div slot="component" class="w-full">
+      <template v-slot:component class="w-full">
         <h3>Color Variables</h3>
         <div class="grid">
           <div class="">
@@ -29,21 +29,19 @@
             <label for="choose-color">Choose Background Color</label>
           </div>
         </div>
-      </div>
+      </template>
     </example-block>
   </section>
 </template>
 
 <script>
-import { ref } from 'vue-demi'
-// import { useCssVars } from '@vueblocks/vue-use-core'
+import { ref, defineComponent } from 'vue'
+import { useCssVars } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useCssVars } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
+// import { useCssVars } from '../../../packages/core/lib/index.cjs'
 
-export default {
-  name: 'UseCssVarsExample',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseCssVarsDemo',
   setup () {
     const textEl = ref(null)
     const onInputTextColor = e => textColor.value = e.target.value
@@ -60,7 +58,7 @@ export default {
       onInputBgColor
     }
   }
-}
+})
 </script>
 
 <style scoped>

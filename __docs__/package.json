@@ -1,9 +1,10 @@
 {
-  "name": "__docs__",
+  "name": "vitepress-docs",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@vueblocks/vue-use-axios": "^0.2.6",
+    "@vueblocks/vue-use-core": "^0.2.9",
     "vue": "^3.0.7"
   }
 }

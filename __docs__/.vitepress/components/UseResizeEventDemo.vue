@@ -1,36 +1,40 @@
 <template>
   <section>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <strong class="px-3 py-2" >Reactive Resize Event</strong>
-      </div>
-      <span slot="code">document size: {{ domSize }}</span>
+      </template>
+      <template v-slot:code>
+        <span>document size: {{ domSize }}</span>
+      </template>
     </example-block>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <strong class="px-3 py-2" >Throttle Resize Event</strong>
-      </div>
-      <span slot="code">document size: {{ throttleSize }}</span>
+      </template>
+      <template v-slot:code>
+        <span>document size: {{ throttleSize }}</span>
+      </template>
     </example-block>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <strong class="px-3 py-2" >Debounce Resize Event</strong>
-      </div>
-      <span slot="code">document size: {{ debounceSize }}</span>
+      </template>
+      <template v-slot:code>
+        <span>document size: {{ debounceSize }}</span>
+      </template>
     </example-block>
   </section>
 </template>
 
-<script>
-import { onMounted, reactive } from 'vue-demi'
+<script lang="ts">
+import { defineComponent, onMounted, reactive } from 'vue'
 import { useResizeEvent } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useResizeEvent } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseResizeEvent',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseResizeEventDemo',
   setup () {
     const domSize = reactive({
       width: 0,
@@ -79,5 +83,5 @@ export default {
       debounceSize
     }
   }
-}
+})
 </script>

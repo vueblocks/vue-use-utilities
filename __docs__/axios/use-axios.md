@@ -20,9 +20,9 @@ npm i @vueblocks/vue-use-axios -S
 
 > Fetch Bitcoin Price every 20 seconds
 
-<!-- <ClientOnly>
-  <UseAxios />
-</ClientOnly> -->
+<ClientOnly>
+  <UseAxiosDemo />
+</ClientOnly>
 
 ## Usage
 

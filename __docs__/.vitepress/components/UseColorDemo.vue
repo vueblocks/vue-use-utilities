@@ -123,18 +123,16 @@
 </template>
 
 <script lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, defineComponent } from 'vue'
 import { useColor, usePalette } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useColor, usePalette } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
+// import { useColor, usePalette } from '../../../packages/core/lib/index.esm'
 
 const range = (end: any, start = 0, step = 1) =>
   Array.from({ length: Math.ceil((end - start + 1) / step) }, (v, i) => i * step + start)
 
-export default {
+export default defineComponent({
   name: 'UseColorDemo',
-  components: { ExampleBlock },
   setup () {
     const mainColor = ref('#3eaf7c')
     const amountColor = ref('#3eaf7c')
@@ -181,7 +179,7 @@ export default {
       ...reactiveColors
     }
   }
-}
+})
 </script>
 
 <style scoped>

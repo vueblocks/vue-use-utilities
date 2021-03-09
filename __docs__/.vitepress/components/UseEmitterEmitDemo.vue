@@ -1,24 +1,23 @@
 <template>
   <section>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <button @click="onChange">Emit An Event</button>
-      </div>
+      </template>
     </example-block>
   </section>
 </template>
 
-<script>
-import { onMounted, getCurrentInstance } from 'vue-demi'
+<script lang="ts">
+import { defineComponent, getCurrentInstance } from 'vue'
+import { useInstance } from '@vueblocks/vue-use-core'
 // import { useEmitter } from '@vueblocks/vue-use-core'
 // Test local bundle
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseEmitterEmit',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseEmitterEmitDemo',
   setup () {
-    const vm = getCurrentInstance().proxy
+    const vm = useInstance()
     
     const onChange = () => {
       console.log(vm.$emitter)
@@ -29,5 +28,5 @@ export default {
       onChange
     }
   }
-}
+})
 </script>

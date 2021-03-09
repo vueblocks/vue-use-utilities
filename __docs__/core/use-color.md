@@ -8,11 +8,6 @@ Reactive color parsing and manipulation built on top of [color2k](https://github
 
 > Change Color and Watch Reactive Color.
 
-<script setup>
-import ExampleBlock from '../.vitepress/components/ExampleBlock.vue'
-import UseColorDemo from '../.vitepress/components/UseColorDemo.vue'
-</script>
-
 <ClientOnly>
   <UseColorDemo />
 </ClientOnly>

@@ -1,6 +1,6 @@
 <template>
   <example-block>
-    <div slot="component">
+    <template v-slot:component>
       <label for="text">Type Something: </label>
       <input
         type="text"
@@ -8,24 +8,25 @@
         placeholder="debounce with input"
         v-model="text"
       />
-    </div>
-    <span slot="code">{{ text }}</span>
+    </template>
+    <template v-slot:code>
+      <span>{{ text }}</span>
+    </template>
   </example-block>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { useDebouncedRef } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useDebouncedRef } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseDebouncedRef',
-  components: { ExampleBlock },
-  setup() {
+export default defineComponent({
+  name: 'UseDebouncedRefDemo',
+  setup () {
     return {
       text: useDebouncedRef('hello')
     }
   }
-}
+})
 </script>

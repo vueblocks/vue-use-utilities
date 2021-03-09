@@ -8,9 +8,9 @@ Reactive window size
 
 > 💡 resize the browser and watch window size changed.
 
-<!-- <ClientOnly>
-  <UseWindowSize />
-</ClientOnly> -->
+<ClientOnly>
+  <UseWindowSizeDemo />
+</ClientOnly>
 
 ## Usage
 

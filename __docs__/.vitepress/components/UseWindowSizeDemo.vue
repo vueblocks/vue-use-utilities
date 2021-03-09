@@ -1,36 +1,40 @@
 <template>
   <section>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <strong class="px-3 py-2" >Reactive Resize Event</strong>
-      </div>
-      <span slot="code">window size: {{ domSize }}</span>
+      </template>
+      <template v-slot:code>
+        <span>window size: {{ domSize }}</span>
+      </template>
     </example-block>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <strong class="px-3 py-2" >Throttle Resize Event</strong>
-      </div>
-      <span slot="code">window size: {{ throttleSize }}</span>
+      </template>
+      <template v-slot:code>
+        <span>window size: {{ throttleSize }}</span>
+      </template>
     </example-block>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <strong class="px-3 py-2" >Debounce Resize Event</strong>
-      </div>
-      <span slot="code">window size: {{ debounceSize }}</span>
+      </template>
+      <template v-slot:code>
+        <span>window size: {{ debounceSize }}</span>
+      </template>
     </example-block>
   </section>
 </template>
 
-<script>
-import { onMounted, reactive, watchEffect } from 'vue-demi'
+<script lang="ts">
+import { defineComponent, reactive, watchEffect } from 'vue'
 import { useWindowSize } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useWindowSize } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'useResizeEvent',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseWindowSizeDemo',
   setup () {
     const domSize = reactive({
       width: 0,
@@ -47,7 +51,7 @@ export default {
       height: 0
     })
 
-    const domWSize = useWindowSize()
+    const domWSize = useWindowSize({})
 
     const throttleWSize = useWindowSize({
       useThrottle: true
@@ -56,17 +60,17 @@ export default {
       useThrottle: false
     })
 
-    const onResize = size => {
+    const onResize = (size: any) => {
       domSize.width = size.width.value
       domSize.height = size.height.value
     }
 
-    const onThrottleResize = (size) => {
+    const onThrottleResize = (size: any) => {
       throttleSize.width = size.width.value
       throttleSize.height = size.height.value
     }
 
-    const onDebounceResize = (size) => {
+    const onDebounceResize = (size: any) => {
       debounceSize.width = size.width.value
       debounceSize.height = size.height.value
     }
@@ -83,5 +87,5 @@ export default {
       debounceSize
     }
   }
-}
+})
 </script>

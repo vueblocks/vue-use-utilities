@@ -6,9 +6,9 @@
 
 ## Example
 
-<!-- <ClientOnly>
-  <UseStateshot />
-</ClientOnly> -->
+<ClientOnly>
+  <UseStateshotDemo />
+</ClientOnly>
 
 ## Usage
 

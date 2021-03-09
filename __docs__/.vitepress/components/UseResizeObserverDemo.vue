@@ -1,6 +1,6 @@
 <template>
   <example-block>
-    <div slot="component">
+    <template v-slot:component>
       <div class="flex flex-col">
         <label for="story">Tell us your story:</label>
         <textarea
@@ -12,21 +12,21 @@
           ref="textareaRef"
         >It was a dark and stormy night...</textarea>
       </div>
-    </div>
-    <span slot="code">{{ rectState }}</span>
+    </template>
+    <template v-slot:code>
+      <span>{{ rectState }}</span>
+    </template>
   </example-block>
 </template>
 
-<script>
-import { ref } from 'vue-demi'
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 import { useResizeObserver } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useResizeObserver } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseResizeObserver',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseResizeObserverDemo',
   setup () {
     const rectState = ref({})
     const textareaRef = ref(null)
@@ -35,7 +35,8 @@ export default {
       textareaRef,
       ([entry]) => {
         rectState.value = entry.contentRect
-      }
+      },
+      {}
     )
 
     return {
@@ -43,5 +44,5 @@ export default {
       rectState
     }
   }
-}
+})
 </script>

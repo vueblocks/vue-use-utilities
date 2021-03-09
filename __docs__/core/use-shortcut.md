@@ -10,9 +10,9 @@ Bind Keyboard Shortcuts API build on top of [keymaster](https://github.com/madro
 
 > Type one of the following Keys👇:
 
-<!-- <ClientOnly>
-  <UseShortcut />
-</ClientOnly> -->
+<ClientOnly>
+  <UseShortcutDemo />
+</ClientOnly>
 
 ## Usage
 

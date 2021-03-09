@@ -1,27 +1,26 @@
 <template>
   <section>
     <example-block>
-      <div slot="component" class="w-full text-center">
+      <template v-slot:component class="w-full text-center">
         <div class="h-8 w-full" :style="{ backgroundColor: color }"></div>
-      </div>
+      </template>
     </example-block>
   </section>
 </template>
 
-<script>
-import { getCurrentInstance, onMounted, ref } from 'vue-demi'
+<script lang="ts">
+import { defineComponent, onMounted, ref } from 'vue'
+import { useInstance } from '@vueblocks/vue-use-core'
 // import { useEmitter } from '@vueblocks/vue-use-core'
 // Test local bundle
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseEmitterOn',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseEmitterOnDemo',
   setup () {
-    const vm = getCurrentInstance().proxy
+    const vm = useInstance()
     const color = ref('#f4a')
 
-    const onChange = val => {
+    const onChange = (val: any) => {
       console.log(val)
       color.value = val
     }
@@ -34,5 +33,5 @@ export default {
       color
     }
   }
-}
+})
 </script>

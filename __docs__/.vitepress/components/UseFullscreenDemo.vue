@@ -1,6 +1,6 @@
 <template>
   <example-block>
-    <div slot="component">
+    <template v-slot:component>
       <div>
         <img
           class="cursor-pointer"
@@ -13,21 +13,21 @@
           <button class="px-3 py-2" @click="toggle">Try out Fullscreen</button>
         </div>
       </div>
-    </div>
-    <span slot="code">isFullScreen: {{ isFullscreen }}</span>
+    </template>
+    <template v-slot:code>
+      <span>isFullScreen: {{ isFullscreen }}</span>
+    </template>
   </example-block>
 </template>
 
-<script>
-import { ref, onMounted } from 'vue-demi'
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 import { useFullscreen } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useFullscreen } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseFullscreen',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseFullscreenDemo',
   setup () {
     const imgRef = ref(null)
     const { isFullscreen, toggleFullscreen: toggle } = useFullscreen()
@@ -40,5 +40,5 @@ export default {
       toggleFullscreen
     }
   }
-}
+})
 </script>

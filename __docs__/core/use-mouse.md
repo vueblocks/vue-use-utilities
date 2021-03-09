@@ -8,9 +8,9 @@
 
 > 💡 Move your mouse
 
-<!-- <ClientOnly>
-  <UseMouse />
-</ClientOnly> -->
+<ClientOnly>
+  <UseMouseDemo />
+</ClientOnly>
 
 ## Usage
 

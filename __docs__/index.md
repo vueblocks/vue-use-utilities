@@ -21,8 +21,8 @@ features:
 footer: MIT Licensed | Copyright © 2020-present @xiaoluoboding
 ---
 
-<script setup>
+<!-- <script setup>
 import ExampleBlock from './.vitepress/components/ExampleBlock.vue'
 import UseColorDemo from './.vitepress/components/UseColorDemo.vue'
-// import UseCssVarsExample from './.vitepress/components/UseCssVarsExample.vue'
-</script>
+import UseCssVarsExample from './.vitepress/components/UseCssVarsExample.vue'
+</script> -->

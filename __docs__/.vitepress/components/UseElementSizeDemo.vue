@@ -1,6 +1,6 @@
 <template>
   <example-block>
-    <div slot="component">
+    <template v-slot:component>
       <div class="flex flex-col">
         <label for="story">Tell us your story:</label>
         <textarea
@@ -12,25 +12,25 @@
           ref="textareaRef"
         >It was a dark and stormy night...</textarea>
       </div>
-    </div>
-    <span slot="code">Element Size: {{ width }} x {{ height }}</span>
+    </template>
+    <template v-slot:code>
+      <span>Element Size: {{ width }} x {{ height }}</span>
+    </template>
   </example-block>
 </template>
 
-<script>
-import { onMounted, ref } from 'vue-demi'
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 import { useElementSize } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useElementSize } from '../../../packages/core/lib/index.cjs'
-import ExampleBlock from './ExampleBlock.vue'
 
-export default {
-  name: 'UseElementSize',
-  components: { ExampleBlock },
+export default defineComponent({
+  name: 'UseElementSizeDemo',
   setup () {
     const textareaRef = ref(null)
 
-    const { width, height } = useElementSize(textareaRef)
+    const { width, height } = useElementSize(textareaRef, {})
 
     return {
       textareaRef,
@@ -38,5 +38,5 @@ export default {
       height
     }
   }
-}
+})
 </script>

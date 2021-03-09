@@ -8,9 +8,9 @@
 
 > 💡 Example of [MouseMove](https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event) event. The following example uses the `mousedown`, `mousemove`, and `mouseup` events to allow the user to draw on an HTML5 canvas.
 
-<!-- <ClientOnly>
-  <UseEventListener />
-</ClientOnly> -->
+<ClientOnly>
+  <UseEventListenerDemo />
+</ClientOnly>
 
 ## Usage
 

@@ -6,9 +6,9 @@
 
 ## Example
 
-<!-- <ClientOnly>
-  <UsePrecision />
-</ClientOnly> -->
+<ClientOnly>
+  <UsePrecisionDemo />
+</ClientOnly>
 
 ## Usage
 

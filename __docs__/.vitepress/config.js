@@ -8,9 +8,9 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' },
-      { text: 'Core', link: '/Core/' },
-      { text: 'Vuex', link: '/vuex/' },
-      { text: 'Axios', link: '/axios/' },
+      { text: 'Core', link: '/core/use-color' },
+      { text: 'Vuex', link: '/vuex/use-vuex' },
+      { text: 'Axios', link: '/axios/use-axios' },
       { text: 'GitHub', link: 'https://github.com/vueblocks/vue-use-utilities' },
     ],
     sidebar: {

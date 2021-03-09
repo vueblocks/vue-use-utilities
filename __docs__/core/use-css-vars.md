@@ -9,7 +9,7 @@ Munipulate CSS Variables.
 > 💡 Change Color and Watch CSS Variables Changed.
 
 <ClientOnly>
-  <UseCssVarsExample />
+  <UseCssVarsDemo />
 </ClientOnly>
 
 ## Usage
