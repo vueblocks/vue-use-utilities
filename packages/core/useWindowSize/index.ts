@@ -8,7 +8,7 @@ import { WindowSize, EventOptions } from '../types'
  * @param {object} options
  * @return {Ref<number>} WindowSize
  */
-const useWindowSize = (options: EventOptions): WindowSize => {
+const useWindowSize = (options?: EventOptions): WindowSize => {
   const width = ref(isClient ? window.innerWidth : 0)
   const height = ref(isClient ? window.innerHeight : 0)
 

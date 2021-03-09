@@ -11,7 +11,7 @@ import { ResizeObserverOptions, ResizeObserverCallback } from '../types'
 const useResizeObserver = (
   target: Element,
   callback: ResizeObserverCallback,
-  options: ResizeObserverOptions
+  options?: ResizeObserverOptions
 ) => {
   let ro: ResizeObserver | undefined
   const targetRef = ref(target)
