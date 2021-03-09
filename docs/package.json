@@ -1,0 +1,11 @@
+{
+  "name": "vuepress-docs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/composition-api": "^1.0.0-rc.3",
+    "@vueblocks/vue-use-axios": "^0.2.6",
+    "@vueblocks/vue-use-core": "^0.2.9",
+    "vue-demi": "^0.7.1"
+  }
+}

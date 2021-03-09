@@ -3,10 +3,11 @@
   "version": "0.2.9",
   "description": "A collection of Vue composition-api utilities",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "docs:vue": "vuepress dev docs",
+    "docs:build:vue": "vuepress build docs",
     "docs:deploy": "sh deploy.sh",
-    "docs:serve": "vitepress dev __docs__",
+    "docs:vite": "vitepress dev __docs__",
+    "docs:build:vite": "vitepress build __docs__",
     "build": "rollup -c rollup.config.js",
     "release": "lerna publish",
     "test": "jest --coverage",
@@ -24,8 +25,6 @@
     "@types/lodash.throttle": "^4.1.6",
     "@types/node": "^14.14.32",
     "@vue/test-utils": "^1.1.3",
-    "@vueblocks/vue-use-axios": "^0.2.6",
-    "@vueblocks/vue-use-core": "^0.2.9",
     "autoprefixer": "^9",
     "axios": "^0.21.1",
     "color2k": "^1.2.4",
@@ -62,10 +61,10 @@
     "@vue/composition-api": "^1.0.0-rc.3",
     "vue-demi": "^0.7.1"
   },
-	"postcss": {
-		"plugins": {
-			"tailwindcss": {},
-			"autoprefixer": {}
-		}
-	}
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
 }
