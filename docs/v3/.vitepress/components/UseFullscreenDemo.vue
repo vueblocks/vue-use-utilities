@@ -10,7 +10,7 @@
         />
 
         <div class="w-full text-center mt-4">
-          <button class="px-3 py-2" @click="toggle">Try out Fullscreen</button>
+          <button class="px-3 py-2 bg-gray-100" @click="toggle">Try out Fullscreen</button>
         </div>
       </div>
     </template>
@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue-demi'
+import { defineComponent, ref } from '@vue/runtime-core'
 import { useFullscreen } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useFullscreen } from '../../../packages/core/lib/index.cjs'

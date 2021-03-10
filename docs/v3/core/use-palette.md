@@ -15,7 +15,7 @@ Turn `color2k` to `usePalette`, we enhanced color2k with new utilities like `tin
 ## Usage
 
 ```js
-import { ref } from 'vue-demi'
+import { ref } from 'vue'
 import { usePalette } from '@vueblocks/vue-use-core'
 
 const { tint } = usePalette

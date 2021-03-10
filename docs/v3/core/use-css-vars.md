@@ -15,7 +15,7 @@ Munipulate CSS Variables.
 ## Usage
 
 ```js
-import { ref } from 'vue-demi'
+import { ref } from 'vue'
 import { useCssVars } from '@vueblocks/vue-use-core'
 
 export default {

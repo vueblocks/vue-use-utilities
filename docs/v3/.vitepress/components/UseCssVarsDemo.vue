@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { ref, defineComponent } from 'vue-demi'
+import { ref, defineComponent } from '@vue/runtime-core'
 import { useCssVars } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useCssVars } from '../../../packages/core/lib/index.cjs'

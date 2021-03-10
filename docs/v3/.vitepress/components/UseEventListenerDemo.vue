@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue-demi'
+import { defineComponent, onMounted, ref } from '@vue/runtime-core'
 import { useEventListener } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useEventListener } from '../../../packages/core/lib/index.cjs'

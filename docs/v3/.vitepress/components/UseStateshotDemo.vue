@@ -4,11 +4,11 @@
       <label for="text">Add a todo: </label>
       <input
         type="text"
-        class="px-3 py-2 leading-5 border rounded-md ml-2"
+        class="px-3 py-2 leading-5 border rounded-sm ml-2"
         placeholder="E.g. Feed the cat"
         v-model="newTodoText"
       />
-      <button class="cursor-pointer px-4 py-2 border rounded-md" @click="addTodo">Add</button>
+      <button class="cursor-pointer ml-2 px-4 py-2 border rounded-sm" @click="addTodo">Add</button>
 
       <ul v-for="(item, index) in historyState.todoList" :key="index">
         <li :key="item.id">
@@ -17,10 +17,10 @@
         </li>
       </ul>
 
-      <div class="w-full text-center mt-4">
-        <button class="cursor-pointer px-3 py-2" @click="undo" :disabled="!hasUndo">Undo {{ undoCount }}</button>
-        <button class="cursor-pointer px-3 py-2" @click="redo" :disabled="!hasRedo">Redo {{ redoCount }}</button>
-        <button class="cursor-pointer px-3 py-2" @click="reset" :disabled="historyLength === 0">Reset</button>
+      <div class="w-full text-center mt-4 space-x-2">
+        <button class="cursor-pointer px-3 py-2 bg-gray-100" @click="undo" :disabled="!hasUndo">Undo {{ undoCount }}</button>
+        <button class="cursor-pointer px-3 py-2 bg-gray-100" @click="redo" :disabled="!hasRedo">Redo {{ redoCount }}</button>
+        <button class="cursor-pointer px-3 py-2 bg-gray-100" @click="reset" :disabled="historyLength === 0">Reset</button>
       </div>
     </template>
     <template v-slot:code>
@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, reactive, ref } from 'vue-demi'
+import { defineComponent, computed, reactive, ref } from '@vue/runtime-core'
 import { useStateshot } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useStateshot } from '../../../packages/core/lib/index.cjs'

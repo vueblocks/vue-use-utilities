@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue-demi'
+import { defineComponent, ref } from '@vue/runtime-core'
 import { useResizeObserver } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useResizeObserver } from '../../../packages/core/lib/index.cjs'

@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { onMounted, defineComponent } from 'vue-demi'
+import { onMounted, defineComponent } from '@vue/runtime-core'
 import { useAxios } from '@vueblocks/vue-use-axios'
 // Test local bundle
 // import { useAxios } from '../../../packages/axios/lib/index.cjs'

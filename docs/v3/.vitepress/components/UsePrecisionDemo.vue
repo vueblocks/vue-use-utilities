@@ -47,8 +47,8 @@
             </tr>
           </tbody>
         </table>
-        <div>
-          <button class="cursor-pointer px-3 py-2" @click="randomNumbers">Random</button>
+        <div class="text-center">
+          <button class="cursor-pointer px-3 py-2 bg-gray-100" @click="randomNumbers">Random</button>
         </div>
       </template>
     </example-block>
@@ -56,7 +56,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, computed } from 'vue-demi'
+import { defineComponent, reactive, toRefs, computed } from '@vue/runtime-core'
 import { usePrecision } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { usePrecision } from '../../../packages/core/lib/index.cjs'

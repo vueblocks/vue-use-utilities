@@ -13,7 +13,7 @@
 ## Usage
 
 ```js
-import { ref, reactive, toRefs } from 'vue-demi'
+import { ref, reactive, toRefs } from 'vue'
 import { usePrecision } from '@vueblocks/vue-use-core'
 
 export default {

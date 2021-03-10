@@ -10,7 +10,7 @@
         scrollbar-none overflow-x-auto p-6
         text-sm leading-snug language-html
         text-white bg-black bg-opacity-75"
-      ><code class="language-html"><span class="token string"><slot name="code" /></span></code></pre>
+      ><code><span class="token string"><slot name="code" /></span></code></pre>
     </div>
   </div>
 </template>

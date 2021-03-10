@@ -12,8 +12,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue-demi'
 import { useMouse } from '@vueblocks/vue-use-core'
+import { defineComponent } from '@vue/runtime-core'
 // Test local bundle
 // import { useMouse } from '../../../packages/core/lib/index.cjs'
 
