@@ -1,7 +1,7 @@
 import { computed, getCurrentInstance, isVue3 } from 'vue-demi'
 import { Store } from 'vuex'
 
-import { isObject, isString, partial } from '../utils'
+import { isObject, isString, partial } from './utils'
 
 /**
  * Validate whether given map is valid or not
