@@ -93,6 +93,7 @@ for (const { name, display, external = [], globals = {} } of activePackages) {
           },
         }),
         replace({
+          preventAssignment: true,
           __DEV__: config.format !== 'umd'
             ? `(process.env.NODE_ENV !== 'production')`
             : config.isMinify ? 'false' : 'true'

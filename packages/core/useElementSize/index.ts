@@ -1,11 +1,11 @@
 import { ref } from 'vue-demi'
 
 import { useResizeObserver } from '../useResizeObserver'
-import { ResizeObserverOptions, ElementSize, MaybeRefElement } from '../types'
+import { ResizeObserverOptions, ElementSize, RefTypedElement } from '../types'
 import { isElement } from '../utils'
 
 const useElementSize = (
-  target: MaybeRefElement,
+  target: RefTypedElement,
   options: ResizeObserverOptions = {},
 ): ElementSize => {
   const width = ref(isElement(target) ? target.clientWidth : 0)

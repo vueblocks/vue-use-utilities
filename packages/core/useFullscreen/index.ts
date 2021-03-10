@@ -1,7 +1,7 @@
 import { ref, Ref } from 'vue-demi'
 import screenfull, { Screenfull } from 'screenfull'
 import { tryOnMounted } from '../useLifecycle'
-import { Fn, MaybeElement } from '../types'
+import { Fn, RefElement } from '../types'
 
 export interface IFullScreen {
   isFullscreen: Ref<boolean>;
@@ -14,7 +14,7 @@ export interface IFullScreen {
  * @param options
  */
 const useFullscreen = (
-  target: MaybeElement,
+  target: RefElement,
   options: FullscreenOptions = {}
 ): IFullScreen => {
   const targetRef = ref(target || document.querySelector('html'))

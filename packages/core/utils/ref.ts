@@ -1,10 +1,10 @@
 import { isRef, ref, Ref, computed, unref } from 'vue-demi'
 
-import { RefTyped, RefElement, ReactiveFn, MaybeRefElement, VueInstance } from '../types'
+import { RefTyped, RefElement, ReactiveFn, RefTypedElement } from '../types'
 
 export function unwrap<T>(o: RefTyped<T>): T
 export function unwrap<T>(o: RefTyped<T>): T {
-  return isRef(o) ? o.value : o;
+  return isRef(o) ? o.value : o
 }
 
 export function wrap(o: RefElement): Ref<Element>
@@ -19,7 +19,6 @@ export function reactiveFn<T extends Function>(fn: T): ReactiveFn<T> {
   } as ReactiveFn<T>
 }
 
-export function unrefElement(refEl: MaybeRefElement) {
-  const plain = unref(refEl)
-  return (plain as VueInstance).$el ?? plain
+export function unrefElement(refEl: RefTypedElement): any {
+  return unref(refEl)
 }

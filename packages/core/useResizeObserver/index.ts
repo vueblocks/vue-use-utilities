@@ -3,7 +3,7 @@ import { ResizeObserver } from '@juggle/resize-observer'
 import {
   ResizeObserverOptions,
   ResizeObserverCallback,
-  MaybeRefElement
+  RefTypedElement
 } from '../types'
 import { unrefElement } from '../utils'
 import { tryOnUnmounted } from '../useLifecycle'
@@ -15,7 +15,7 @@ import { tryOnUnmounted } from '../useLifecycle'
  * @param options 
  */
 const useResizeObserver = (
-  target: MaybeRefElement,
+  target: RefTypedElement,
   callback: ResizeObserverCallback,
   options: ResizeObserverOptions = {}
 ) => {
