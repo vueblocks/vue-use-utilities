@@ -6,7 +6,7 @@ import { isElement } from '../utils'
 
 const useElementSize = (
   target: Element,
-  options: ResizeObserverOptions,
+  options?: ResizeObserverOptions,
 ): ElementSize => {
   const width = ref(isElement(target) ? target.clientWidth : 0)
   const height = ref(isElement(target) ? target.clientHeight : 0)
