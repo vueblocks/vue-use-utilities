@@ -17,9 +17,9 @@
 
 <script lang="ts">
 import { defineComponent, ref } from '@vue/runtime-core'
-import { useInstance } from '@vueblocks/vue-use-core'
+// import { useInstance } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useEmitter } from '../../../packages/core/lib/index.cjs'
+// import { useEmitter } from '../../../../packages/core/lib/index.esm'
 
 export default defineComponent({
   name: 'UseEmitterDemo',

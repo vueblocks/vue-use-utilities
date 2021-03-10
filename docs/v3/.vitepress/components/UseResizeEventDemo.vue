@@ -31,7 +31,7 @@
 import { defineComponent, onMounted, reactive } from '@vue/runtime-core'
 import { useResizeEvent } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useResizeEvent } from '../../../packages/core/lib/index.cjs'
+// import { useResizeEvent } from '../../../../packages/core/lib/index.esm'
 
 export default defineComponent({
   name: 'UseResizeEventDemo',

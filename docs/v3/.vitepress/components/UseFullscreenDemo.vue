@@ -22,15 +22,16 @@
 
 <script lang="ts">
 import { defineComponent, ref } from '@vue/runtime-core'
-import { useFullscreen } from '@vueblocks/vue-use-core'
+// import { useFullscreen } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useFullscreen } from '../../../packages/core/lib/index.cjs'
+import { useFullscreen } from '../../../../packages/core/lib/index.esm'
+// import { useFullscreen } from '../../../../packages/core/useFullscreen'
 
 export default defineComponent({
   name: 'UseFullscreenDemo',
   setup () {
     const imgRef = ref(null)
-    const { isFullscreen, toggleFullscreen: toggle } = useFullscreen()
+    const { isFullscreen, toggleFullscreen: toggle } = useFullscreen(null)
     const { toggleFullscreen } = useFullscreen(imgRef)
 
     return {

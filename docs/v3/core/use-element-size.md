@@ -30,33 +30,45 @@ Reactive [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) siz
 </div>
 ```
 
-```js
+```ts
+import { defineComponent, ref, onMounted } from 'vue'
 import { useElementSize } from '@vueblocks/vue-use-core'
 
-export default {
+export default defineComponent({
   setup () {
-    const textareaRef = ref(null)
+    const position = ref({})
+    const textareaRef = ref<Element>()
 
-    const { width, height } = useElementSize(textareaRef)
+    onMounted(() => {
+      position.value = useElementSize(textareaRef, {})
+    })
 
     return {
       textareaRef,
-      width,
-      height
+      position
     }
   }
-}
+})
 ```
 
 ## Typing
 
 ```ts
 interface WindowSize {
-    width: Ref<number>;
-    height: Ref<number>;
+  width: Ref<number>;
+  height: Ref<number>;
 }
 interface ElementSize extends WindowSize {
 }
+/**
+ * Options to be given to the resize observer,
+ * when observing a new element.
+ *
+ * https://drafts.csswg.org/resize-observer-1/#dictdef-resizeobserveroptions
+ */
+interface ResizeObserverOptions {
+  box?: 'content-box' | 'border-box' | 'device-pixel-content-box' | ResizeObserverBoxOptions;
+}
 
-declare const useElementSize: (target: Element, options: ResizeObserverOptions) => ElementSize;
+declare const useElementSize: (target: RefElement, options?: ResizeObserverOptions) => ElementSize;
 ```

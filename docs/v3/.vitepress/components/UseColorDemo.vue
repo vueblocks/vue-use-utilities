@@ -126,7 +126,7 @@
 import { computed, ref, defineComponent } from '@vue/runtime-core'
 import { useColor, usePalette } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useColor, usePalette } from '../../../packages/core/lib/index.esm'
+// import { useColor, usePalette } from '../../../../packages/core/lib/index.esm'
 
 const range = (end: any, start = 0, step = 1) =>
   Array.from({ length: Math.ceil((end - start + 1) / step) }, (v, i) => i * step + start)

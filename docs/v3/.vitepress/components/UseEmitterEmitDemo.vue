@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, getCurrentInstance } from '@vue/runtime-core'
+import { defineComponent } from '@vue/runtime-core'
 import { useInstance } from '@vueblocks/vue-use-core'
 // import { useEmitter } from '@vueblocks/vue-use-core'
 // Test local bundle

@@ -2,12 +2,7 @@ export type {
   Fn
 } from './common'
 
-export type {
-  RefTyped,
-  RefElement,
-  ToRefs,
-  ReactiveFn
-} from './ref'
+export * from './ref'
 
 export type {
   ResizeObserverSize,

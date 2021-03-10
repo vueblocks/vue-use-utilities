@@ -45,7 +45,7 @@ interface ResizeObserverEntry {
 /**
  * https://drafts.csswg.org/resize-observer-1/#resize-observer-callback
  */
-type ResizeObserverCallback = (entries: ResizeObserverEntry[], observer: ResizeObserver) => void;
+type ResizeObserverCallback = (entries: ReadonlyArray<ResizeObserverEntry>, observer: ResizeObserver) => void;
 
 export {
   ResizeObserverSize,

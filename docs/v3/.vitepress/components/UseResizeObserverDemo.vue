@@ -20,24 +20,26 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/runtime-core'
-import { useResizeObserver } from '@vueblocks/vue-use-core'
+import { defineComponent, ref, onMounted } from '@vue/runtime-core'
+// import { useResizeObserver } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useResizeObserver } from '../../../packages/core/lib/index.cjs'
+import { useResizeObserver } from '../../../../packages/core/lib/index.esm'
+// import { useResizeObserver } from '../../../../packages/core/useResizeObserver'
 
 export default defineComponent({
   name: 'UseResizeObserverDemo',
   setup () {
     const rectState = ref({})
-    const textareaRef = ref(null)
+    const textareaRef = ref<Element>()
 
-    useResizeObserver(
-      textareaRef,
-      ([entry]) => {
-        rectState.value = entry.contentRect
-      },
-      {}
-    )
+    onMounted(() => {
+      useResizeObserver(
+        textareaRef,
+        ([entry]) => {
+          rectState.value = entry.contentRect
+        }
+      )
+    })
 
     return {
       textareaRef,

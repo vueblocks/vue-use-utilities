@@ -29,9 +29,9 @@
 
 <script lang="ts">
 import { defineComponent, reactive, watchEffect } from '@vue/runtime-core'
-import { useWindowSize } from '@vueblocks/vue-use-core'
+// import { useWindowSize } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useWindowSize } from '../../../packages/core/lib/index.cjs'
+import { useWindowSize } from '../../../../packages/core/lib/index.esm'
 
 export default defineComponent({
   name: 'UseWindowSizeDemo',
@@ -51,7 +51,7 @@ export default defineComponent({
       height: 0
     })
 
-    const domWSize = useWindowSize({})
+    const domWSize = useWindowSize()
 
     const throttleWSize = useWindowSize({
       useThrottle: true

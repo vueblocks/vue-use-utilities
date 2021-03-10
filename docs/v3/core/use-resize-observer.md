@@ -98,7 +98,7 @@ interface ResizeObserverEntry {
  * https://drafts.csswg.org/resize-observer-1/#resize-observer-callback
  */
 declare type ResizeObserverCallback = (
-  entries: ResizeObserverEntry[],
+  entries: ReadonlyArray<ResizeObserverEntry>,
   observer: ResizeObserver
 ) => void;
 
@@ -109,10 +109,10 @@ declare type ResizeObserverCallback = (
  * @param options
  */
 declare const useResizeObserver: (
-  target: Element,
+  target: RefElement,
   callback: ResizeObserverCallback,
-  options: ResizeObserverOptions
+  options?: ResizeObserverOptions
 ) => {
-  stop: () => void;
+    stop: () => void;
 };
 ```

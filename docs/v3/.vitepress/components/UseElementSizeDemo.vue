@@ -14,28 +14,31 @@
       </div>
     </template>
     <template v-slot:code>
-      <span>Element Size: {{ width }} x {{ height }}</span>
+      <span>Element Size: {{ position.width }} x {{ position.height }}</span>
     </template>
   </example-block>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/runtime-core'
-import { useElementSize } from '@vueblocks/vue-use-core'
+import { defineComponent, ref, onMounted } from '@vue/runtime-core'
+// import { useElementSize } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useElementSize } from '../../../packages/core/lib/index.umd'
+import { useElementSize } from '../../../../packages/core/lib/index.esm'
+// import { useElementSize } from '../../../../packages/core/useElementSize'
 
 export default defineComponent({
   name: 'UseElementSizeDemo',
   setup () {
-    const textareaRef = ref<Element>()
+    const position = ref({})
+    const textareaRef = ref(null)
 
-    const { width, height } = useElementSize(textareaRef.value, {})
+    onMounted(() => {
+      position.value = useElementSize(textareaRef)
+    })
 
     return {
       textareaRef,
-      width,
-      height
+      position
     }
   }
 })

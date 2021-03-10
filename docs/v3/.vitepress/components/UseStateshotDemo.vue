@@ -33,7 +33,7 @@
 import { defineComponent, computed, reactive, ref } from '@vue/runtime-core'
 import { useStateshot } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useStateshot } from '../../../packages/core/lib/index.cjs'
+// import { useStateshot } from '../../../../packages/core/lib/index.esm'
 
 export default defineComponent({
   name: 'UseStateshotDemo',

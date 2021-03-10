@@ -59,7 +59,7 @@
 import { defineComponent, reactive, toRefs, computed } from '@vue/runtime-core'
 import { usePrecision } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { usePrecision } from '../../../packages/core/lib/index.cjs'
+// import { usePrecision } from '../../../../packages/core/lib/index.esm'
 
 export default defineComponent({
   name: 'UsePrecisionDemo',
@@ -94,8 +94,8 @@ export default defineComponent({
     })
 
     const randomNumbers = () => {
-      const getN = () => Math.random().toFixed(2)
-      Object.keys(n).map(key => n[key] = getN())
+      const getN = (): string => Math.random().toFixed(2)
+      Object.keys(n).map((key: string) => n[key] = getN())
     }
 
     return {

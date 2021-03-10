@@ -77,11 +77,11 @@ interface KeyHandler {
  * Bind shortcut onMounted & unbind shortcut automatically onUnmounted in setup hooks
  * or
  * Unbind shortcut before bind shortcut without setup hooks
- * @param {Object} keymap
- * @param {Object} vm
- * @return {function} toggle
+ * @param keymap
+ * @param vm
+ * @return shortcut
  */
-declare const useShortcut: (keymap: KeyBindingMap, vm: any) => {
+declare const useShortcut: (keymap: KeyBindingMap, vm?: any) => {
     shift: boolean;
     alt: boolean;
     option: boolean;

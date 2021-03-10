@@ -1,9 +1,11 @@
 <template>
   <section>
     <example-block>
-      <template v-slot:component class="w-full text-center">
-        <h3>Drawing with mouse events</h3>
-        <canvas id="myPics" ref="refPics" width="560" height="240" class="border"></canvas>
+      <template v-slot:component>
+        <div class="w-full text-center">
+          <h3 class="mb-4">Drawing with mouse events</h3>
+          <canvas id="myPics" ref="refPics" width="560" height="240" class="border m-auto"></canvas>
+        </div>
       </template>
     </example-block>
   </section>
@@ -13,7 +15,7 @@
 import { defineComponent, onMounted, ref } from '@vue/runtime-core'
 import { useEventListener } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useEventListener } from '../../../packages/core/lib/index.cjs'
+// import { useEventListener } from '../../../../packages/core/lib/index.esm'
 
 export default defineComponent({
   name: 'UseEventListenerDemo',

@@ -19,7 +19,7 @@
 import { defineComponent } from '@vue/runtime-core'
 import { useDebouncedRef } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useDebouncedRef } from '../../../packages/core/lib/index.cjs'
+// import { useDebouncedRef } from '../../../../packages/core/lib/index.esm'
 
 export default defineComponent({
   name: 'UseDebouncedRefDemo',

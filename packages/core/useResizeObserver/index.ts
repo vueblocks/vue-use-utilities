@@ -1,6 +1,12 @@
-import { ref, watch } from 'vue-demi'
+import { watch } from 'vue-demi'
 import { ResizeObserver } from '@juggle/resize-observer'
-import { ResizeObserverOptions, ResizeObserverCallback } from '../types'
+import {
+  ResizeObserverOptions,
+  ResizeObserverCallback,
+  MaybeRefElement
+} from '../types'
+import { unrefElement } from '../utils'
+import { tryOnUnmounted } from '../useLifecycle'
 
 /**
  * It immediately detects when an element resizes and provides accurate sizing information back to the handler.
@@ -9,27 +15,32 @@ import { ResizeObserverOptions, ResizeObserverCallback } from '../types'
  * @param options 
  */
 const useResizeObserver = (
-  target: Element,
+  target: MaybeRefElement,
   callback: ResizeObserverCallback,
-  options?: ResizeObserverOptions
+  options: ResizeObserverOptions = {}
 ) => {
   let ro: ResizeObserver | undefined
-  const targetRef = ref(target)
   const isSupported = window && 'ResizeObserver' in window
 
-  const stopWatch = watch(targetRef, (newVal) => {
-    if (isSupported && window && newVal) {
-      ro = new ResizeObserver(callback)
+  const stopWatch = watch(
+    () => unrefElement(target),
+    (el) => {
+      if (isSupported && window && el) {
+        ro = new ResizeObserver(callback)
 
-      ro.observe(newVal, options)
-    }
-  }, { immediate: true })
+        ro.observe(el, options)
+      }
+    },
+    { immediate: true }
+  )
 
   const stop = () => {
     ro && ro.disconnect()
     ro = undefined
     stopWatch()
   }
+
+  tryOnUnmounted(stop)
 
   return {
     stop

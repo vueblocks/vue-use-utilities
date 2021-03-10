@@ -43,14 +43,16 @@ interface WindowSize {
   height: Ref<number>;
 }
 
+interface EventOptions {
+  useCapture?: boolean;
+  useThrottle?: boolean | null;
+  delay?: number;
+}
+
 /**
  * Reactive window size
- * @param {boolean} useCapture
- * @param {boolean} useThrottle: true: throttle | false: debounce
+ * @param {object} options
  * @return {Ref<number>} WindowSize
  */
-declare const useWindowSize: (
-  useCapture?: boolean,
-  useThrottle?: boolean
-) => WindowSize;
+declare const useWindowSize: (options?: EventOptions) => WindowSize;
 ```
