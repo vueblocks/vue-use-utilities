@@ -1,0 +1,32 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "docs:v2": "vue-demi-switch 2 && vuepress dev v2",
+    "docs:v3": "vue-demi-switch 3 vue3 && vitepress dev v3"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.0.0-rc.3",
+    "@vueblocks/vue-use-axios": "^0.2.6",
+    "@vueblocks/vue-use-core": "^0.2.9",
+    "@vueblocks/vue-use-vuex": "^0.2.5",
+    "vue": "^2.6.12",
+    "vue-demi": "^0.7.1",
+    "vue3": "npm:vue@3"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vitepress": "^0.12.2",
+    "vuepress": "^1.8.2"
+  }
+}

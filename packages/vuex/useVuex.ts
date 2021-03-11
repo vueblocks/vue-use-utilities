@@ -200,14 +200,14 @@ export const createNamespacedHelpers = (store: Store<any>, namespace: string) =>
 
 /**
  * Get $store from current instance
- * @return {Store} vm.$store
+ * @return {Store} instance.$store
  */
 export const useStore = (): Store<any> => {
-  const vm: any = getCurrentInstance()
-  if (!vm) {
+  const instance: any = getCurrentInstance()
+  if (!instance) {
     console.error('You must use this function within the "setup()" method')
   }
-  return isVue3 ? vm.ctx.$store : vm.proxy.$store
+  return isVue3 ? instance.ctx.$store : instance.proxy.$store
 }
 
 /**

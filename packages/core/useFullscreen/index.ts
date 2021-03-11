@@ -1,7 +1,7 @@
 import { ref, Ref } from 'vue-demi'
 import screenfull, { Screenfull } from 'screenfull'
 import { tryOnMounted } from '../useLifecycle'
-import { Fn } from '../types'
+import { Fn, RefElement } from '../types'
 
 export interface IFullScreen {
   isFullscreen: Ref<boolean>;
@@ -10,16 +10,18 @@ export interface IFullScreen {
 
 /**
  * Reactive Fullscreen API build on top of screenfull.js
- * @param {HTMLElement} target
- * @return {boolean} isFullscreen
- * @return {function} toggleFullscreen
+ * @param target
+ * @param options
  */
-const useFullscreen = (target: HTMLElement): IFullScreen => {
+const useFullscreen = (
+  target: RefElement,
+  options: FullscreenOptions = {}
+): IFullScreen => {
   const targetRef = ref(target || document.querySelector('html'))
   const isFullscreen = ref(false)
 
   const toggleFullscreen = () => {
-    screenfull.isEnabled && screenfull.toggle(targetRef.value)
+    screenfull.isEnabled && screenfull.toggle(targetRef.value, options)
   }
 
   tryOnMounted(() => {

@@ -41,11 +41,11 @@ const shortcut = {
  * Bind shortcut onMounted & unbind shortcut automatically onUnmounted in setup hooks
  * or
  * Unbind shortcut before bind shortcut without setup hooks
- * @param {Object} keymap
- * @param {Object} vm
- * @return {function} toggle
+ * @param keymap
+ * @param vm
+ * @return shortcut
  */
-const useShortcut = (keymap: KeyBindingMap, vm: any) => {
+const useShortcut = (keymap: KeyBindingMap, vm: any = undefined) => {
   let sync = true
 
   if (!vm) {
@@ -67,7 +67,7 @@ const useShortcut = (keymap: KeyBindingMap, vm: any) => {
     })
   }
 
-  tryOnMounted(() => bindKeys(), sync)
+  tryOnMounted(bindKeys, sync)
 
   tryOnUnmounted(unbindKeys)
 
