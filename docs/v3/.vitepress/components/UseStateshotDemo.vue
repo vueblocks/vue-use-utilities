@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, reactive, ref } from '@vue/runtime-core'
+import { defineComponent, computed, reactive, ref } from 'vue3'
 import { useStateshot } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useStateshot } from '../../../../packages/core/lib/index.esm'

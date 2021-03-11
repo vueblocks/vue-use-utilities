@@ -14,10 +14,10 @@
 </template>
 
 <script lang="ts">
-import { onMounted, defineComponent } from '@vue/runtime-core'
-import { useAxios } from '@vueblocks/vue-use-axios'
+import { onMounted, defineComponent } from 'vue3'
+// import { useAxios } from '@vueblocks/vue-use-axios'
 // Test local bundle
-// import { useAxios } from '../../../../packages/axios/lib/index.esm'
+import { useAxios } from '../../../../packages/axios/lib/index.esm'
 
 export default defineComponent({
   name: 'UseAxiosDemo',

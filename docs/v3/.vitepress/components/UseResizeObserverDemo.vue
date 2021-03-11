@@ -20,10 +20,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from '@vue/runtime-core'
-// import { useResizeObserver } from '@vueblocks/vue-use-core'
+import { defineComponent, ref, onMounted } from 'vue3'
+import { useResizeObserver } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useResizeObserver } from '../../../../packages/core/lib/index.esm'
+// import { useResizeObserver } from '../../../../packages/core/lib/index.esm'
 // import { useResizeObserver } from '../../../../packages/core/useResizeObserver'
 
 export default defineComponent({

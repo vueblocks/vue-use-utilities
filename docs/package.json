@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-rc.3",
-    "@vueblocks/vue-use-axios": "^0.2.6",
     "@vueblocks/vue-use-core": "^0.2.10",
     "@vueblocks/vue-use-vuex": "^0.2.10",
     "vue": "^2.6.12",

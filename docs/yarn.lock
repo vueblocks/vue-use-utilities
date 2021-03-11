@@ -1317,7 +1317,7 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@^1.0.0-beta.24", "@vue/composition-api@^1.0.0-rc.3":
+"@vue/composition-api@^1.0.0-rc.3":
   version "1.0.0-rc.3"
   resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-rc.3.tgz#5174632fdda888f4f04bbaa5263cf01e34ba3fc2"
   integrity sha512-/N/yCgIeFwAdsChML1RAke7YT5v/LYnPOyrz2zU+fE6xx2MpZfWn+DD2wCf3Vre659AvuXA8zzKLlRaFzW75XQ==
@@ -1360,16 +1360,6 @@
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.0.7.tgz#96d52988efc07444c108c7c6803ba7cc93e40045"
   integrity sha512-dn5FyfSc4ky424jH4FntiHno7Ss5yLkqKNmM/NXwANRnlkmqu74pnGetexDFVG5phMk9/FhwovUZCWGxsotVKg==
-
-"@vueblocks/vue-use-axios@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-axios/-/vue-use-axios-0.2.6.tgz#f1b4983e2473bc748d32b3f843d21415e3b8f474"
-  integrity sha512-1xXPek7AohtvufAEgrG49iq/JrMuHiudbnsN6Oxupx1+/VL1L6chhJBAw9e5DNn12z6m+1GJk3bFwkwLQEOr3Q==
-  dependencies:
-    "@vue/composition-api" "^1.0.0-beta.24"
-    lodash.debounce "^4.0.8"
-    lodash.throttle "^4.1.1"
-    vue-demi "^0.5.4"
 
 "@vueblocks/vue-use-core@^0.2.10":
   version "0.2.10"
@@ -8526,11 +8516,6 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
-
-vue-demi@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.5.4.tgz#cedb887af819ff0126c545a5540170d8895b816d"
-  integrity sha512-m/cm/Jo+USFx4JNGvhXVuAAbeB+Dejc0O8hzarph9MMuxxcMEDxf+0UBzg79g15YwYGIToX957XvzG0xSufG9A==
 
 vue-demi@^0.7.1:
   version "0.7.1"

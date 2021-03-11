@@ -56,7 +56,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, computed } from '@vue/runtime-core'
+import { defineComponent, reactive, toRefs, computed } from 'vue3'
 import { usePrecision } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { usePrecision } from '../../../../packages/core/lib/index.esm'
