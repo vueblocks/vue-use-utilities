@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "docs:v2": "vue-demi-switch 2 && vuepress dev v2",
-    "docs:v3": "vue-demi-switch 3 vue3 && vitepress dev v3"
+    "dev:v2": "vue-demi-switch 2 && vuepress dev v2",
+    "dev:v3": "vue-demi-switch 3 vue3 && vitepress dev v3",
+    "build:v2": "vue-demi-switch 2 && vuepress build v2",
+    "build:v3": "vue-demi-switch 3 vue3 && vitess build v3"
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-rc.3",
     "@vueblocks/vue-use-axios": "^0.2.6",
-    "@vueblocks/vue-use-core": "^0.2.9",
-    "@vueblocks/vue-use-vuex": "^0.2.5",
+    "@vueblocks/vue-use-core": "^0.2.10",
+    "@vueblocks/vue-use-vuex": "^0.2.10",
     "vue": "^2.6.12",
     "vue-demi": "^0.7.1",
     "vue3": "npm:vue@3"
