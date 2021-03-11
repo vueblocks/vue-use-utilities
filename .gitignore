@@ -3,7 +3,8 @@ node_modules
 packages/**/lib
 packages/**/node_modules
 coverage
-docs/.vuepress/dist
+docs/v2/.vuepress/dist
+docs/v3/.vitess/dist
 
 # local env files
 .env.local

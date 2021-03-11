@@ -1317,7 +1317,7 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@^1.0.0-beta.24", "@vue/composition-api@^1.0.0-rc.2", "@vue/composition-api@^1.0.0-rc.3":
+"@vue/composition-api@^1.0.0-beta.24", "@vue/composition-api@^1.0.0-rc.3":
   version "1.0.0-rc.3"
   resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-rc.3.tgz#5174632fdda888f4f04bbaa5263cf01e34ba3fc2"
   integrity sha512-/N/yCgIeFwAdsChML1RAke7YT5v/LYnPOyrz2zU+fE6xx2MpZfWn+DD2wCf3Vre659AvuXA8zzKLlRaFzW75XQ==
@@ -1371,15 +1371,14 @@
     lodash.throttle "^4.1.1"
     vue-demi "^0.5.4"
 
-"@vueblocks/vue-use-core@^0.2.9":
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-core/-/vue-use-core-0.2.9.tgz#af9c0b5ab4d6507c8ec1db660b1047b8c6632649"
-  integrity sha512-+KhxmcVwsrDcbBsPAQ38Etkwem2fW1IbE6mnGMWqvc+9ZVexEyrZRQlPeK72QEZyBdDPTpmKhpeYBSpkWKrd/g==
+"@vueblocks/vue-use-core@^0.2.10":
+  version "0.2.10"
+  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-core/download/@vueblocks/vue-use-core-0.2.10.tgz#f6a2b2fdb36d1f29c3ef7bc1122eb6c243d5240a"
+  integrity sha1-9qKy/bNtHynD73vBEi62wkPVJAo=
   dependencies:
     "@juggle/resize-observer" "^3.2.0"
-    "@vue/composition-api" "^1.0.0-rc.2"
+    "@vue/composition-api" "^1.0.0-rc.3"
     color2k "^1.2.4"
-    dayjs "^1.10.2"
     keymaster "^1.6.2"
     lodash.clonedeep "^4.5.0"
     lodash.debounce "^4.0.8"
@@ -1387,15 +1386,15 @@
     number-precision "^1.5.0"
     screenfull "^5.1.0"
     stateshot "^1.3.3"
-    vue-demi "^0.6.0"
+    vue-demi "^0.7.1"
 
-"@vueblocks/vue-use-vuex@^0.2.5":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@vueblocks/vue-use-vuex/-/vue-use-vuex-0.2.5.tgz#f75a88cb810ecf00fd3c51d8904a1a2096a66164"
-  integrity sha512-FpChMkXsf6vtYGtcTokhieBODHuRjp9XV+wfOWXtK2rxix/wkCTL9UuiDEeOlHcWssKS08WZHAxUFxZ8z9Ljjg==
+"@vueblocks/vue-use-vuex@^0.2.10":
+  version "0.2.10"
+  resolved "https://registry.npm.taobao.org/@vueblocks/vue-use-vuex/download/@vueblocks/vue-use-vuex-0.2.10.tgz#78beda46cd255d26d68fd966a61e33bec0841c1e"
+  integrity sha1-eL7aRs0lXSbWj9lmph4zvsCEHB4=
   dependencies:
-    "@vue/composition-api" "^1.0.0-beta.24"
-    vue-demi "^0.5.4"
+    "@vue/composition-api" "^1.0.0-rc.3"
+    vue-demi "^0.7.1"
 
 "@vuepress/core@1.8.2":
   version "1.8.2"
@@ -3183,11 +3182,6 @@ dashdash@^1.12.0:
   integrity sha1-hTz6D3y+L+1d4gMmuN1YEDX24vA=
   dependencies:
     assert-plus "^1.0.0"
-
-dayjs@^1.10.2:
-  version "1.10.4"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"
-  integrity sha512-RI/Hh4kqRc1UKLOAf/T5zdMMX5DQIlDxwUe3wSyMMnEbGunnpENCdbUgM+dW7kXidZqCttBrmw7BhN4TMddkCw==
 
 de-indent@^1.0.2:
   version "1.0.2"
@@ -8538,11 +8532,6 @@ vue-demi@^0.5.4:
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.5.4.tgz#cedb887af819ff0126c545a5540170d8895b816d"
   integrity sha512-m/cm/Jo+USFx4JNGvhXVuAAbeB+Dejc0O8hzarph9MMuxxcMEDxf+0UBzg79g15YwYGIToX957XvzG0xSufG9A==
 
-vue-demi@^0.6.0:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.6.2.tgz#ed9633eaa69b7409cc6e8328e8a6c3d31ab39319"
-  integrity sha512-4KfwxbqsZcDz7UryD11oHa6FLK9Gzx4MIwAEcP37IbUdXuF6DHg2w9L5Zv5t+FNqsuAjEQ2NnGVIZ3u71y435Q==
-
 vue-demi@^0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.7.1.tgz#e7cf3e70e4c69bc192f4530c2665ce8b289f5dc4"
@@ -8605,6 +8594,7 @@ vue-template-es2015-compiler@^1.9.0:
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
 "vue3@npm:vue@3", vue@^3.0.5:
+  name vue3
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.7.tgz#8bcff51f8be570f9e4ce8cc5f52e2ab0fe3c74a1"
   integrity sha512-8h4TikD+JabbMK9aRlBO4laG0AtNHRPHynxYgWZ9sq1YUPfzynd9Jeeb27XNyZytC7aCQRX9xe1+TQJuc181Tw==
