@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue3'
+import { defineComponent, ref } from 'vue'
 // import { useFullscreen } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useFullscreen } from '../../../../packages/core/lib/index.esm'

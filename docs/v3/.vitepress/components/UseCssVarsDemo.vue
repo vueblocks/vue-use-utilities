@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { ref, defineComponent } from 'vue3'
+import { ref, defineComponent } from 'vue'
 import { useCssVars } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useCssVars } from '../../../../packages/core/lib/index.esm'

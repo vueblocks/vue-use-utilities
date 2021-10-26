@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue3'
+import { defineComponent, ref, onMounted } from 'vue'
 import { useElementSize } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useElementSize } from '../../../../packages/core/lib/index.esm'

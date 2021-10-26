@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onUnmounted, ref } from 'vue3'
+import { defineComponent, onUnmounted, ref } from 'vue'
 import { useShortcut } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useShortcut } from '../../../../packages/core/lib/index.esm'

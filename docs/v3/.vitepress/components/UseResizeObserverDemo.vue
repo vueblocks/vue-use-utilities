@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue3'
+import { defineComponent, ref, onMounted } from 'vue'
 import { useResizeObserver } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useResizeObserver } from '../../../../packages/core/lib/index.esm'

@@ -20,7 +20,7 @@
 <script>
 // import { useVuex, useStore } from '@vueblocks/vue-use-vuex'
 // Test local bundle
-import { useVuex, useStore } from '@vueblocks/vue-use-vuex'
+import { useVuex, useStore } from '../../../../packages/vuex/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {

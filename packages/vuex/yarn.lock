@@ -160,10 +160,10 @@ tslib@^2.3.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
-vue-demi@^0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.11.4.tgz#6101992fe4724cf5634018a16e953f3052e94e2a"
-  integrity sha512-/3xFwzSykLW2HiiLie43a+FFgNOcokbBJ+fzvFXd0r2T8MYohqvphUyDQ8lbAwzQ3Dlcrb1c9ykifGkhSIAk6A==
+vue-demi@0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.10.0.tgz#e21cad49e4aee210093de658684f0ba49ae404f1"
+  integrity sha512-SlVtIkcCVwbSVAiWTk3ixcDF6bRjgPP5nKGjSx4HXmieEUDi2oVQJUQxoFmEOV21js7TKvclzEUhInDEkg0NDQ==
 
 "vue2@npm:vue@2":
   version "2.6.14"

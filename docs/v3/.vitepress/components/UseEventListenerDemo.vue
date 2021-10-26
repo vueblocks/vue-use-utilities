@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue3'
+import { defineComponent, onMounted, ref } from 'vue'
 import { useEventListener } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useEventListener } from '../../../../packages/core/lib/index.esm'

@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue3'
+import { defineComponent } from 'vue'
 import { useMouse } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useMouse } from '../../../../packages/core/lib/index.esm'

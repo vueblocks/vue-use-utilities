@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue3'
+import { defineComponent, ref } from 'vue'
 // import { useInstance } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useEmitter } from '../../../../packages/core/lib/index.esm'

@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, watchEffect } from 'vue3'
+import { defineComponent, reactive, watchEffect } from 'vue'
 import { useWindowSize } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useWindowSize } from '../../../../packages/core/lib/index.esm'
