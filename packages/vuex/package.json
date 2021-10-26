@@ -28,15 +28,25 @@
   "author": "xiaoluoboding<https://github.com/xiaoluoboding>",
   "license": "MIT",
   "sideEffects": false,
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
   "peerDependencies": {
+    "@vue/composition-api": "^1.2.4",
+    "vue": "^2.6.14 || ^3.2.0",
     "vuex": "^3.6.2"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.0.0-rc.3",
-    "vue-demi": "^0.7.1"
+    "@vue/composition-api": "^1.2.4",
+    "vue-demi": "^0.11.4",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "vuex": "^3.6.2"
+    "@vue/compiler-sfc": "^3.2.20",
+    "vue": "^3.2.20",
+    "vue2": "npm:vue@2"
   },
   "gitHead": "19fec27b41f71b70a73f0afd37180c39bb362827"
 }

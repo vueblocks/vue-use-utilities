@@ -39,7 +39,6 @@
 
 [bundlePhobiaBadge]:https://badgen.net/bundlephobia/minzip/@vueblocks/vue-use-core
 [bundlePhobiaUrl]:https://bundlephobia.com/result?p=@vueblocks/vue-use-core
-</p>
 
 ## ✨ Features
 
