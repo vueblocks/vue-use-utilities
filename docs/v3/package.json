@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "vitepress dev --port 4499",
+    "dev": "vitepress dev --port 4949",
     "build": "vitess build"
   },
   "dependencies": {

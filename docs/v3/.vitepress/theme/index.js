@@ -18,6 +18,7 @@ import UseResizeObserverDemo from '../components/UseResizeObserverDemo.vue'
 import UseShortcutDemo from '../components/UseShortcutDemo.vue'
 import UseStateshotDemo from '../components/UseStateshotDemo.vue'
 import UseWindowSizeDemo from '../components/UseWindowSizeDemo.vue'
+import UseVuexDemo from '../components/UseVuexDemo.vue'
 
 export default {
   ...DefaultTheme,
@@ -41,5 +42,6 @@ export default {
     app.component(UseShortcutDemo.name, UseShortcutDemo)
     app.component(UseStateshotDemo.name, UseStateshotDemo)
     app.component(UseWindowSizeDemo.name, UseWindowSizeDemo)
+    app.component(UseVuexDemo.name, UseVuexDemo)
   }
 }

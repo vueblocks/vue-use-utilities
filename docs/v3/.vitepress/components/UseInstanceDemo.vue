@@ -4,9 +4,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useInstance } from '@vueblocks/vue-use-core'
+// import { useInstance } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useInstance } from '../../../../packages/core/lib/index.esm'
+import { useInstance } from '../../../../packages/core/lib/index.esm'
 
 export default defineComponent({
   name: 'UseInstanceDemo',

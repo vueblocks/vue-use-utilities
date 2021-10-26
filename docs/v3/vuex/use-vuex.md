@@ -22,10 +22,10 @@ npm i @vueblocks/vue-use-vuex -S
 
 It export these composable helpers:
 
-* [useState](./useState.md) - same as `mapState` helper in Vuex
-* [useGetters](./useGetters.md) - same as `mapGetters` helper in Vuex
-* [useMutations](./useMutations.md) - same as `mapMutations` helper in Vuex
-* [useActions](./useActions.md) - same as `mapActions` helper in Vuex
+* [useState](./use-state.md) - same as `mapState` helper in Vuex
+* [useGetters](./use-getters.md) - same as `mapGetters` helper in Vuex
+* [useMutations](./use-mutations.md) - same as `mapMutations` helper in Vuex
+* [useActions](./use-actions.md) - same as `mapActions` helper in Vuex
 
 Differently, `useVuex` do not export `createNamespacedHelpers` function, Instead `useVuex` allow you provide
 the namespace as first argument, then return will be the namespaced component binding helpers.
@@ -33,6 +33,38 @@ the namespace as first argument, then return will be the namespaced component bi
 Read more about namespacing [documention](./namespacing.md).
 
 It seems familiar right?
+
+## Example
+
+::: tip 💡 Tips
+`useVuex` also allow you provide the `namespace` as first argument, then return will be the namespaced component binding helpers.
+:::
+
+```js
+import { useVuex, useStore } from '@vueblocks/vue-use-vuex'
+
+export default {
+  setup () {
+    const store = useStore()
+    const { useState, useGetters, useActions } = useVuex('counter')
+
+    return {
+      ...useState(['count']),
+
+      ...useGetters([
+        'evenOrOdd'
+      ]),
+      
+      ...useActions([
+        'increment',
+        'decrement',
+        'incrementIfOdd',
+        'incrementAsync'
+      ])
+    }
+  }
+}
+```
 
 ## Typing
 
