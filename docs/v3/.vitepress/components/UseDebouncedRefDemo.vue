@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/runtime-core'
+import { defineComponent } from 'vue'
 import { useDebouncedRef } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useDebouncedRef } from '../../../../packages/core/lib/index.esm'

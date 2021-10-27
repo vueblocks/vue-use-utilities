@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, reactive } from '@vue/runtime-core'
+import { defineComponent, onMounted, reactive } from 'vue'
 import { useResizeEvent } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useResizeEvent } from '../../../../packages/core/lib/index.esm'

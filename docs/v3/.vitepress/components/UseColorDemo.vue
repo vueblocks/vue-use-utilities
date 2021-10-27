@@ -123,7 +123,7 @@
 </template>
 
 <script lang="ts">
-import { computed, ref, defineComponent } from '@vue/runtime-core'
+import { computed, ref, defineComponent } from 'vue'
 import { useColor, usePalette } from '@vueblocks/vue-use-core'
 // Test local bundle
 // import { useColor, usePalette } from '../../../../packages/core/lib/index.esm'

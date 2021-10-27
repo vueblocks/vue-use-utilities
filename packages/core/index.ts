@@ -1,3 +1,4 @@
+export * from './useClipboard'
 export * from './useCssVars'
 export * from './useColor'
 export * from './useDebouncedRef'

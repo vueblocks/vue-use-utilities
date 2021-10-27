@@ -21,11 +21,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/runtime-core'
+import { defineComponent, ref } from 'vue'
 // import { useFullscreen } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useFullscreen } from '../../../../packages/core/lib/index.esm'
-// import { useFullscreen } from '../../../../packages/core/useFullscreen'
+// import { useFullscreen } from '../../../../packages/core/lib/index.esm'
+import { useFullscreen } from '../../../../packages/core/useFullscreen'
 
 export default defineComponent({
   name: 'UseFullscreenDemo',

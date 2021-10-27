@@ -15,9 +15,9 @@
 
 <script>
 import { onMounted, ref } from 'vue-demi'
-import { useAxios } from '@vueblocks/vue-use-axios'
+// import { useAxios } from '@vueblocks/vue-use-axios'
 // Test local bundle
-// import { useAxios } from '../../../../packages/axios/lib/index.cjs'
+import { useAxios } from '@vueblocks/vue-use-axios'
 
 export default {
   name: 'UseAxios',

@@ -25,6 +25,7 @@ module.exports = {
           text: 'Core',
           collapsable: true,
           children: [
+            { text: 'useClipboard', link: '/core/use-clipboard' },
             { text: 'useColor', link: '/core/use-color' },
             { text: 'useCssVars', link: '/core/use-css-vars' },
             { text: 'useDebouncedRef', link: '/core/use-debounced-ref' },

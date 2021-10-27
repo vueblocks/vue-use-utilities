@@ -39,9 +39,10 @@ module.exports = {
         },
         {
           title: 'Core',
-          collapsable: true,
+          collapsable: false,
           sidebarDepth: 1,
           children: [
+            '/guide/core/useClipboard',
             '/guide/core/useColor',
             '/guide/core/useCssVars',
             '/guide/core/useDebouncedRef',

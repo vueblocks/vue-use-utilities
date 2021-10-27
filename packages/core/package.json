@@ -1,7 +1,7 @@
 {
   "name": "@vueblocks/vue-use-core",
   "description": "A Collection of Vue Compositon API Utilities.",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "main": "lib/index.cjs.js",
   "types": "lib/index.d.ts",
   "module": "lib/index.esm.js",
@@ -27,9 +27,18 @@
   "author": "xiaoluoboding<https://github.com/xiaoluoboding>",
   "license": "MIT",
   "sideEffects": false,
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.2.4",
+    "vue": "^2.6.14 || ^3.2.0"
+  },
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
-    "@vue/composition-api": "^1.0.0-rc.3",
+    "@vue/composition-api": "^1.2.4",
     "color2k": "^1.2.4",
     "keymaster": "^1.6.2",
     "lodash.clonedeep": "^4.5.0",
@@ -38,7 +47,16 @@
     "number-precision": "^1.5.0",
     "screenfull": "^5.1.0",
     "stateshot": "^1.3.3",
-    "vue-demi": "^0.7.1"
+    "vue-demi": "0.10.0"
+  },
+  "devDependencies": {
+    "@types/keymaster": "^1.6.30",
+    "@types/lodash.clonedeep": "^4.5.6",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/lodash.throttle": "^4.1.6",
+    "@vue/compiler-sfc": "^3.2.20",
+    "vue": "^3.2.20",
+    "vue2": "npm:vue@2"
   },
   "gitHead": "19fec27b41f71b70a73f0afd37180c39bb362827"
 }

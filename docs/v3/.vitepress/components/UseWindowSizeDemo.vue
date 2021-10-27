@@ -28,10 +28,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, watchEffect } from '@vue/runtime-core'
-// import { useWindowSize } from '@vueblocks/vue-use-core'
+import { defineComponent, reactive, watchEffect } from 'vue'
+import { useWindowSize } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useWindowSize } from '../../../../packages/core/lib/index.esm'
+// import { useWindowSize } from '../../../../packages/core/lib/index.esm'
 
 export default defineComponent({
   name: 'UseWindowSizeDemo',

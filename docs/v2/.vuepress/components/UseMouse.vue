@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import { onMounted, reactive } from 'vue-demi'
-import { useMouse } from '@vueblocks/vue-use-core'
+import { ref } from 'vue-demi'
+// import { useMouse } from '@vueblocks/vue-use-core'
 // Test local bundle
-// import { useMouse } from '../../../../packages/core/lib/index.cjs'
+import { useMouse } from '../../../../packages/core/lib/index.cjs'
 import ExampleBlock from './ExampleBlock.vue'
 
 export default {

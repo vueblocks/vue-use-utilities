@@ -8,9 +8,8 @@ import {
   digitLength,
   float2Fixed
 } from 'number-precision'
-import { ComputedRef } from 'vue-demi'
 
-import { reactiveFn,  } from '../utils'
+import { reactiveFn } from '../utils'
 
 /**
  * `usePrecision` provide reactive methods to perform addition, subtraction, multiplication & division operations precisely.

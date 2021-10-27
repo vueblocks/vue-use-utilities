@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 
 import ExampleBlock from '../components/ExampleBlock.vue'
 import UseAxiosDemo from '../components/UseAxiosDemo.vue'
+import UseClipboardDemo from '../components/UseClipboardDemo.vue'
 import UseColorDemo from '../components/UseColorDemo.vue'
 import UseCssVarsDemo from '../components/UseCssVarsDemo.vue'
 import UseDebouncedRefDemo from '../components/UseDebouncedRefDemo.vue'
@@ -18,6 +19,7 @@ import UseResizeObserverDemo from '../components/UseResizeObserverDemo.vue'
 import UseShortcutDemo from '../components/UseShortcutDemo.vue'
 import UseStateshotDemo from '../components/UseStateshotDemo.vue'
 import UseWindowSizeDemo from '../components/UseWindowSizeDemo.vue'
+import UseVuexDemo from '../components/UseVuexDemo.vue'
 
 export default {
   ...DefaultTheme,
@@ -27,6 +29,7 @@ export default {
     console.log(siteData.value)
     app.component(ExampleBlock.name, ExampleBlock)
     app.component(UseAxiosDemo.name, UseAxiosDemo)
+    app.component(UseClipboardDemo.name, UseClipboardDemo)
     app.component(UseColorDemo.name, UseColorDemo)
     app.component(UseCssVarsDemo.name, UseCssVarsDemo)
     app.component(UseDebouncedRefDemo.name, UseDebouncedRefDemo)
@@ -41,5 +44,6 @@ export default {
     app.component(UseShortcutDemo.name, UseShortcutDemo)
     app.component(UseStateshotDemo.name, UseStateshotDemo)
     app.component(UseWindowSizeDemo.name, UseWindowSizeDemo)
+    app.component(UseVuexDemo.name, UseVuexDemo)
   }
 }

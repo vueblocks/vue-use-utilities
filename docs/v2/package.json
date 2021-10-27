@@ -1,0 +1,31 @@
+{
+  "name": "@vueblock/vue-use-docs-vue2",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^1.2.4",
+    "@vueblocks/vue-use-axios": "^0.2.6",
+    "@vueblocks/vue-use-core": "^0.2.10",
+    "@vueblocks/vue-use-vuex": "^0.2.10",
+    "axios": "^0.24.0",
+    "vue-demi": "0.10.0",
+    "vuex": "^3.6.2"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vuepress": "^1.8.2"
+  }
+}

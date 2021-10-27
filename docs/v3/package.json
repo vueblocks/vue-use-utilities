@@ -1,21 +1,17 @@
 {
-  "name": "docs",
+  "name": "@vueblock/vue-use-docs-vue3",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev:v2": "vue-demi-switch 2 && vuepress dev v2",
-    "dev:v3": "vue-demi-switch 3 vue3 && vitepress dev v3",
-    "build:v2": "vue-demi-switch 2 && vuepress build v2",
-    "build:v3": "vue-demi-switch 3 vue3 && vitess build v3"
+    "dev": "vitepress dev --port 4949",
+    "build": "vitepress build"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.0.0-rc.3",
     "@vueblocks/vue-use-axios": "^0.2.6",
     "@vueblocks/vue-use-core": "^0.2.10",
     "@vueblocks/vue-use-vuex": "^0.2.10",
-    "vue": "^2.6.12",
-    "vue-demi": "^0.7.1",
-    "vue3": "npm:vue@3"
+    "axios": "^0.24.0",
+    "vuex": "^3.6.2"
   },
   "postcss": {
     "plugins": {
@@ -28,7 +24,6 @@
     "autoprefixer": "^9",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "vitepress": "^0.12.2",
-    "vuepress": "^1.8.2"
+    "vitepress": "^0.20.0"
   }
 }

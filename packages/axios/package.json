@@ -1,7 +1,7 @@
 {
   "name": "@vueblocks/vue-use-axios",
   "description": "Use Axios With Composition API Easily.",
-  "version": "0.2.6",
+  "version": "0.2.11",
   "main": "lib/index.cjs.js",
   "types": "lib/index.d.ts",
   "module": "lib/index.esm.js",
@@ -28,17 +28,29 @@
   "author": "xiaoluoboding<https://github.com/xiaoluoboding>",
   "license": "MIT",
   "sideEffects": false,
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
   "peerDependencies": {
-    "axios": "^0.21.0"
+    "@vue/composition-api": "^1.2.4",
+    "axios": "^0.21.0",
+    "vue": "^2.6.14 || ^3.2.0"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.0.0-beta.24",
+    "@vue/composition-api": "^1.2.4",
+    "axios": "^0.24.0",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
-    "vue-demi": "^0.5.4"
+    "vue-demi": "0.10.0"
   },
   "devDependencies": {
-    "axios": "^0.21.1"
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/lodash.throttle": "^4.1.6",
+    "@vue/compiler-sfc": "^3.2.20",
+    "vue": "^3.2.20",
+    "vue2": "npm:vue@2"
   },
   "gitHead": "19fec27b41f71b70a73f0afd37180c39bb362827"
 }

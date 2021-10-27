@@ -20,10 +20,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from '@vue/runtime-core'
-// import { useElementSize } from '@vueblocks/vue-use-core'
+import { defineComponent, ref, onMounted } from 'vue'
+import { useElementSize } from '@vueblocks/vue-use-core'
 // Test local bundle
-import { useElementSize } from '../../../../packages/core/lib/index.esm'
+// import { useElementSize } from '../../../../packages/core/lib/index.esm'
 // import { useElementSize } from '../../../../packages/core/useElementSize'
 
 export default defineComponent({
