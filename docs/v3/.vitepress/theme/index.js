@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 
 import ExampleBlock from '../components/ExampleBlock.vue'
 import UseAxiosDemo from '../components/UseAxiosDemo.vue'
+import UseClipboardDemo from '../components/UseClipboardDemo.vue'
 import UseColorDemo from '../components/UseColorDemo.vue'
 import UseCssVarsDemo from '../components/UseCssVarsDemo.vue'
 import UseDebouncedRefDemo from '../components/UseDebouncedRefDemo.vue'
@@ -28,6 +29,7 @@ export default {
     console.log(siteData.value)
     app.component(ExampleBlock.name, ExampleBlock)
     app.component(UseAxiosDemo.name, UseAxiosDemo)
+    app.component(UseClipboardDemo.name, UseClipboardDemo)
     app.component(UseColorDemo.name, UseColorDemo)
     app.component(UseCssVarsDemo.name, UseCssVarsDemo)
     app.component(UseDebouncedRefDemo.name, UseDebouncedRefDemo)
