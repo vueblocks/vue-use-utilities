@@ -3,14 +3,11 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-# 切换到 docs 目录
-cd docs
-
 # 生成静态文件
-npm run build:v2
+npm run docs:build:v2
 
 # 进入生成的文件夹
-cd v2/.vuepress/dist
+cd docs/v2/.vuepress/dist
 
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
