@@ -1,10 +1,5 @@
-import { Commit } from 'vuex'
 import { makeActions } from '../actions'
 import { counter } from '../mutation-types'
-
-export interface State {
-  count: number;
-}
 
 // namespaced counter state object.
 // each Vuex instance is just a single state tree.
@@ -12,16 +7,18 @@ const state = {
   count: 0
 }
 
+type State = typeof state
+
 // mutations are operations that actually mutate the state.
 // each mutation handler gets the entire state tree as the
 // first argument, followed by additional payload arguments.
 // mutations must be synchronous and can be recorded by plugins
 // for debugging purposes.
 const mutations = {
-  [counter.INCREMENT] (state: State) {
+  [counter.INCREMENT] (state: State): void {
     state.count++
   },
-  [counter.DECREMENT] (state: State) {
+  [counter.DECREMENT] (state: State): void {
     state.count--
   }
 }
@@ -33,16 +30,16 @@ const actions = {
     increment: counter.INCREMENT,
     decrement: counter.DECREMENT
   }),
-  incrementIfOdd ({ commit, state }: { commit: Commit; state: State }) {
+  incrementIfOdd ({ commit, state }: any): void {
     if ((state.count + 1) % 2 === 0) {
       commit(counter.INCREMENT)
     }
   },
-  incrementAsync ({ commit }: { commit: Commit }) {
-    return new Promise((resolve) => {
+  incrementAsync ({ commit, state }: any): Promise<number> {
+    return new Promise((resolve, reject) => {
       setTimeout(() => {
         commit(counter.INCREMENT)
-        resolve()
+        resolve(state.count)
       }, 1000)
     })
   }
