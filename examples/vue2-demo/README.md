@@ -1,6 +1,4 @@
-# vue2-demo
-
-> Generate with @vue/cli > 4.5.0, use 2.x version.
+# vue2-ts
 
 ## Project setup
 ```

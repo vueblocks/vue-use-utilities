@@ -7,16 +7,18 @@ const state = {
   count: 0
 }
 
+type State = typeof state
+
 // mutations are operations that actually mutate the state.
 // each mutation handler gets the entire state tree as the
 // first argument, followed by additional payload arguments.
 // mutations must be synchronous and can be recorded by plugins
 // for debugging purposes.
 const mutations = {
-  [counter.INCREMENT] (state) {
+  [counter.INCREMENT] (state: State): void {
     state.count++
   },
-  [counter.DECREMENT] (state) {
+  [counter.DECREMENT] (state: State): void {
     state.count--
   }
 }
@@ -28,16 +30,16 @@ const actions = {
     increment: counter.INCREMENT,
     decrement: counter.DECREMENT
   }),
-  incrementIfOdd ({ commit, state }) {
+  incrementIfOdd ({ commit, state }: any): void {
     if ((state.count + 1) % 2 === 0) {
       commit(counter.INCREMENT)
     }
   },
-  incrementAsync ({ commit }) {
+  incrementAsync ({ commit, state }: any): Promise<number> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         commit(counter.INCREMENT)
-        resolve()
+        resolve(state.count)
       }, 1000)
     })
   }
@@ -45,7 +47,7 @@ const actions = {
 
 // getters are functions.
 const getters = {
-  evenOrOdd: state => state.count % 2 === 0 ? 'even' : 'odd'
+  evenOrOdd: (state: State) => state.count % 2 === 0 ? 'even' : 'odd'
 }
 
 // nested modules

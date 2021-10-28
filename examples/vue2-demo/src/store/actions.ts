@@ -1,8 +1,11 @@
-const makeAction = type => {
-  return ({ commit }, ...args) => commit(type, ...args)
+const makeAction = (type: string) => {
+  return (payload: any, ...args: any) => {
+    const { commit } = payload
+    return commit(type, ...args)
+  }
 }
 
-export const makeActions = (types = {}) => {
+export const makeActions = (types: any = {}) => {
   const actions = {}
 
   for (const type of Object.keys(types)) {
