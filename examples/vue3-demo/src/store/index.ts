@@ -3,33 +3,32 @@ import { createStore } from 'vuex'
 import * as actions from './actions'
 import * as types from './mutation-types'
 import modules from './modules/index'
-export interface State {
-  theme: string;
-}
 
 const state = {
   theme: 'light'
 }
 
+type RootState = typeof state
+
 const getters = {
-  isDarkmode: (state: State) => state.theme === 'dark'
+  isDarkmode: (state: RootState) => state.theme === 'dark'
 }
 
 const mutations = {
-  [types.SET_STATE] (state: State, payload: any) {
+  [types.SET_STATE] (state: RootState, payload: any) {
     Object.assign(state, payload)
   },
-  [types.SET_THEME] (state: State, payload: any) {
+  [types.SET_THEME] (state: RootState, payload: any) {
     state.theme = payload
   }
 }
 
 // A Vuex instance is created by combining the state, mutations, actions,
 // and getters.
-export default createStore<State>({
+export default createStore({
   state,
   getters,
-  mutations,
   actions,
+  mutations,
   modules
 })

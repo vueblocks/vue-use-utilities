@@ -11,15 +11,17 @@ const state = {
   theme: 'light'
 }
 
+type RootState = typeof state
+
 const getters = {
-  isDarkmode: state => state.theme === 'dark'
+  isDarkmode: (state: RootState) => state.theme === 'dark'
 }
 
 const mutations = {
-  [types.SET_STATE] (state, payload) {
+  [types.SET_STATE] (state: RootState, payload: any) {
     Object.assign(state, payload)
   },
-  [types.SET_THEME] (state, payload) {
+  [types.SET_THEME] (state: RootState, payload: any) {
     state.theme = payload
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="counter">
     Clicked: {{ count }} times, count is {{ evenOrOdd }}.
     <br>
     <button @click="increment">+</button>
@@ -12,10 +12,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue-demi'
 import { useVuex, useStore } from '@vueblocks/vue-use-vuex'
 
-export default {
+export default defineComponent({
   // mounted () {
   //   console.group('--- mounted ---')
   //   console.log(this.$store)
@@ -70,5 +71,5 @@ export default {
       ])
     }
   }
-}
+})
 </script>

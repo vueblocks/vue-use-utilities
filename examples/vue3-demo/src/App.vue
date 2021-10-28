@@ -1,23 +1,23 @@
 <template>
-  <hello-world />
+  <HelloWorld />
   <Counter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Counter from './components/Counter.vue'
 import HelloWorld from './components/HelloWorld.vue'
+import Counter from './components/Counter.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    Counter,
-    HelloWorld
+    HelloWorld,
+    Counter
   }
 })
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,24 +1,25 @@
 <template>
   <div id="app">
-    <hello-world />
+    <HelloWorld />
     <Counter />
   </div>
 </template>
 
-<script>
-import Counter from './components/Counter.vue'
+<script lang="ts">
+import Vue from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
+import Counter from './components/Counter.vue'
 
-export default {
+export default Vue.extend({
   name: 'App',
   components: {
-    Counter,
-    HelloWorld
+    HelloWorld,
+    Counter
   }
-}
+})
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

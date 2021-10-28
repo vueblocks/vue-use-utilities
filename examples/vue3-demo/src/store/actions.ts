@@ -1,7 +1,8 @@
-import { Commit } from 'vuex'
-
 const makeAction = (type: string) => {
-  return ({ commit }: { commit: Commit }, ...args: Array<string>) => commit(type, ...args)
+  return (payload: any, ...args: any) => {
+    const { commit } = payload
+    return commit(type, ...args)
+  }
 }
 
 export const makeActions = (types: any = {}) => {
