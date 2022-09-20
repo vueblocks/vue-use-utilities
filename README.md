@@ -11,6 +11,7 @@
 [![Minzipped Size][bundlePhobiaBadge]][bundlePhobiaUrl]
 [![lerna][lernaBadge]][lernaUrl]
 [![OpenBase][openbaseBadge]][openbaseUrl]
+[![kandi][kandixrayBadge]][kandiUrl]
 [![License][licenseBadge]][licenseUrl]
 
 </div>
@@ -31,6 +32,9 @@
 
 [openbaseBadge]:https://badges.openbase.io/js/rating/@vueblocks/vue-use-vuex.svg
 [openbaseUrl]:https://openbase.io/js/@vueblocks/vue-use-vuex?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge
+
+[kandixrayBadge]:https://kandi.openweaver.com/badges/xray.svg
+[kandiUrl]:https://kandi.openweaver.com/typescript/vueblocks/vue-use-utilities
 
 [supportBadge]:https://img.shields.io/badge/support-2%263-%234FC08D?style=flat&logo=Vue.js
 
